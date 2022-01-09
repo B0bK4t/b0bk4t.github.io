@@ -1,10 +1,4 @@
-let points = [];
-let i;
-let affiliations;
-let former;
-
 let setups = [{ x: 0, y: 0, zoom: 2 }];
-
 let setup = 0;
 
 let x = setups[setup].x;
