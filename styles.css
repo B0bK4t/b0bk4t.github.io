@@ -1,0 +1,39 @@
+body {
+	background-color: #36393f;
+	color: white;
+	font-family: Ginto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	scroll-behavior: smooth;
+}
+
+#mapid {
+	width: 95vw;
+	height: 90vh;
+	margin: auto;
+	cursor: crosshair;
+}
+
+.leaflet-popup-content-wrapper {
+	width: 160px !important;
+}
+
+.transparent-tooltip {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	padding-top: 8px;
+	font-weight: bold;
+	color: black;
+}
+
+.transparent-tooltip::before {
+	border: none;
+}
+
+.input {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	width: 95vw;
+	margin: auto;
+}
