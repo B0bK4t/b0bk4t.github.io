@@ -31,7 +31,7 @@ function append(pokemon) {
 	element.innerHTML = `
     <h3>${p.name}</h3>
     <img
-        src="http://play.pokemonshowdown.com/sprites/ani/${p.id}.gif"
+        src="https://play.pokemonshowdown.com/sprites/ani/${p.id}.gif"
     />
     <div class="types">
         <span class="${t1.toLowerCase()}Type">${t1}</span>
