@@ -121,6 +121,14 @@ th {
 	padding: 5px;
 }
 
+thead th {
+	position: relative;
+}
+
+thead th h3 {
+	margin-top: 15px;
+}
+
 span {
 	border: 2px solid;
 	padding: 3px;
@@ -141,6 +149,9 @@ img {
 
 button {
 	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 .immune {

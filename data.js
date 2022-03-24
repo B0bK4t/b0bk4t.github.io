@@ -1082,7 +1082,7 @@ let data = [
 	{ name: "Drilbur", id: "drilbur", type1: "Ground", type2: "" },
 	{ name: "Excadrill", id: "excadrill", type1: "Ground", type2: "Steel" },
 	{ name: "Audino", id: "audino", type1: "Normal", type2: "" },
-	{ name: "Mega Audino", id: "mega audino", type1: "Normal", type2: "Fairy" },
+	{ name: "Mega Audino", id: "audino-mega", type1: "Normal", type2: "Fairy" },
 	{ name: "Timburr", id: "timburr", type1: "Fighting", type2: "" },
 	{ name: "Gurdurr", id: "gurdurr", type1: "Fighting", type2: "" },
 	{ name: "Conkeldurr", id: "conkeldurr", type1: "Fighting", type2: "" },
@@ -1871,12 +1871,7 @@ let data = [
 		type2: "",
 	},
 	{ name: "Lycanroc Dusk", id: "lycanroc dusk", type1: "Rock", type2: "" },
-	{
-		name: "Wishiwashi Solo Form",
-		id: "wishiwashi solo form",
-		type1: "Water",
-		type2: "",
-	},
+	{ name: "Wishiwashi Solo Form", id: "wishiwashi", type1: "Water", type2: "" },
 	{
 		name: "Wishiwashi School Form",
 		id: "wishiwashi school form",
@@ -2281,7 +2276,7 @@ let data = [
 	{ name: "Perrserker", id: "perrserker", type1: "Steel", type2: "" },
 	{ name: "Cursola", id: "cursola", type1: "Ghost", type2: "" },
 	{ name: "Sirfetch'd", id: "sirfetchd", type1: "Fighting", type2: "" },
-	{ name: "Mr. Rime", id: "mr. rime", type1: "Ice", type2: "Psychic" },
+	{ name: "Mr. Rime", id: "mrrime", type1: "Ice", type2: "Psychic" },
 	{ name: "Runerigus", id: "runerigus", type1: "Ground", type2: "Ghost" },
 	{ name: "Milcery", id: "milcery", type1: "Fairy", type2: "" },
 	{

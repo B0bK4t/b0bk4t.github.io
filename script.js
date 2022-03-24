@@ -29,7 +29,6 @@ function append(pokemon) {
 		t2 = t1;
 	}
 	element.innerHTML = `
-    <button>X</button>
     <h3>${p.name}</h3>
     <img
         src="http://play.pokemonshowdown.com/sprites/ani/${p.id}.gif"
@@ -43,6 +42,9 @@ function append(pokemon) {
 	t1 = t1.toLowerCase();
 	t2 = t2.toLowerCase();
 
+	let index;
+
+	let rows = [];
 	for (let i = 0; i < types.length; i++) {
 		const c = types[i];
 		let tObj = typeChart[c];
@@ -95,11 +97,21 @@ function append(pokemon) {
 		displayBox.classList = className;
 		element.id = `header-${colID + 1}`;
 		row.appendChild(displayBox);
+		rows.push(displayBox);
+		index = colID + 1;
 	}
 
-	// header.querySelector("button").addEventListener("click", function () {
-	// 	console.log(this);
-	// });
+	element.innerHTML += `<button onclick="remove('${index}')">X</button>`;
+}
+
+function remove(index) {
+	let header = document.querySelector("#header-" + index);
+	header.parentElement.removeChild(header);
+	for (let i = 0; i < types.length; i++) {
+		let c = types[i];
+		let row = document.querySelector(`#${c}-${index}`);
+		row.parentElement.removeChild(row);
+	}
 }
 
 function format(text) {
@@ -198,6 +210,7 @@ function format(text) {
 		text = text.replaceAll("<", "");
 		text = text.replaceAll(">", "");
 		text = text.replaceAll(">", "");
+		text = text.replaceAll(" ", "");
 		return text;
 	}
 }
