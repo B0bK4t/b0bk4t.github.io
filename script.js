@@ -1,17 +1,32 @@
-let input = document.querySelector("#add_main");
 let header = document.querySelector("thead").querySelector("tr");
+
+let input = document.querySelector("#add_main");
 input.addEventListener("keydown", function (e) {
 	if (e.code === "Enter" && input.value != "") {
-		add();
+		add(input.value);
 	}
 });
 
-function add() {
+function textarea_activate(id) {
+	let ta = document.querySelector(id);
+	if (ta.value != "") {
+		let pkmns = ta.value.match(/(?:\()[^\(\)]*?(?:\))/g);
+		for (let i = 0; i < pkmns.length; i++) {
+			let name = pkmns[i].replace("(", "").replace(")", "");
+			add(name);
+		}
+	}
+}
+
+function add(query) {
+	query = format(query);
 	let pokemon;
-	let query = format(input.value);
 	if ((pokemon = data.find((element) => format(element.id) === query))) {
 	} else if (
 		(pokemon = data.find((element) => format(element.name) === query))
+	) {
+	} else if (
+		(pokemon = data.find((element) => format(element.french) === query))
 	) {
 	}
 	if (pokemon != undefined) {
@@ -101,7 +116,7 @@ function append(pokemon) {
 		index = colID + 1;
 	}
 
-	element.innerHTML += `<button onclick="remove('${index}')">X</button>`;
+	element.innerHTML += `<button class='delete' onclick="remove('${index}')">X</button>`;
 }
 
 function remove(index) {

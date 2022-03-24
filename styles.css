@@ -5,6 +5,16 @@ html {
 	color: white;
 }
 
+.inputs {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+textarea {
+	resize: vertical;
+}
+
 .normalType {
 	background: #a8a878;
 	border-color: #6d6d4e;
@@ -149,6 +159,9 @@ img {
 
 button {
 	cursor: pointer;
+}
+
+.delete {
 	position: absolute;
 	top: 0;
 	right: 0;
