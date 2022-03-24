@@ -1,106 +1,203 @@
-let setups = [{ x: 0, y: 0, zoom: 2 }];
-let setup = 0;
-
-let x = setups[setup].x;
-let y = setups[setup].y;
-let zoom = setups[setup].zoom;
-
-//Styles
-let tilesets = [
-	"mapbox/streets-v11", //Streets, 0
-	"mapbox/satellite-v9", //Satellite, 1
-	"mapbox/light-v10", //Light, 2
-	"mapbox/dark-v10", //Dark, 3
-	"mapbox/outdoors-v11", //Topographic, 4
-];
-let style = tilesets[0];
-
-//Script
-let map = L.map("mapid").setView([x, y], zoom);
-
-function average(array) {
-	let value = 0;
-	for (let i = 0; i < array.length; i++) {
-		value += array[i];
-	}
-
-	return value / array.length;
-}
-
-L.tileLayer(
-	"https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
-	{
-		attribution:
-			'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		maxZoom: 18,
-		id: style,
-		tileSize: 512,
-		zoomOffset: -1,
-		accessToken:
-			"pk.eyJ1IjoiYjBiazR0IiwiYSI6ImNrazFzeWR0cDB1bTQydnBwN2xlbWd6d3UifQ.AnxiJC1924NDM6tqNTA2mw",
-	}
-).addTo(map);
-
-let lines = [];
-
-function line(array, title, colorName, label) {
-	if (colorName == undefined) colorName = "blue";
-	let polyline;
-
-	polyline = L.polyline(array, {
-		color: colorName,
-	}).addTo(map);
-
-	if (label) polyline.bindPopup(title);
-	lines.push({
-		id: title,
-		object: polyline,
-	});
-}
-
-function onMapClick(e) {
-	let coords = e.latlng.toString().substring(7, 28);
-	coords = coords.replace(")", "");
-	navigator.clipboard.writeText(coords);
-}
-// map.on("click", onMapClick);
-
-function getLine(id) {
-	let line = lines.find((element) => element.id === id);
-	return line;
-}
-
-let input = document.querySelector("input");
-
+let input = document.querySelector("#add_main");
+let header = document.querySelector("thead").querySelector("tr");
 input.addEventListener("keydown", function (e) {
 	if (e.code === "Enter" && input.value != "") {
-		latitude();
+		add();
 	}
 });
 
-function latitude() {
-	let x = input.value;
-	let width = 360;
+function add() {
+	let pokemon;
+	let query = format(input.value);
+	if ((pokemon = data.find((element) => format(element.id) === query))) {
+	} else if (
+		(pokemon = data.find((element) => format(element.name) === query))
+	) {
+	}
+	if (pokemon != undefined) {
+		append(pokemon);
+	}
+}
 
-	if (x == "") {
-		alert("Please enter a value");
-	} else if (x < -90 || x > 90) {
-		alert(
-			`This value (${x}) is out of bounds, please stay between 90° and -90°`
-		);
+function append(pokemon) {
+	let p = pokemon;
+	let element = document.createElement("th");
+	let t1 = p.type1;
+	let t2;
+	if ((t2 = p.type2)) {
 	} else {
-		if (getLine("a")) {
-			getLine("a").object.remove();
+		t2 = t1;
+	}
+	element.innerHTML = `
+    <button>X</button>
+    <h3>${p.name}</h3>
+    <img
+        src="http://play.pokemonshowdown.com/sprites/ani/${p.id}.gif"
+    />
+    <div class="types">
+        <span class="${t1.toLowerCase()}Type">${t1}</span>
+        <span class="${t2.toLowerCase()}Type">${t2}</span>
+    </div>`;
+	header.appendChild(element);
+
+	t1 = t1.toLowerCase();
+	t2 = t2.toLowerCase();
+
+	for (let i = 0; i < types.length; i++) {
+		const c = types[i];
+		let tObj = typeChart[c];
+		let multiplier = tObj[t1];
+		multiplier = tObj[t1];
+		if (multiplier == undefined) {
+			multiplier = 1;
 		}
-		lines = [];
-		line(
-			[
-				[x, -width],
-				[x, width],
-			],
-			"a",
-			"red",
-			"false"
-		);
+
+		if (t2 != t1) {
+			let multiplier2 = tObj[t2];
+			multiplier2 = tObj[t2];
+			if (multiplier2 == undefined) {
+				multiplier2 = 1;
+			}
+			multiplier = multiplier * multiplier2;
+		}
+
+		let display = multiplier;
+		let className;
+		switch (display) {
+			case 0:
+				className = "immune";
+				break;
+			case 0.25:
+				className = "quarter";
+				break;
+			case 0.5:
+				className = "half";
+				break;
+			case 2:
+				className = "double";
+				break;
+			case 4:
+				className = "quadruple";
+				break;
+			default:
+				className = "";
+				break;
+		}
+
+		let row = document.querySelector(`[data-${c}]`);
+		let cols = row.querySelectorAll("th");
+		let col = cols[cols.length - 1];
+		let colID = parseInt(col.id.split("-")[1]);
+
+		let displayBox = document.createElement("th");
+		displayBox.innerHTML = `<h3>x${display}</h3>`;
+		displayBox.id = `${c}-${colID + 1}`;
+		displayBox.classList = className;
+		element.id = `header-${colID + 1}`;
+		row.appendChild(displayBox);
+	}
+
+	// header.querySelector("button").addEventListener("click", function () {
+	// 	console.log(this);
+	// });
+}
+
+function format(text) {
+	if (text != null) {
+		text = text.toLowerCase();
+		text = text.replaceAll("à", "a");
+		text = text.replaceAll("á", "a");
+		text = text.replaceAll("â", "a");
+		text = text.replaceAll("ä", "a");
+		text = text.replaceAll("ā", "a");
+		text = text.replaceAll("β", "b");
+		text = text.replaceAll("ç", "c");
+		text = text.replaceAll("ć", "c");
+		text = text.replaceAll("è", "e");
+		text = text.replaceAll("é", "e");
+		text = text.replaceAll("ê", "e");
+		text = text.replaceAll("ë", "e");
+		text = text.replaceAll("ē", "e");
+		text = text.replaceAll("ę", "e");
+		text = text.replaceAll("ì", "i");
+		text = text.replaceAll("í", "i");
+		text = text.replaceAll("î", "i");
+		text = text.replaceAll("ï", "i");
+		text = text.replaceAll("ī", "i");
+		text = text.replaceAll("ñ", "n");
+		text = text.replaceAll("ò", "o");
+		text = text.replaceAll("ó", "o");
+		text = text.replaceAll("ô", "o");
+		text = text.replaceAll("ö", "o");
+		text = text.replaceAll("ō", "o");
+		text = text.replaceAll("ø", "o");
+		text = text.replaceAll("œ", "oe");
+		text = text.replaceAll("ß", "ss");
+		text = text.replaceAll("ù", "u");
+		text = text.replaceAll("ú", "u");
+		text = text.replaceAll("û", "u");
+		text = text.replaceAll("ü", "u");
+		text = text.replaceAll("ū", "u");
+		text = text.replaceAll("ỳ", "y");
+		text = text.replaceAll("ý", "y");
+		text = text.replaceAll("ŷ", "y");
+		text = text.replaceAll("ÿ", "y");
+		text = text.replaceAll("ȳ", "y");
+		text = text.replaceAll("Ψ", "y");
+		text = text.replaceAll("²", "2");
+		text = text.replaceAll("∞", "");
+		text = text.replaceAll("♡", "");
+		text = text.replaceAll("♥", "");
+		text = text.replaceAll("☆", "");
+		text = text.replaceAll("★", "");
+		text = text.replaceAll("'", "");
+		text = text.replaceAll(")", "");
+		text = text.replaceAll("(", "");
+		text = text.replaceAll(":", "");
+		text = text.replaceAll(";", "");
+		text = text.replaceAll('"', "");
+		text = text.replaceAll("~", "");
+		text = text.replaceAll("?", "");
+		text = text.replaceAll("!", "");
+		text = text.replaceAll("！", "");
+		text = text.replaceAll("？", "");
+		text = text.replaceAll("&", "");
+		text = text.replaceAll("[", "");
+		text = text.replaceAll("]", "");
+		text = text.replaceAll("{", "");
+		text = text.replaceAll("}", "");
+		text = text.replaceAll(".", "");
+		text = text.replaceAll("…", "");
+		text = text.replaceAll("-", "");
+		text = text.replaceAll("–", "");
+		text = text.replaceAll("─", "");
+		text = text.replaceAll("—", "");
+		text = text.replaceAll("_", "");
+		text = text.replaceAll(",", "");
+		text = text.replaceAll("・", "");
+		text = text.replaceAll("#", "");
+		text = text.replaceAll("♯", "");
+		text = text.replaceAll("♭", "");
+		text = text.replaceAll("$", "");
+		text = text.replaceAll("£", "");
+		text = text.replaceAll("¢", "");
+		text = text.replaceAll("/", "");
+		text = text.replaceAll("\\", "");
+		text = text.replaceAll("↑", "");
+		text = text.replaceAll("→", "");
+		text = text.replaceAll("⬱", "");
+		text = text.replaceAll("♪", "");
+		text = text.replaceAll("♫", "");
+		text = text.replaceAll("º", "");
+		text = text.replaceAll("*", "");
+		text = text.replaceAll("+", "");
+		text = text.replaceAll("±", "");
+		text = text.replaceAll("^", "");
+		text = text.replaceAll("《", "");
+		text = text.replaceAll("》", "");
+		text = text.replaceAll("<", "");
+		text = text.replaceAll(">", "");
+		text = text.replaceAll(">", "");
+		return text;
 	}
 }

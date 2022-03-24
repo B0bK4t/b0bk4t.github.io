@@ -1,39 +1,166 @@
-body {
-	background-color: #36393f;
+html {
+	box-sizing: border-box;
+
+	background: #36393f;
 	color: white;
-	font-family: Ginto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 20px;
-	scroll-behavior: smooth;
 }
 
-#mapid {
-	width: 95vw;
-	height: 88vh;
-	margin: auto;
-	cursor: crosshair;
-}
-
-.leaflet-popup-content-wrapper {
-	width: 160px !important;
-}
-
-.transparent-tooltip {
-	background: transparent;
-	border: none;
-	box-shadow: none;
-	padding-top: 8px;
-	font-weight: bold;
+.normalType {
+	background: #a8a878;
+	border-color: #6d6d4e;
 	color: black;
 }
 
-.transparent-tooltip::before {
-	border: none;
+.fireType {
+	background: #f08030;
+	border-color: #9c531f;
+	color: black;
 }
 
-.input {
+.fightingType {
+	background: #c03028;
+	border-color: #7d1f1a;
+}
+
+.waterType {
+	background: #6890f0;
+	border-color: #445e9c;
+	color: black;
+}
+
+.flyingType {
+	background: #a890f0;
+	border-color: #6d5e9c;
+	color: black;
+}
+
+.grassType {
+	background: #78c850;
+	border-color: #4e8234;
+	color: black;
+}
+
+.poisonType {
+	background: #a040a0;
+	border-color: #682a68;
+}
+
+.electricType {
+	background: #f8d030;
+	border-color: #a1871f;
+	color: black;
+}
+
+.groundType {
+	background: #e0c068;
+	border-color: #927d44;
+	color: black;
+}
+
+.psychicType {
+	background: #f85888;
+	border-color: #a13959;
+	color: black;
+}
+
+.rockType {
+	background: #b8a038;
+	border-color: #786824;
+	color: black;
+}
+
+.iceType {
+	background: #98d8d8;
+	border-color: #638d8d;
+	color: black;
+}
+
+.bugType {
+	background: #a8b820;
+	border-color: #6d7815;
+	color: black;
+}
+
+.dragonType {
+	background: #7038f8;
+	border-color: #4924a1;
+}
+
+.ghostType {
+	background: #705898;
+	border-color: #493963;
+}
+
+.darkType {
+	background: #705848;
+	border-color: #49392f;
+}
+
+.steelType {
+	background: #b8b8d0;
+	border-color: #787887;
+	color: black;
+}
+
+.fairyType {
+	background: #ee99ac;
+	border-color: #9b6470;
+	color: black;
+}
+
+.grid {
 	display: flex;
-	align-items: center;
-	gap: 5px;
-	width: 95vw;
-	margin: auto;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th {
+	border: 1px solid white;
+	padding: 5px;
+}
+
+span {
+	border: 2px solid;
+	padding: 3px;
+}
+
+h3 {
+	margin: 0;
+}
+
+.types {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+img {
+	max-height: 100px;
+}
+
+button {
+	cursor: pointer;
+}
+
+.immune {
+	background: #787878;
+}
+
+.quarter {
+	background: green;
+	font-weight: bold;
+}
+
+.half {
+	color: lime;
+}
+
+.double {
+	color: red;
+}
+
+.quadruple {
+	background: red;
+	font-weight: bold;
 }
