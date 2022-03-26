@@ -28,10 +28,19 @@ input.addEventListener("keydown", function (e) {
 function textarea_activate(id) {
 	let ta = document.querySelector(id);
 	if (ta.value != "") {
-		let pkmns = ta.value.match(/(?:\()[^\(\)]*?(?:\))/g);
+		let pkmns = ta.value.split("\n\n");
 		for (let i = 0; i < pkmns.length; i++) {
-			let name = pkmns[i].replace("(", "").replace(")", "");
-			add(name);
+			const t = pkmns[i];
+			let name;
+			let n;
+			if ((n = t.match(/(?:\()[^\(\)]*?(?:\))/g))) {
+				name = n[0].replace("(", "").replace(")", "");
+			} else {
+				name = t.split(" ")[0];
+			}
+			if (name != "") {
+				add(name);
+			}
 		}
 	}
 }
