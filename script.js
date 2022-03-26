@@ -2,6 +2,21 @@ let header = document.querySelector("thead").querySelector("tr");
 let imgindex = 0;
 let weaks = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let resists = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let inputed_mons = [];
+let savedmons = cache_get("pokemon");
+if (savedmons) {
+	inputed_mons = savedmons.split(",");
+}
+
+init();
+
+function init() {
+	for (let i = 0; i < inputed_mons.length; i++) {
+		const m = inputed_mons[i];
+		let pkmn = m.split("|")[0];
+		add(pkmn, true);
+	}
+}
 
 let input = document.querySelector("#add_main");
 input.addEventListener("keydown", function (e) {
@@ -21,7 +36,7 @@ function textarea_activate(id) {
 	}
 }
 
-function add(query) {
+function add(query, init) {
 	query = format(query);
 	let pokemon;
 	if ((pokemon = data.find((element) => format(element.id) === query))) {
@@ -33,11 +48,11 @@ function add(query) {
 	) {
 	}
 	if (pokemon != undefined) {
-		append(pokemon);
+		append(pokemon, init);
 	}
 }
 
-function append(pokemon) {
+function append(pokemon, init) {
 	imgindex++;
 	let p = pokemon;
 	let element = document.createElement("th");
@@ -141,8 +156,13 @@ function append(pokemon) {
 	}
 
 	element.innerHTML += `<button class='delete' onclick="remove('${index}')">X</button>`;
+	element.dataset.id = `${p.id}|${index}`;
 	element.classList.add("pokemon");
 	updateWeakResist();
+	if (!init) {
+		inputed_mons.push(`${p.id}|${index}`);
+		cache_set("pokemon", inputed_mons, true);
+	}
 }
 
 function clear_all() {
@@ -176,6 +196,8 @@ function remove(index) {
 		row.parentElement.removeChild(row);
 	}
 	updateWeakResist();
+	removeFromArray(inputed_mons, header.dataset.id);
+	cache_remove("pokemon");
 }
 
 function shiny(i) {
@@ -246,106 +268,5 @@ function updateWeakResist() {
 				resistBox.classList.add("three");
 				break;
 		}
-	}
-}
-
-function format(text) {
-	if (text != null) {
-		text = text.toLowerCase();
-		text = text.replaceAll("à", "a");
-		text = text.replaceAll("á", "a");
-		text = text.replaceAll("â", "a");
-		text = text.replaceAll("ä", "a");
-		text = text.replaceAll("ā", "a");
-		text = text.replaceAll("β", "b");
-		text = text.replaceAll("ç", "c");
-		text = text.replaceAll("ć", "c");
-		text = text.replaceAll("è", "e");
-		text = text.replaceAll("é", "e");
-		text = text.replaceAll("ê", "e");
-		text = text.replaceAll("ë", "e");
-		text = text.replaceAll("ē", "e");
-		text = text.replaceAll("ę", "e");
-		text = text.replaceAll("ì", "i");
-		text = text.replaceAll("í", "i");
-		text = text.replaceAll("î", "i");
-		text = text.replaceAll("ï", "i");
-		text = text.replaceAll("ī", "i");
-		text = text.replaceAll("ñ", "n");
-		text = text.replaceAll("ò", "o");
-		text = text.replaceAll("ó", "o");
-		text = text.replaceAll("ô", "o");
-		text = text.replaceAll("ö", "o");
-		text = text.replaceAll("ō", "o");
-		text = text.replaceAll("ø", "o");
-		text = text.replaceAll("œ", "oe");
-		text = text.replaceAll("ß", "ss");
-		text = text.replaceAll("ù", "u");
-		text = text.replaceAll("ú", "u");
-		text = text.replaceAll("û", "u");
-		text = text.replaceAll("ü", "u");
-		text = text.replaceAll("ū", "u");
-		text = text.replaceAll("ỳ", "y");
-		text = text.replaceAll("ý", "y");
-		text = text.replaceAll("ŷ", "y");
-		text = text.replaceAll("ÿ", "y");
-		text = text.replaceAll("ȳ", "y");
-		text = text.replaceAll("Ψ", "y");
-		text = text.replaceAll("²", "2");
-		text = text.replaceAll("∞", "");
-		text = text.replaceAll("♡", "");
-		text = text.replaceAll("♥", "");
-		text = text.replaceAll("☆", "");
-		text = text.replaceAll("★", "");
-		text = text.replaceAll("'", "");
-		text = text.replaceAll(")", "");
-		text = text.replaceAll("(", "");
-		text = text.replaceAll(":", "");
-		text = text.replaceAll(";", "");
-		text = text.replaceAll('"', "");
-		text = text.replaceAll("~", "");
-		text = text.replaceAll("?", "");
-		text = text.replaceAll("!", "");
-		text = text.replaceAll("！", "");
-		text = text.replaceAll("？", "");
-		text = text.replaceAll("&", "");
-		text = text.replaceAll("[", "");
-		text = text.replaceAll("]", "");
-		text = text.replaceAll("{", "");
-		text = text.replaceAll("}", "");
-		text = text.replaceAll(".", "");
-		text = text.replaceAll("…", "");
-		text = text.replaceAll("-", "");
-		text = text.replaceAll("–", "");
-		text = text.replaceAll("─", "");
-		text = text.replaceAll("—", "");
-		text = text.replaceAll("_", "");
-		text = text.replaceAll(",", "");
-		text = text.replaceAll("・", "");
-		text = text.replaceAll("#", "");
-		text = text.replaceAll("♯", "");
-		text = text.replaceAll("♭", "");
-		text = text.replaceAll("$", "");
-		text = text.replaceAll("£", "");
-		text = text.replaceAll("¢", "");
-		text = text.replaceAll("/", "");
-		text = text.replaceAll("\\", "");
-		text = text.replaceAll("↑", "");
-		text = text.replaceAll("→", "");
-		text = text.replaceAll("⬱", "");
-		text = text.replaceAll("♪", "");
-		text = text.replaceAll("♫", "");
-		text = text.replaceAll("º", "");
-		text = text.replaceAll("*", "");
-		text = text.replaceAll("+", "");
-		text = text.replaceAll("±", "");
-		text = text.replaceAll("^", "");
-		text = text.replaceAll("《", "");
-		text = text.replaceAll("》", "");
-		text = text.replaceAll("<", "");
-		text = text.replaceAll(">", "");
-		text = text.replaceAll(">", "");
-		text = text.replaceAll(" ", "");
-		return text;
 	}
 }
