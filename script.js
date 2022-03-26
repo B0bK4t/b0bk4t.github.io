@@ -39,7 +39,6 @@ function add(query) {
 
 function append(pokemon) {
 	imgindex++;
-	let random = Math.floor(Math.random() * 100 + 1);
 	let p = pokemon;
 	let element = document.createElement("th");
 	let t1 = p.type1;
@@ -48,6 +47,7 @@ function append(pokemon) {
 	} else {
 		t2 = t1;
 	}
+	let random = Math.floor(Math.random() * 100 + 1);
 	let directory = "";
 	if (random > 6) {
 		directory = "ani";
@@ -141,7 +141,16 @@ function append(pokemon) {
 	}
 
 	element.innerHTML += `<button class='delete' onclick="remove('${index}')">X</button>`;
+	element.classList.add("pokemon");
 	updateWeakResist();
+}
+
+function clear_all() {
+	let pokemon = document.querySelectorAll(".pokemon");
+	for (let i = 0; i < pokemon.length; i++) {
+		const p = pokemon[i];
+		remove(p.id.replace("header-", ""));
+	}
 }
 
 function remove(index) {
