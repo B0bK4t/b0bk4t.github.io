@@ -155,6 +155,7 @@ h3 {
 
 img {
 	max-height: 100px;
+	cursor: pointer;
 }
 
 button {

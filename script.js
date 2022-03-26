@@ -34,7 +34,11 @@ function add(query) {
 	}
 }
 
+let imgindex = 0;
+
 function append(pokemon) {
+	imgindex++;
+	let random = Math.floor(Math.random() * 100 + 1);
 	let p = pokemon;
 	let element = document.createElement("th");
 	let t1 = p.type1;
@@ -43,10 +47,18 @@ function append(pokemon) {
 	} else {
 		t2 = t1;
 	}
+	let directory = "";
+	if (random > 6) {
+		directory = "ani";
+	} else {
+		directory = "ani-shiny";
+	}
 	element.innerHTML = `
     <h3>${p.name}</h3>
     <img
-        src="https://play.pokemonshowdown.com/sprites/ani/${p.id}.gif"
+		id="img-${imgindex}"
+		onclick="shiny(${imgindex})"
+        src="https://play.pokemonshowdown.com/sprites/${directory}/${p.id}.gif"
     />
     <div class="types">
         <span class="${t1.toLowerCase()}Type">${t1}</span>
@@ -126,6 +138,16 @@ function remove(index) {
 		let c = types[i];
 		let row = document.querySelector(`#${c}-${index}`);
 		row.parentElement.removeChild(row);
+	}
+}
+
+function shiny(i) {
+	let img = document.querySelector("#img-" + i);
+	let src = img.getAttribute("src");
+	if (src.includes("/ani/")) {
+		img.setAttribute("src", src.replace("/ani/", "/ani-shiny/"));
+	} else {
+		img.setAttribute("src", src.replace("/ani-shiny/", "/ani/"));
 	}
 }
 
