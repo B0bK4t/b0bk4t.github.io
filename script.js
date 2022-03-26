@@ -1,4 +1,7 @@
 let header = document.querySelector("thead").querySelector("tr");
+let imgindex = 0;
+let weaks = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let resists = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 let input = document.querySelector("#add_main");
 input.addEventListener("keydown", function (e) {
@@ -33,8 +36,6 @@ function add(query) {
 		append(pokemon);
 	}
 }
-
-let imgindex = 0;
 
 function append(pokemon) {
 	imgindex++;
@@ -95,18 +96,23 @@ function append(pokemon) {
 		switch (display) {
 			case 0:
 				className = "immune";
+				resists[i]++;
 				break;
 			case 0.25:
 				className = "quarter";
+				resists[i]++;
 				break;
 			case 0.5:
 				className = "half";
+				resists[i]++;
 				break;
 			case 2:
 				className = "double";
+				weaks[i]++;
 				break;
 			case 4:
 				className = "quadruple";
+				weaks[i]++;
 				break;
 			default:
 				className = "";
@@ -116,12 +122,18 @@ function append(pokemon) {
 		let row = document.querySelector(`[data-${c}]`);
 		let cols = row.querySelectorAll("th");
 		let col = cols[cols.length - 1];
-		let colID = parseInt(col.id.split("-")[1]);
+		let colID = col.id.split("-")[1];
+		if (colID == "r") {
+			colID = 0;
+		} else {
+			colID = parseInt(colID);
+		}
 
 		let displayBox = document.createElement("th");
 		displayBox.innerHTML = `<h3>x${display}</h3>`;
 		displayBox.id = `${c}-${colID + 1}`;
 		displayBox.classList = className;
+		displayBox.dataset.value = display;
 		element.id = `header-${colID + 1}`;
 		row.appendChild(displayBox);
 		rows.push(displayBox);
@@ -129,6 +141,7 @@ function append(pokemon) {
 	}
 
 	element.innerHTML += `<button class='delete' onclick="remove('${index}')">X</button>`;
+	updateWeakResist();
 }
 
 function remove(index) {
@@ -137,8 +150,23 @@ function remove(index) {
 	for (let i = 0; i < types.length; i++) {
 		let c = types[i];
 		let row = document.querySelector(`#${c}-${index}`);
+		let value = parseInt(row.dataset.value);
+		switch (value) {
+			case 0:
+			case 0.25:
+			case 0.5:
+				resists[i]--;
+				break;
+			case 2:
+			case 4:
+				weaks[i]--;
+				break;
+			default:
+				break;
+		}
 		row.parentElement.removeChild(row);
 	}
+	updateWeakResist();
 }
 
 function shiny(i) {
@@ -148,6 +176,67 @@ function shiny(i) {
 		img.setAttribute("src", src.replace("/ani/", "/ani-shiny/"));
 	} else {
 		img.setAttribute("src", src.replace("/ani-shiny/", "/ani/"));
+	}
+}
+
+function updateWeakResist() {
+	for (let i = 0; i < types.length; i++) {
+		const c = types[i];
+		let weakBox = document.querySelector(`#${c}-w`);
+		let resistBox = document.querySelector(`#${c}-r`);
+		switch (weaks[i]) {
+			case 0:
+				weakBox.innerHTML = "";
+				weakBox.classList.remove("one");
+				weakBox.classList.remove("two");
+				weakBox.classList.remove("three");
+				break;
+			case 1:
+				weakBox.innerHTML = weaks[i];
+				weakBox.classList.add("one");
+				weakBox.classList.remove("two");
+				weakBox.classList.remove("three");
+				break;
+			case 2:
+				weakBox.innerHTML = weaks[i];
+				weakBox.classList.remove("one");
+				weakBox.classList.add("two");
+				weakBox.classList.remove("three");
+				break;
+			default:
+				weakBox.innerHTML = weaks[i];
+				weakBox.classList.remove("one");
+				weakBox.classList.remove("two");
+				weakBox.classList.add("three");
+				break;
+		}
+
+		switch (resists[i]) {
+			case 0:
+				resistBox.innerHTML = "";
+				resistBox.classList.remove("one");
+				resistBox.classList.remove("two");
+				resistBox.classList.remove("three");
+				break;
+			case 1:
+				resistBox.innerHTML = resists[i];
+				resistBox.classList.add("one");
+				resistBox.classList.remove("two");
+				resistBox.classList.remove("three");
+				break;
+			case 2:
+				resistBox.innerHTML = resists[i];
+				resistBox.classList.remove("one");
+				resistBox.classList.add("two");
+				resistBox.classList.remove("three");
+				break;
+			default:
+				resistBox.innerHTML = resists[i];
+				resistBox.classList.remove("one");
+				resistBox.classList.remove("two");
+				resistBox.classList.add("three");
+				break;
+		}
 	}
 }
 

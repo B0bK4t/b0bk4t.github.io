@@ -189,3 +189,41 @@ button {
 	background: red;
 	font-weight: bold;
 }
+
+.weaknesses {
+	background: #e9d6e5;
+	color: black;
+}
+
+.resistances {
+	background: #cff0e5;
+	color: black;
+}
+
+.one.weaknesses {
+	background: #ecbecc;
+}
+
+.two.weaknesses {
+	background: #f197a1;
+}
+
+.three.weaknesses {
+	background: #de3033;
+	color: #ff0;
+	font-weight: bold;
+}
+
+.one.resistances {
+	background: #b9f1cc;
+}
+
+.two.resistances {
+	background: #9fdfad;
+}
+
+.three.resistances {
+	background: #56ae66;
+	color: #fff;
+	font-weight: bold;
+}
