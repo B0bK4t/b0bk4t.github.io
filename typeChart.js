@@ -80,7 +80,7 @@ let typeChart = {
 		electric: 2,
 		poison: 2,
 		flying: 0,
-		bug: 0.2,
+		bug: 0.5,
 		rock: 2,
 		steel: 2,
 	},
