@@ -73,17 +73,26 @@ function append(pokemon, init) {
 	}
 	let random = Math.floor(Math.random() * 100 + 1);
 	let directory = "";
+	let img_type = "";
+	console.log(random);
 	if (random > 6) {
 		directory = "ani";
+		img_type = "gif";
+	} else if (random == 5) {
+		directory = "afd";
+		img_type = "png";
 	} else {
 		directory = "ani-shiny";
+		img_type = "gif";
 	}
 	element.innerHTML = `
     <h3>${p.name}</h3>
     <img
 		id="img-${imgindex}"
 		onclick="shiny(${imgindex})"
-        src="https://play.pokemonshowdown.com/sprites/${directory}/${p.id}.gif"
+        src="https://play.pokemonshowdown.com/sprites/${directory}/${
+		p.id
+	}.${img_type}"
     />
     <div class="types">
         <span class="${t1.toLowerCase()}Type">${t1}</span>
