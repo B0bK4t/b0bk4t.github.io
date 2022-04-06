@@ -71,11 +71,10 @@ function append(pokemon, init) {
 	} else {
 		t2 = t1;
 	}
-	let random = Math.floor(Math.random() * 100 + 1);
 	let directory = "";
 	let img_type = "";
-	console.log(random);
-	if (random > 6) {
+	let random = Math.floor(Math.random() * 100 + 1);
+	if (random > 10) {
 		directory = "ani";
 		img_type = "gif";
 	} else if (random == 5) {

@@ -1,3 +1,4 @@
+/*========Main========*/
 html {
 	box-sizing: border-box;
 
@@ -5,6 +6,7 @@ html {
 	color: white;
 }
 
+/*========Pokemon========*/
 .inputs {
 	display: flex;
 	align-items: center;
@@ -226,4 +228,63 @@ button {
 	background: #56ae66;
 	color: #fff;
 	font-weight: bold;
+}
+
+/*========Time========*/
+.timeWrap span {
+	border: none;
+}
+
+label h2,
+.output {
+	display: inline-block;
+	margin: 0;
+}
+
+label h2 {
+	width: 180px;
+	text-align: center;
+}
+
+.twoTZs {
+	display: grid;
+	grid-template-areas:
+		"date 		.		. 		.		."
+		"fromLabel 	from	. 		toLabel to"
+		".			.		.		.		."
+		". 			. 		convert .		."
+		".			.		.		.		."
+		"output 	output 	output 	output 	output ";
+	gap: 5px;
+}
+
+#fromInput {
+	grid-area: from;
+}
+
+#toInput {
+	grid-area: to;
+}
+
+.fromLabel {
+	grid-area: fromLabel;
+}
+
+.toLabel {
+	grid-area: toLabel;
+}
+
+#_twoTZs {
+	grid-area: convert;
+	width: 100px;
+	text-align: center;
+}
+
+.output {
+	grid-area: output;
+}
+
+.dateTime {
+	display: flex;
+	gap: 5px;
 }

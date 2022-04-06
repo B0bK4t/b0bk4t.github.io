@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Time</title>
+		<link rel="stylesheet" href="../styles.css" />
+		<link rel="icon" href="favicon.png" />
+		<script src="../scripts/utils.js" defer></script>
+		<script src="../scripts/time.js" defer></script>
+	</head>
+	<body>
+		<div class="timeWrap">
+			<h2>Current Time: <span id="currTime"></span></h2>
+			<div>
+				<label for="currInput"><h2>Select a timezone</h2></label>
+				<select name="currInput" id="currInput" style="width: 508px">
+					<option disabled selected hidden value="undefined">
+						Select a timezone
+					</option>
+				</select>
+				<button id="_currOutput">Convert</button>
+				<h3 class="output">Output: <span id="currOutput"></span></h3>
+			</div>
+			<hr />
+			<div class="twoTZs">
+				<div class="dateTime">
+					<input
+						style="width: 50px"
+						type="number"
+						min="0"
+						max="23"
+						name="hour"
+						id="hour"
+					/>
+					<label>h</label>
+					<input
+						style="width: 50px"
+						type="number"
+						min="1"
+						max="59"
+						name="minute"
+						id="minute"
+					/>
+				</div>
+				<label class="fromLabel" for="fromInput"><h2>Select origin</h2></label>
+				<select name="fromInput" id="fromInput">
+					<option disabled selected hidden value="undefined">
+						Select a timezone
+					</option>
+				</select>
+				<label class="toLabel" for="toInput"><h2>Select target</h2></label>
+				<select name="toInput" id="toInput">
+					<option disabled selected hidden value="undefined">
+						Select a timezone
+					</option>
+				</select>
+				<button id="_twoTZs">Convert</button>
+				<h3 class="output">Output: <span id="twoTZs"></span></h3>
+			</div>
+		</div>
+	</body>
+</html>
