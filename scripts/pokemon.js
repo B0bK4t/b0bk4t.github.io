@@ -35,8 +35,10 @@ function textarea_activate(id) {
 			let n;
 			if ((n = t.match(/(?:\()[^\(\)]*?(?:\))/g))) {
 				name = n[0].replace("(", "").replace(")", "");
+			} else if (t.includes("@")) {
+				name = t.split(" @")[0];
 			} else {
-				name = t.split(" ")[0];
+				name = t.split("\n")[0];
 			}
 			if (name != "") {
 				add(name);
