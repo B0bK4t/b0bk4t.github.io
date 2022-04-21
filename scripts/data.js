@@ -5236,7 +5236,7 @@ let data = [
 	},
 	{
 		name: "Thundurus Therian",
-		id: "thundurus therian",
+		id: "thundurus-therian",
 		french: "Fulguris Totémique",
 		type1: "Electric",
 		type2: "Flying",
