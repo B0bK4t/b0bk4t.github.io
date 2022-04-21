@@ -29,7 +29,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Venusaur",
-		id: "gigantamax venusaur",
+		id: "venusaur-gmax",
 		french: "Florizarre Gigamax",
 		type1: "Grass",
 		type2: "Poison",
@@ -106,7 +106,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Blastoise",
-		id: "gigantamax blastoise",
+		id: "blastoise-gmax",
 		french: "Tortank Gigamax",
 		type1: "Water",
 		type2: "",
@@ -162,7 +162,7 @@ let data = [
 	},
 	{
 		name: "Mega Beedrill",
-		id: "mega beedrill",
+		id: "beedrill-mega",
 		french: "Méga-Dardargnan",
 		type1: "Bug",
 		type2: "Poison",
@@ -190,7 +190,7 @@ let data = [
 	},
 	{
 		name: "Mega Pidgeot",
-		id: "mega pidgeot",
+		id: "pidgeot-mega",
 		french: "Méga-Roucarnage",
 		type1: "Normal",
 		type2: "Flying",
@@ -204,7 +204,7 @@ let data = [
 	},
 	{
 		name: "Alolan Rattata",
-		id: "alolan rattata",
+		id: "rattata-alola",
 		french: "Rattata d'Alola",
 		type1: "Dark",
 		type2: "Normal",
@@ -218,7 +218,7 @@ let data = [
 	},
 	{
 		name: "Alolan Raticate",
-		id: "alolan raticate",
+		id: "raticate-alola",
 		french: "Rattatac d'Alola",
 		type1: "Dark",
 		type2: "Normal",
@@ -262,7 +262,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Pikachu",
-		id: "gigantamax pikachu",
+		id: "pikachu-gmax",
 		french: "Pikachu Gigamax",
 		type1: "Electric",
 		type2: "",
@@ -283,7 +283,7 @@ let data = [
 	},
 	{
 		name: "Alolan Raichu",
-		id: "alolan raichu",
+		id: "raichu-alola",
 		french: "Raichu d'Alola",
 		type1: "Electric",
 		type2: "Psychic",
@@ -297,7 +297,7 @@ let data = [
 	},
 	{
 		name: "Alolan Sandshrew",
-		id: "alolan sandshrew",
+		id: "sandshrew-alola",
 		french: "Sabelette d'Alola",
 		type1: "Ice",
 		type2: "Steel",
@@ -311,7 +311,7 @@ let data = [
 	},
 	{
 		name: "Alolan Sandslash",
-		id: "alolan sandslash",
+		id: "sandslash-alola",
 		french: "Sablaireau d'Alola",
 		type1: "Ice",
 		type2: "Steel",
@@ -374,9 +374,16 @@ let data = [
 	},
 	{ name: "Vulpix", id: "vulpix", french: "Goupix", type1: "Fire", type2: "" },
 	{
-		name: "Alolan Vulpix [Keokeo]",
-		id: "alolan vulpix [keokeo]",
-		french: "Goupix d'Alola [Ke'oke'o]",
+		name: "Alolan Vulpix",
+		id: "vulpix-alola",
+		french: "Goupix d'Alola",
+		type1: "Ice",
+		type2: "",
+	},
+	{
+		name: "Keokeo",
+		id: "vulpix-alola",
+		french: "Ke'oke'o",
 		type1: "Ice",
 		type2: "",
 	},
@@ -389,7 +396,7 @@ let data = [
 	},
 	{
 		name: "Alolan Ninetales",
-		id: "alolan ninetales",
+		id: "ninetales-alola",
 		french: "Feunard d'Alola",
 		type1: "Ice",
 		type2: "Fairy",
@@ -474,7 +481,7 @@ let data = [
 	},
 	{
 		name: "Alolan Diglett",
-		id: "alolan diglett",
+		id: "diglett-alola",
 		french: "Taupiqueur d'Alola",
 		type1: "Ground",
 		type2: "Steel",
@@ -488,7 +495,7 @@ let data = [
 	},
 	{
 		name: "Alolan Dugtrio",
-		id: "alolan dugtrio",
+		id: "dugtrio-alola",
 		french: "Triopikeur d'Alola",
 		type1: "Ground",
 		type2: "Steel",
@@ -502,21 +509,21 @@ let data = [
 	},
 	{
 		name: "Alolan Meowth",
-		id: "alolan meowth",
+		id: "meowth-alola",
 		french: "Miaouss d'Alola",
 		type1: "Dark",
 		type2: "",
 	},
 	{
 		name: "Galarian Meowth",
-		id: "galarian meowth",
+		id: "meowth-galar",
 		french: "Miaouss de Galar",
 		type1: "Steel",
 		type2: "",
 	},
 	{
 		name: "Gigantamax Meowth",
-		id: "gigantamax meowth",
+		id: "meowth-gmax",
 		french: "Miaouss Gigamax",
 		type1: "Normal",
 		type2: "",
@@ -530,7 +537,7 @@ let data = [
 	},
 	{
 		name: "Alolan Persian",
-		id: "alolan persian",
+		id: "persian-alola",
 		french: "Persian d'Alola",
 		type1: "Dark",
 		type2: "",
@@ -615,7 +622,7 @@ let data = [
 	},
 	{
 		name: "Mega Alakazam",
-		id: "mega alakazam",
+		id: "alakazam-mega",
 		french: "Méga-Alakazam",
 		type1: "Psychic",
 		type2: "",
@@ -643,7 +650,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Machamp",
-		id: "gigantamax machamp",
+		id: "machamp-gmax",
 		french: "Mackogneur Gigamax",
 		type1: "Fighting",
 		type2: "",
@@ -692,7 +699,7 @@ let data = [
 	},
 	{
 		name: "Alolan Geodude",
-		id: "alolan geodude",
+		id: "geodude-alola",
 		french: "Racaillou d'Alola",
 		type1: "Rock",
 		type2: "Electric",
@@ -706,7 +713,7 @@ let data = [
 	},
 	{
 		name: "Alolan Graveler",
-		id: "alolan graveler",
+		id: "graveler-alola",
 		french: "Gravalanch d'Alola",
 		type1: "Rock",
 		type2: "Electric",
@@ -720,7 +727,7 @@ let data = [
 	},
 	{
 		name: "Alolan Golem",
-		id: "alolan golem",
+		id: "golem-alola",
 		french: "Grolem d'Alola",
 		type1: "Rock",
 		type2: "Electric",
@@ -728,7 +735,7 @@ let data = [
 	{ name: "Ponyta", id: "ponyta", french: "Ponyta", type1: "Fire", type2: "" },
 	{
 		name: "Galarian Ponyta",
-		id: "galarian ponyta",
+		id: "ponyta-galar",
 		french: "Ponyta de Galar",
 		type1: "Psychic",
 		type2: "",
@@ -742,7 +749,7 @@ let data = [
 	},
 	{
 		name: "Galarian Rapidash",
-		id: "galarian rapidash",
+		id: "rapidash-galar",
 		french: "Galopa de Galar",
 		type1: "Psychic",
 		type2: "Fairy",
@@ -756,7 +763,7 @@ let data = [
 	},
 	{
 		name: "Galarian Slowpoke",
-		id: "galarian slowpoke",
+		id: "slowpoke-galar",
 		french: "Ramoloss de Galar",
 		type1: "Psychic",
 		type2: "",
@@ -770,14 +777,14 @@ let data = [
 	},
 	{
 		name: "Mega Slowbro",
-		id: "mega slowbro",
+		id: "slowbro-mega",
 		french: "Méga-Flagadoss",
 		type1: "Water",
 		type2: "Psychic",
 	},
 	{
 		name: "Galarian Slowbro",
-		id: "galarian slowbro",
+		id: "slowbro-galar",
 		french: "Flagadoss de Galar",
 		type1: "Poison",
 		type2: "Psychic",
@@ -804,8 +811,8 @@ let data = [
 		type2: "Flying",
 	},
 	{
-		name: "Galarian Farftech'd",
-		id: "galarian farftech'd",
+		name: "Galarian Farfetch'd",
+		id: "farfetchd-galar",
 		french: "Canarticho de Galar",
 		type1: "Fighting",
 		type2: "",
@@ -841,7 +848,7 @@ let data = [
 	},
 	{
 		name: "Alolan Grimer",
-		id: "alolan grimer",
+		id: "grimer-alola",
 		french: "Tadmorv d'Alola",
 		type1: "Poison",
 		type2: "Dark",
@@ -849,7 +856,7 @@ let data = [
 	{ name: "Muk", id: "muk", french: "Grotadmorv", type1: "Poison", type2: "" },
 	{
 		name: "Alolan Muk",
-		id: "alolan muk",
+		id: "muk-alola",
 		french: "Grotadmorv d'Alola",
 		type1: "Poison",
 		type2: "Dark",
@@ -891,14 +898,14 @@ let data = [
 	},
 	{
 		name: "Mega Gengar",
-		id: "mega gengar",
+		id: "gengar-mega",
 		french: "Méga-Ectoplasma",
 		type1: "Ghost",
 		type2: "Poison",
 	},
 	{
 		name: "Gigantamax Gengar",
-		id: "gigantamax gengar",
+		id: "gengar-gmax",
 		french: "Ectoplasma Gigamax",
 		type1: "Ghost",
 		type2: "Poison",
@@ -928,7 +935,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Kingler",
-		id: "gigantamax kingler",
+		id: "kingler-gmax",
 		french: "Krabboss Gigamax",
 		type1: "Water",
 		type2: "",
@@ -963,7 +970,7 @@ let data = [
 	},
 	{
 		name: "Alolan Exeggutor",
-		id: "alolan exeggutor",
+		id: "exeggutor-alola",
 		french: "Noadkoko d'Alola",
 		type1: "Grass",
 		type2: "Dragon",
@@ -984,7 +991,7 @@ let data = [
 	},
 	{
 		name: "Alolan Marowak",
-		id: "alolan marowak",
+		id: "marowak-alola",
 		french: "Ossatueur d'Alola",
 		type1: "Fire",
 		type2: "Ghost",
@@ -1026,7 +1033,7 @@ let data = [
 	},
 	{
 		name: "Galarian Weezing",
-		id: "galarian weezing",
+		id: "weezing-galar",
 		french: "Smogogo de Galar",
 		type1: "Poison",
 		type2: "Fairy",
@@ -1068,7 +1075,7 @@ let data = [
 	},
 	{
 		name: "Mega Kangaskhan",
-		id: "mega kangaskhan",
+		id: "kangaskhan-mega",
 		french: "Méga-Kangourex",
 		type1: "Normal",
 		type2: "",
@@ -1111,14 +1118,14 @@ let data = [
 	},
 	{
 		name: "Mr. Mime",
-		id: "mr. mime",
+		id: "mrmime",
 		french: "M. Mime",
 		type1: "Psychic",
 		type2: "Fairy",
 	},
 	{
 		name: "Galarian Mr. Mime",
-		id: "galarian mr. mime",
+		id: "mrmime-galar",
 		french: "M. Mime de Galar",
 		type1: "Ice",
 		type2: "Psychic",
@@ -1154,7 +1161,7 @@ let data = [
 	},
 	{
 		name: "Mega Pinsir",
-		id: "mega pinsir",
+		id: "pinsir-mega",
 		french: "Méga-Scarabrute",
 		type1: "Bug",
 		type2: "Flying",
@@ -1182,7 +1189,7 @@ let data = [
 	},
 	{
 		name: "Mega Gyarados",
-		id: "mega gyarados",
+		id: "gyarados-mega",
 		french: "Méga-Léviator",
 		type1: "Water",
 		type2: "Flying",
@@ -1196,7 +1203,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Lapras",
-		id: "gigantamax lapras",
+		id: "lapras-gmax",
 		french: "Lokhlass Gigamax",
 		type1: "Water",
 		type2: "Ice",
@@ -1218,7 +1225,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Eevee",
-		id: "gigantamax eevee",
+		id: "eevee-gmax",
 		french: "Évoli Gigamax",
 		type1: "Normal",
 		type2: "",
@@ -1288,7 +1295,7 @@ let data = [
 	},
 	{
 		name: "Mega Aerodactyl",
-		id: "mega aerodactyl",
+		id: "aerodactyl-mega",
 		french: "Méga-Ptéra",
 		type1: "Rock",
 		type2: "Flying",
@@ -1302,7 +1309,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Snorlax",
-		id: "gigantamax snorlax",
+		id: "snorlax-gmax",
 		french: "Ronflex Gigamax",
 		type1: "Normal",
 		type2: "",
@@ -1379,14 +1386,14 @@ let data = [
 	},
 	{
 		name: "Mega Mewtwo X",
-		id: "mega mewtwo x",
+		id: "mewtwo-megax",
 		french: "Méga-Mewtwo X",
 		type1: "Psychic",
 		type2: "Fighting",
 	},
 	{
 		name: "Mega Mewtwo Y",
-		id: "mega mewtwo y",
+		id: "mewtwo-megay",
 		french: "Méga-Mewtwo Y",
 		type1: "Psychic",
 		type2: "",
@@ -1593,7 +1600,7 @@ let data = [
 	},
 	{
 		name: "Mega Ampharos",
-		id: "mega ampharos",
+		id: "ampharos-mega",
 		french: "Méga-Pharamp",
 		type1: "Electric",
 		type2: "Dragon",
@@ -1726,7 +1733,7 @@ let data = [
 	},
 	{
 		name: "Galarian Slowking",
-		id: "galarian slowking",
+		id: "slowking-galar",
 		french: "Roigada de Galar",
 		type1: "TBA",
 		type2: "TBA",
@@ -1784,7 +1791,7 @@ let data = [
 	},
 	{
 		name: "Mega Steelix",
-		id: "mega steelix",
+		id: "steelix-mega",
 		french: "Méga-Steelix",
 		type1: "Steel",
 		type2: "Ground",
@@ -1819,7 +1826,7 @@ let data = [
 	},
 	{
 		name: "Mega Scizor",
-		id: "mega scizor",
+		id: "scizor-mega",
 		french: "Méga-Cizayox",
 		type1: "Bug",
 		type2: "Steel",
@@ -1840,7 +1847,7 @@ let data = [
 	},
 	{
 		name: "Mega Heracross",
-		id: "mega heracross",
+		id: "heracross-mega",
 		french: "Méga-Scarhino",
 		type1: "Bug",
 		type2: "Fighting",
@@ -1897,7 +1904,7 @@ let data = [
 	},
 	{
 		name: "Galarian Corsola",
-		id: "galarian corsola",
+		id: "corsola-galar",
 		french: "Corayon de Galar",
 		type1: "Ghost",
 		type2: "",
@@ -1953,7 +1960,7 @@ let data = [
 	},
 	{
 		name: "Mega Houndoom",
-		id: "mega houndoom",
+		id: "houndoom-mega",
 		french: "Méga-Démolosse",
 		type1: "Dark",
 		type2: "Fire",
@@ -2081,7 +2088,7 @@ let data = [
 	},
 	{
 		name: "Mega Tyranitar",
-		id: "mega tyranitar",
+		id: "tyranitar-mega",
 		french: "Méga-Tyranocif",
 		type1: "Rock",
 		type2: "Dark",
@@ -2137,7 +2144,7 @@ let data = [
 	},
 	{
 		name: "Mega Sceptile",
-		id: "mega sceptile",
+		id: "sceptile-mega",
 		french: "Méga-Jungko",
 		type1: "Grass",
 		type2: "Dragon",
@@ -2165,7 +2172,7 @@ let data = [
 	},
 	{
 		name: "Mega Blaziken",
-		id: "mega blaziken",
+		id: "blaziken-mega",
 		french: "Méga-Braségali",
 		type1: "Fire",
 		type2: "Fighting",
@@ -2187,7 +2194,7 @@ let data = [
 	},
 	{
 		name: "Mega Swampert",
-		id: "mega swampert",
+		id: "swampert-mega",
 		french: "Méga-Laggron",
 		type1: "Water",
 		type2: "Ground",
@@ -2215,7 +2222,7 @@ let data = [
 	},
 	{
 		name: "Galarian Zigzagoon",
-		id: "galarian zigzagoon",
+		id: "zigzagoon-galar",
 		french: "Zigzaton de Galar",
 		type1: "Dark",
 		type2: "Normal",
@@ -2229,7 +2236,7 @@ let data = [
 	},
 	{
 		name: "Galarian Linoone",
-		id: "galarian linoone",
+		id: "linoone-galar",
 		french: "Linéon de Galar",
 		type1: "Dark",
 		type2: "Normal",
@@ -2362,7 +2369,7 @@ let data = [
 	},
 	{
 		name: "Mega Gardevoir",
-		id: "mega gardevoir",
+		id: "gardevoir-mega",
 		french: "Méga-Gardevoir",
 		type1: "Psychic",
 		type2: "Fairy",
@@ -2509,7 +2516,7 @@ let data = [
 	},
 	{
 		name: "Mega Sableye",
-		id: "mega sableye",
+		id: "sableye-mega",
 		french: "Méga-Ténéfix",
 		type1: "Dark",
 		type2: "Ghost",
@@ -2523,7 +2530,7 @@ let data = [
 	},
 	{
 		name: "Mega Mawile",
-		id: "mega mawile",
+		id: "mawile-mega",
 		french: "Méga-Mysdibule",
 		type1: "Steel",
 		type2: "Fairy",
@@ -2551,7 +2558,7 @@ let data = [
 	},
 	{
 		name: "Mega Aggron",
-		id: "mega aggron",
+		id: "aggron-mega",
 		french: "Méga-Galeking",
 		type1: "Steel",
 		type2: "",
@@ -2572,7 +2579,7 @@ let data = [
 	},
 	{
 		name: "Mega Medicham",
-		id: "mega medicham",
+		id: "medicham-mega",
 		french: "Méga-Charmina",
 		type1: "Fighting",
 		type2: "Psychic",
@@ -2593,7 +2600,7 @@ let data = [
 	},
 	{
 		name: "Mega Manectric",
-		id: "mega manectric",
+		id: "manectric-mega",
 		french: "Méga-Élecsprint",
 		type1: "Electric",
 		type2: "",
@@ -2663,7 +2670,7 @@ let data = [
 	},
 	{
 		name: "Mega Sharpedo",
-		id: "mega sharpedo",
+		id: "sharpedo-mega",
 		french: "Méga-Sharpedo",
 		type1: "Water",
 		type2: "Dark",
@@ -2698,7 +2705,7 @@ let data = [
 	},
 	{
 		name: "Mega Camerupt",
-		id: "mega camerupt",
+		id: "camerupt-mega",
 		french: "Méga-Camérupt",
 		type1: "Fire",
 		type2: "Ground",
@@ -2776,7 +2783,7 @@ let data = [
 	},
 	{
 		name: "Mega Altaria",
-		id: "mega altaria",
+		id: "altaria-mega",
 		french: "Méga-Altaria",
 		type1: "Dragon",
 		type2: "Fairy",
@@ -2938,7 +2945,7 @@ let data = [
 	},
 	{
 		name: "Mega Banette",
-		id: "mega banette",
+		id: "banette-mega",
 		french: "Méga-Branette",
 		type1: "",
 		type2: "",
@@ -2974,7 +2981,7 @@ let data = [
 	{ name: "Absol", id: "absol", french: "Absol", type1: "Dark", type2: "" },
 	{
 		name: "Mega Absol",
-		id: "mega absol",
+		id: "absol-mega",
 		french: "Méga-Absol",
 		type1: "Dark",
 		type2: "",
@@ -2996,7 +3003,7 @@ let data = [
 	{ name: "Glalie", id: "glalie", french: "Oniglali", type1: "Ice", type2: "" },
 	{
 		name: "Mega Glalie",
-		id: "mega glalie",
+		id: "glalie-mega",
 		french: "Méga-Oniglali",
 		type1: "Ice",
 		type2: "",
@@ -3074,7 +3081,7 @@ let data = [
 	},
 	{
 		name: "Mega Salamence",
-		id: "mega salamence",
+		id: "salamence-mega",
 		french: "Méga-Drattak",
 		type1: "Dragon",
 		type2: "Flying",
@@ -3102,7 +3109,7 @@ let data = [
 	},
 	{
 		name: "Mega Metagross",
-		id: "mega metagross",
+		id: "metagross-mega",
 		french: "Méga-Métalosse",
 		type1: "Steel",
 		type2: "Psychic",
@@ -3131,7 +3138,7 @@ let data = [
 	},
 	{
 		name: "Mega Latias",
-		id: "mega latias",
+		id: "latias-mega",
 		french: "Méga-Latias",
 		type1: "Dragon",
 		type2: "Psychic",
@@ -3145,7 +3152,7 @@ let data = [
 	},
 	{
 		name: "Mega Latios",
-		id: "mega latios",
+		id: "latios-mega",
 		french: "Méga-Latios",
 		type1: "Dragon",
 		type2: "Psychic",
@@ -3181,7 +3188,7 @@ let data = [
 	},
 	{
 		name: "Mega Rayquaza",
-		id: "mega rayquaza",
+		id: "rayquaza-mega",
 		french: "Méga-Rayquaza",
 		type1: "Dragon",
 		type2: "Flying",
@@ -3674,7 +3681,7 @@ let data = [
 	},
 	{
 		name: "Mega Garchomp",
-		id: "mega garchomp",
+		id: "garchomp-mega",
 		french: "Méga-Carchacrok",
 		type1: "Dragon",
 		type2: "Ground",
@@ -3787,7 +3794,7 @@ let data = [
 	},
 	{
 		name: "Mega Abomasnow",
-		id: "mega abomasnow",
+		id: "abomasnow-mega",
 		french: "Méga-Blizzaroi",
 		type1: "Grass",
 		type2: "Ice",
@@ -3899,7 +3906,7 @@ let data = [
 	},
 	{
 		name: "Mega Gallade",
-		id: "mega gallade",
+		id: "gallade-mega",
 		french: "Méga-Gallame",
 		type1: "Psychic",
 		type2: "Fighting",
@@ -4519,7 +4526,7 @@ let data = [
 	},
 	{
 		name: "Galarian Darumaka",
-		id: "galarian darumaka",
+		id: "darumaka-galar",
 		french: "Darumarond de Galar",
 		type1: "Ice",
 		type2: "",
@@ -4533,21 +4540,21 @@ let data = [
 	},
 	{
 		name: "Darmanitan Zen",
-		id: "darmanitan zen",
+		id: "darmanitan-zen",
 		french: "Darumacho Mode Transe",
 		type1: "Fire",
 		type2: "Psychic",
 	},
 	{
 		name: "Galarian Darmanitan",
-		id: "galarian darmanitan",
+		id: "darmanitan-galar",
 		french: "Darumacho de Galar",
 		type1: "Ice",
 		type2: "",
 	},
 	{
 		name: "Galarian Darmanitan Zen",
-		id: "galarian darmanitan zen",
+		id: "darmanitan-galarzen",
 		french: "Darumacho de Galar Mode Transe",
 		type1: "Ice",
 		type2: "Fire",
@@ -4603,7 +4610,7 @@ let data = [
 	},
 	{
 		name: "Galarian Yamask",
-		id: "galarian yamask",
+		id: "yamask-galar",
 		french: "Tutafeh de Galar",
 		type1: "Ground",
 		type2: "Ghost",
@@ -4659,7 +4666,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Garbodor",
-		id: "gigantamax garbodor",
+		id: "garbodor-gmax",
 		french: "Miasmax Gigamax",
 		type1: "Poison",
 		type2: "",
@@ -5033,7 +5040,7 @@ let data = [
 	},
 	{
 		name: "Galarian Stunfisk",
-		id: "galarian stunfisk",
+		id: "stunfisk-galar",
 		french: "Limonde de Galar",
 		type1: "Ground",
 		type2: "Steel",
@@ -5194,7 +5201,7 @@ let data = [
 	},
 	{
 		name: "Tornadus Incarnate",
-		id: "tornadus incarnate",
+		id: "tornadus-incarnate",
 		french: "Boréas Avatar",
 		type1: "Flying",
 		type2: "",
@@ -5208,14 +5215,14 @@ let data = [
 	},
 	{
 		name: "Tornadus Therian",
-		id: "tornadus therian",
+		id: "tornadus-therian",
 		french: "Boréas Totémique",
 		type1: "Flying",
 		type2: "",
 	},
 	{
 		name: "Thundurus Incarnate",
-		id: "thundurus incarnate",
+		id: "thundurus-incarnate",
 		french: "Fulguris Avatar",
 		type1: "Electric",
 		type2: "Flying",
@@ -7099,7 +7106,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Melmetal",
-		id: "gigantamax melmetal",
+		id: "melmetal-gmax",
 		french: "Melmetal Gigamax",
 		type1: "Steel",
 		type2: "",
@@ -7127,7 +7134,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Rillaboom",
-		id: "gigantamax rillaboom",
+		id: "rillaboom-gmax",
 		french: "Gorythmic Gigamax",
 		type1: "Grass",
 		type2: "",
@@ -7149,7 +7156,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Cinderace",
-		id: "gigantamax cinderace",
+		id: "cinderace-gmax",
 		french: "Pyrobut Gigamax",
 		type1: "Fire",
 		type2: "",
@@ -7177,7 +7184,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Inteleon",
-		id: "gigantamax inteleon",
+		id: "inteleon-gmax",
 		french: "Lézargus Gigamax",
 		type1: "Water",
 		type2: "",
@@ -7219,7 +7226,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Corviknight",
-		id: "gigantamax corviknight",
+		id: "corviknight-gmax",
 		french: "Corvaillus Gigamax",
 		type1: "Flying",
 		type2: "Steel",
@@ -7247,7 +7254,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Orbeetle",
-		id: "gigantamax orbeetle",
+		id: "orbeetle-gmax",
 		french: "Astronelle Gigamax",
 		type1: "Bug",
 		type2: "Psychic",
@@ -7310,7 +7317,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Drednaw",
-		id: "gigantamax drednaw",
+		id: "drednaw-gmax",
 		french: "Torgamord Gigamax",
 		type1: "Water",
 		type2: "Rock",
@@ -7352,7 +7359,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Coalossal",
-		id: "gigantamax coalossal",
+		id: "coalossal-gmax",
 		french: "Monthracite Gigamax",
 		type1: "Rock",
 		type2: "Fire",
@@ -7373,7 +7380,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Flapple",
-		id: "gigantamax flapple",
+		id: "flapple-gmax",
 		french: "Pomdrapi Gigamax",
 		type1: "Grass",
 		type2: "Dragon",
@@ -7387,7 +7394,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Appletun",
-		id: "gigantamax appletun",
+		id: "appletun-gmax",
 		french: "Dratatin Gigamax",
 		type1: "Grass",
 		type2: "Dragon",
@@ -7408,7 +7415,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Sandaconda",
-		id: "gigantamax sandaconda",
+		id: "sandaconda-gmax",
 		french: "Dunaconda Gigamax",
 		type1: "Ground",
 		type2: "",
@@ -7499,7 +7506,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Centiskorch",
-		id: "gigantamax centiskorch",
+		id: "centiskorch-gmax",
 		french: "Scolocendre Gigamax",
 		type1: "Fire",
 		type2: "Bug",
@@ -7569,7 +7576,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Hatterene",
-		id: "gigantamax hatterene",
+		id: "hatterene-gmax",
 		french: "Sorcilence Gigamax",
 		type1: "Psychic",
 		type2: "Fairy",
@@ -7597,7 +7604,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Grimmsnarl",
-		id: "gigantamax grimmsnarl",
+		id: "grimmsnarl-gmax",
 		french: "Angoliath Gigamax",
 		type1: "Dark",
 		type2: "Fairy",
@@ -7653,70 +7660,70 @@ let data = [
 	},
 	{
 		name: "Alcremie Vanilla Cream",
-		id: "alcremie vanilla cream",
+		id: "alcremie",
 		french: "Charmilly Lait Vanille",
 		type1: "Fairy",
 		type2: "",
 	},
 	{
 		name: "Alcremie Ruby Cream",
-		id: "alcremie ruby cream",
+		id: "alcremie-rubycream",
 		french: "Charmilly Lait Ruby",
 		type1: "Fairy",
 		type2: "",
 	},
 	{
 		name: "Alcremie Matcha Cream",
-		id: "alcremie matcha cream",
+		id: "alcremie-matchacream",
 		french: "Charmilly Lait Matcha",
 		type1: "Fairy",
 		type2: "",
 	},
 	{
 		name: "Alcremie Mint Cream",
-		id: "alcremie mint cream",
+		id: "alcremie-mintcream",
 		french: "Charmilly Lait Menthe",
 		type1: "Fairy",
 		type2: "",
 	},
 	{
 		name: "Alcremie Lemon Cream",
-		id: "alcremie lemon cream",
+		id: "alcremie-lemoncream",
 		french: "Charmilly Lait Citron",
 		type1: "Fairy",
 		type2: "",
 	},
 	{
 		name: "Alcremie Salted Cream",
-		id: "alcremie salted cream",
+		id: "alcremie-saltedcream",
 		french: "Charmilly Lait Salé",
 		type1: "Fairy",
 		type2: "",
 	},
 	{
 		name: "Alcremie Ruby Swirl",
-		id: "alcremie ruby swirl",
+		id: "alcremie-rubyswirl",
 		french: "Charmilly Mélange Ruby",
 		type1: "Fairy",
 		type2: "",
 	},
 	{
 		name: "Alcremie Caramel Swirl",
-		id: "alcremie caramel swirl",
+		id: "alcremie-caramelswirl",
 		french: "Charmilly Mélange Caramel",
 		type1: "Fairy",
 		type2: "",
 	},
 	{
 		name: "Alcremie Rainbow Swirl",
-		id: "alcremie rainbow swirl",
+		id: "alcremie-rainbowswirl",
 		french: "Charmilly Mélange Tricolore",
 		type1: "Fairy",
 		type2: "",
 	},
 	{
 		name: "Gigantamax Alcremie",
-		id: "gigantamax alcremie",
+		id: "alcremie-gmax",
 		french: "Charmilly Gigamax",
 		type1: "Fairy",
 		type2: "",
@@ -7814,7 +7821,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Copperajah",
-		id: "gigantamax copperajah",
+		id: "copperajah-gmax",
 		french: "Pachyradjah Gigamax",
 		type1: "Steel",
 		type2: "",
@@ -7856,7 +7863,7 @@ let data = [
 	},
 	{
 		name: "Gigantamax Duraludon",
-		id: "gigantamax duraludon",
+		id: "duraludon-gmax",
 		french: "Duralugon Gigamax",
 		type1: "Steel",
 		type2: "Dragon",
@@ -7974,15 +7981,15 @@ let data = [
 		type2: "Water",
 	},
 	{
-		name: "Gigantamax Urshifu (SS)",
-		id: "gigantamax urshifu (ss)",
+		name: "Gigantamax Urshifu (Single Strike)",
+		id: "urshifu",
 		french: "Shifours Style PF Gigamax",
 		type1: "Fighting",
 		type2: "Dark",
 	},
 	{
-		name: "Gigantamax Urshifu (RS)",
-		id: "gigantamax urshifu (rs)",
+		name: "Gigantamax Urshifu (Rapid Strike)",
+		id: "urshifu-rapidstrike",
 		french: "Shifours Style MP Gigamax",
 		type1: "Fighting",
 		type2: "Water",
