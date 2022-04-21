@@ -30,16 +30,20 @@ function textarea_activate(id) {
 	if (ta.value != "") {
 		let pkmns = ta.value.split("\n\n");
 		for (let i = 0; i < pkmns.length; i++) {
-			const t = pkmns[i];
+			let t = pkmns[i];
 			let name;
 			let n;
+			t = t.replace("(M)", "");
+			t = t.replace("(F)", "");
 			if ((n = t.match(/(?:\()[^\(\)]*?(?:\))/g))) {
+				console.log(n);
 				name = n[0].replace("(", "").replace(")", "");
 			} else if (t.includes("@")) {
 				name = t.split(" @")[0];
 			} else {
 				name = t.split("\n")[0];
 			}
+			console.log(name);
 			if (name != "") {
 				add(name);
 			}
