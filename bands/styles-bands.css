@@ -65,3 +65,9 @@ td {
 [title] {
 	text-decoration: underline dotted;
 }
+
+th {
+	background: rgba(54, 57, 63, 0.5);
+	position: sticky;
+	top: 0; /* Don't forget this, required for the stickiness */
+}
