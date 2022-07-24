@@ -22,7 +22,7 @@ body {
 }
 
 img {
-	max-height: 45vh;
+	max-height: 40vh;
 }
 
 th,
@@ -59,7 +59,7 @@ td {
 }
 
 .placeholder {
-	opacity: 0.3;
+	opacity: 0.45;
 }
 
 [title] {
