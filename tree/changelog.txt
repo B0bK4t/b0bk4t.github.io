@@ -60,3 +60,43 @@ Tree Update #2
     Added Franziska von Hipper
     Added Wilhelmina von Hipper
     Added Tanya von Hipper
+
+Tree Update #3
+    Removed Koyama Rikiya
+    Renamed Tanaka Rie to Tanaka Yōko
+    Added Tanaka Rie
+    Added Tanaka Ren
+    Added Jōī Elma
+    Renamed Koyama Maya to Tanaka Maya
+    Renamed Koyama Shaolanne to Tanaka Shaolanne
+    Renamed Koyama Antoine to Tanaka Antoine
+    Renamed Natsu Megumi to Tanaka Megumi
+    Added Tanaka Kanon
+    Removed Kafū Saki
+    Added Hoto Kaoruko
+    Added Hoto Yūna
+    Added Rimuru Tempest
+    Added Izawa Shizue
+    Added Tsubasa Tempest
+    Added Alice Rondo
+    Added Chloe Aubert
+    Added Sekiguchi Ryōta
+    Added Misaki Kenya
+    Added Gale Gibson
+    Added Koizaka Koyume
+    Added Koizaka Echidna
+    Added Koizaka Torricelli
+    Added Koizaka Tear
+    Added Matsumoto Kōko
+    Added Matsumoto Rise
+    Added Hoshino Chizuru
+    Added Hoshino Miyako
+    Added Hoshino Hinata
+    Added Himesaka Emily    
+    Added Himesaka Noa
+    Added Shirosaki Haruka
+    Added Shirosaki Hana
+    Added Yamanaka Rika
+    Added Yamanaka Sawako
+    Added Tanemura Koyori
+    Added Tanemura Lily
