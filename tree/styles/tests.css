@@ -1,0 +1,23 @@
+html {
+	box-sizing: border-box;
+
+	--color-primary: #36393f;
+	--color-secondary: white;
+
+	font-family: sans-serif;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	background: var(--color-primary);
+	color: var(--color-secondary);
+}
+
+.bft-edit-form {
+	display: none !important;
+}
