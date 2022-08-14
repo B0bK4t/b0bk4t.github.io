@@ -5,7 +5,7 @@ for (let i = 0; i < people.length; i++) {
 
 	//Img
 	p.pic = `../../sites/vas/images/${p.imgID}.png`;
-	if (!window.location.href.includes("https")) {
+	if (window.location.href.includes("https")) {
 		if (p.imgLink != undefined && p.imgLink != "") {
 			p.pic = p.imgLink;
 		} else {
