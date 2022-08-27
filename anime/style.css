@@ -1,0 +1,50 @@
+:root {
+	--width: 1150px;
+	/*
+	VGA: 1150px
+	Desktop: 1440px;
+	*/
+}
+
+body {
+	background: #36393f;
+	color: white;
+}
+
+img {
+	max-width: 100%;
+}
+
+.alt_names {
+	font-style: italic;
+	margin-bottom: 8px;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, calc(var(--width) / 3 - 3px));
+	justify-content: space-around;
+}
+
+.entity {
+	text-align: center;
+}
+
+.entity section {
+	border: 1px solid white;
+}
+
+a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.icon {
+	max-width: 25px;
+}
+
+.mudae_k {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}

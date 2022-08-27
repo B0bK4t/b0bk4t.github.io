@@ -1,0 +1,20 @@
+let staff = [
+	{
+		name: "Taneda Risa",
+		id: "neptune",
+		jp: "ネプテューヌ",
+		alt_names: "neppu|neppermintunia",
+		img: "https://static.wikia.nocookie.net/neptunia/images/b/bd/Neptune_V2.png/revision/latest?cb=20180909030611",
+		bday: "3006-10-10",
+		mal: { id: "40938", favs: "38914", rank: "11" },
+		alist: { id: "40938", likes: "1111" },
+		adb: { id: "52006", rating: "2222", votes: "3141" },
+		aplan: { url: "neptune", likes: "132" },
+		acdb: { id: "314" },
+		asrch: { id: "888", favs: "421" },
+		vndb: "c93",
+		booru: { tag: "neptune", res: "1111" },
+		pixiv: { tag: "ネプテューヌ", res: "341" },
+		mudae: { name: "Neptune", k: "31", claim: "341", like: "315" },
+	},
+];
