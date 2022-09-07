@@ -7463,11 +7463,11 @@ var FamilyTree = function (e, t) {
 	(FamilyTree.templates.john.field_0 =
 		"<text " +
 		FamilyTree.attr.width +
-		'="230" style="font-size: 16px;font-weight:bold;" fill="#aeaeae" x="60" y="138" text-anchor="middle">{val}</text>'),
+		'="230" style="font-size: 15px;font-weight:bold;" fill="#aeaeae" x="60" y="138" text-anchor="middle">{val}</text>'),
 	(FamilyTree.templates.john.field_1 =
 		"<text " +
 		FamilyTree.attr.width +
-		'="230" style="font-size: 16px;font-weight:bold;" fill="#aeaeae" x="60" y="155" text-anchor="middle">{val}</text>'),
+		'="100" style="font-size: 12px;font-weight:bold;" fill="#aeaeae" x="60" y="155" text-anchor="middle" data-text-overflow="multiline">{val}</text>'),
 	(FamilyTree.templates.john.field_2 =
 		"<text " +
 		FamilyTree.attr.width +

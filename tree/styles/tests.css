@@ -21,3 +21,14 @@ body {
 .bft-edit-form {
 	display: none !important;
 }
+
+a,
+a:visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.top-bar {
+	display: flex;
+	justify-content: space-between;
+}

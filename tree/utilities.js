@@ -41,3 +41,32 @@ function monthName(int) {
 
 	return month;
 }
+
+function calcAge(birthDate, otherDate) {
+	birthDate = new Date(birthDate);
+	otherDate = new Date(otherDate);
+
+	var years = otherDate.getFullYear() - birthDate.getFullYear();
+
+	if (
+		otherDate.getMonth() < birthDate.getMonth() ||
+		(otherDate.getMonth() == birthDate.getMonth() &&
+			otherDate.getDate() < birthDate.getDate())
+	) {
+		years--;
+	}
+
+	return years;
+}
+
+function addZero(int) {
+	if (int.toString().length == 1) {
+		return 0 + int.toString();
+	} else {
+		return int;
+	}
+}
+
+let localURL = "../../vas/images/";
+
+let platform = "online"; //online or local
