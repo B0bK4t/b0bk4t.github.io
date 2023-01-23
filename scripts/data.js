@@ -8454,4 +8454,52 @@ let data = [
 	},
 	{ name: 'Koraidon', id: 'koraidon', type1: 'Fighting', type2: 'Dragon' },
 	{ name: 'Miraidon', id: 'miraidon', type1: 'Electric', type2: 'Dragon' },
+	{
+		name: 'Paldean Wooper',
+		id: 'wooper-paldea',
+		type1: 'Poison',
+		type2: 'Ground',
+	},
+	{
+		name: 'Paldean Tauros',
+		id: 'tauros-paldea',
+		type1: 'Fighting',
+		type2: '',
+	},
+	{
+		name: 'Paldean Tauros (Combat Breed)',
+		id: 'tauros-paldeacombat',
+		type1: 'Fighting',
+		type2: '',
+	},
+	{
+		name: 'Combat Breed Paldean Tauros',
+		id: 'tauros-paldeacombat',
+		type1: 'Fighting',
+		type2: '',
+	},
+	{
+		name: 'Paldean Tauros (Blaze Breed)',
+		id: 'tauros-paldeablaze',
+		type1: 'Fighting',
+		type2: 'Fire',
+	},
+	{
+		name: 'Blaze Breed Paldean Tauros',
+		id: 'tauros-paldeablaze',
+		type1: 'Fighting',
+		type2: 'Fire',
+	},
+	{
+		name: 'Paldean Tauros (Aqua Breed)',
+		id: 'tauros-paldeaaqua',
+		type1: 'Fighting',
+		type2: 'Water',
+	},
+	{
+		name: 'Aqua Breed Paldean Tauros',
+		id: 'tauros-paldeaaqua',
+		type1: 'Fighting',
+		type2: 'Water',
+	},
 ];
