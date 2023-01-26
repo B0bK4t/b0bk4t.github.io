@@ -54,13 +54,12 @@ function textarea_activate(id) {
 function add(query, init) {
 	query = format(query);
 	let pokemon;
-	let searchIn = datav1;
-	if ((pokemon = searchIn.find((element) => format(element.id) === query))) {
+	if ((pokemon = data.find((element) => format(element.id) === query))) {
 	} else if (
-		(pokemon = searchIn.find((element) => format(element.name) === query))
+		(pokemon = data.find((element) => format(element.name) === query))
 	) {
 	} else if (
-		(pokemon = searchIn.find((element) => format(element.french) === query))
+		(pokemon = data.find((element) => format(element.french) === query))
 	) {
 	}
 	if (pokemon != undefined) {

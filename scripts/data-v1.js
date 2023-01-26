@@ -1,4 +1,4 @@
-let datav1 = [
+let data = [
 	{
 		name: 'Bulbasaur',
 		id: 'bulbasaur',
