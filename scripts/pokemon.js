@@ -1,11 +1,11 @@
-let header = document.querySelector("thead").querySelector("tr");
+let header = document.querySelector('thead').querySelector('tr');
 let imgindex = 0;
 let weaks = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let resists = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let inputed_mons = [];
-let savedmons = cache_get("pokemon");
+let savedmons = cache_get('pokemon');
 if (savedmons) {
-	inputed_mons = savedmons.split(",");
+	inputed_mons = savedmons.split(',');
 }
 
 init();
@@ -13,38 +13,38 @@ init();
 function init() {
 	for (let i = 0; i < inputed_mons.length; i++) {
 		const m = inputed_mons[i];
-		let pkmn = m.split("|")[0];
+		let pkmn = m.split('|')[0];
 		add(pkmn, true);
 	}
 }
 
-let input = document.querySelector("#add_main");
-input.addEventListener("keydown", function (e) {
-	if (e.code === "Enter" && input.value != "") {
+let input = document.querySelector('#add_main');
+input.addEventListener('keydown', function (e) {
+	if (e.code === 'Enter' && input.value != '') {
 		add(input.value);
 	}
 });
 
 function textarea_activate(id) {
 	let ta = document.querySelector(id);
-	if (ta.value != "") {
-		let pkmns = ta.value.split("\n\n");
+	if (ta.value != '') {
+		let pkmns = ta.value.split('\n\n');
 		for (let i = 0; i < pkmns.length; i++) {
 			let t = pkmns[i];
 			let name;
 			let n;
-			t = t.replace("(M)", "");
-			t = t.replace("(F)", "");
+			t = t.replace('(M)', '');
+			t = t.replace('(F)', '');
 			if ((n = t.match(/(?:\()[^\(\)]*?(?:\))/g))) {
 				console.log(n);
-				name = n[0].replace("(", "").replace(")", "");
-			} else if (t.includes("@")) {
-				name = t.split(" @")[0];
+				name = n[0].replace('(', '').replace(')', '');
+			} else if (t.includes('@')) {
+				name = t.split(' @')[0];
 			} else {
-				name = t.split("\n")[0];
+				name = t.split('\n')[0];
 			}
 			console.log(name);
-			if (name != "") {
+			if (name != '') {
 				add(name);
 			}
 		}
@@ -54,12 +54,13 @@ function textarea_activate(id) {
 function add(query, init) {
 	query = format(query);
 	let pokemon;
-	if ((pokemon = data.find((element) => format(element.id) === query))) {
+	let searchIn = datav1;
+	if ((pokemon = searchIn.find((element) => format(element.id) === query))) {
 	} else if (
-		(pokemon = data.find((element) => format(element.name) === query))
+		(pokemon = searchIn.find((element) => format(element.name) === query))
 	) {
 	} else if (
-		(pokemon = data.find((element) => format(element.french) === query))
+		(pokemon = searchIn.find((element) => format(element.french) === query))
 	) {
 	}
 	if (pokemon != undefined) {
@@ -70,25 +71,25 @@ function add(query, init) {
 function append(pokemon, init) {
 	imgindex++;
 	let p = pokemon;
-	let element = document.createElement("th");
+	let element = document.createElement('th');
 	let t1 = p.type1;
 	let t2;
 	if ((t2 = p.type2)) {
 	} else {
 		t2 = t1;
 	}
-	let directory = "";
-	let img_type = "";
+	let directory = '';
+	let img_type = '';
 	let random = Math.floor(Math.random() * 100 + 1);
 	if (random > 10) {
-		directory = "ani";
-		img_type = "gif";
+		directory = 'ani';
+		img_type = 'gif';
 	} else if (random == 5) {
-		directory = "afd";
-		img_type = "png";
+		directory = 'afd';
+		img_type = 'png';
 	} else {
-		directory = "ani-shiny";
-		img_type = "gif";
+		directory = 'ani-shiny';
+		img_type = 'gif';
 	}
 	element.innerHTML = `
     <h3>${p.name}</h3>
@@ -133,41 +134,41 @@ function append(pokemon, init) {
 		let className;
 		switch (display) {
 			case 0:
-				className = "immune";
+				className = 'immune';
 				resists[i]++;
 				break;
 			case 0.25:
-				className = "quarter";
+				className = 'quarter';
 				resists[i]++;
 				break;
 			case 0.5:
-				className = "half";
+				className = 'half';
 				resists[i]++;
 				break;
 			case 2:
-				className = "double";
+				className = 'double';
 				weaks[i]++;
 				break;
 			case 4:
-				className = "quadruple";
+				className = 'quadruple';
 				weaks[i]++;
 				break;
 			default:
-				className = "";
+				className = '';
 				break;
 		}
 
 		let row = document.querySelector(`[data-${c}]`);
-		let cols = row.querySelectorAll("th");
+		let cols = row.querySelectorAll('th');
 		let col = cols[cols.length - 1];
-		let colID = col.id.split("-")[1];
-		if (colID == "r") {
+		let colID = col.id.split('-')[1];
+		if (colID == 'r') {
 			colID = 0;
 		} else {
 			colID = parseInt(colID);
 		}
 
-		let displayBox = document.createElement("th");
+		let displayBox = document.createElement('th');
 		displayBox.innerHTML = `<h3>x${display}</h3>`;
 		displayBox.id = `${c}-${colID + 1}`;
 		displayBox.classList = className;
@@ -180,24 +181,24 @@ function append(pokemon, init) {
 
 	element.innerHTML += `<button class='delete' onclick="remove('${index}')">X</button>`;
 	element.dataset.id = `${p.id}|${index}`;
-	element.classList.add("pokemon");
+	element.classList.add('pokemon');
 	updateWeakResist();
 	if (!init) {
 		inputed_mons.push(`${p.id}|${index}`);
-		cache_set("pokemon", inputed_mons, true);
+		cache_set('pokemon', inputed_mons, true);
 	}
 }
 
 function clear_all() {
-	let pokemon = document.querySelectorAll(".pokemon");
+	let pokemon = document.querySelectorAll('.pokemon');
 	for (let i = 0; i < pokemon.length; i++) {
 		const p = pokemon[i];
-		remove(p.id.replace("header-", ""));
+		remove(p.id.replace('header-', ''));
 	}
 }
 
 function remove(index) {
-	let header = document.querySelector("#header-" + index);
+	let header = document.querySelector('#header-' + index);
 	header.parentElement.removeChild(header);
 	for (let i = 0; i < types.length; i++) {
 		let c = types[i];
@@ -220,16 +221,16 @@ function remove(index) {
 	}
 	updateWeakResist();
 	removeFromArray(inputed_mons, header.dataset.id);
-	cache_remove("pokemon");
+	cache_remove('pokemon');
 }
 
 function shiny(i) {
-	let img = document.querySelector("#img-" + i);
-	let src = img.getAttribute("src");
-	if (src.includes("/ani/")) {
-		img.setAttribute("src", src.replace("/ani/", "/ani-shiny/"));
+	let img = document.querySelector('#img-' + i);
+	let src = img.getAttribute('src');
+	if (src.includes('/ani/')) {
+		img.setAttribute('src', src.replace('/ani/', '/ani-shiny/'));
 	} else {
-		img.setAttribute("src", src.replace("/ani-shiny/", "/ani/"));
+		img.setAttribute('src', src.replace('/ani-shiny/', '/ani/'));
 	}
 }
 
@@ -240,55 +241,55 @@ function updateWeakResist() {
 		let resistBox = document.querySelector(`#${c}-r`);
 		switch (weaks[i]) {
 			case 0:
-				weakBox.innerHTML = "";
-				weakBox.classList.remove("one");
-				weakBox.classList.remove("two");
-				weakBox.classList.remove("three");
+				weakBox.innerHTML = '';
+				weakBox.classList.remove('one');
+				weakBox.classList.remove('two');
+				weakBox.classList.remove('three');
 				break;
 			case 1:
 				weakBox.innerHTML = weaks[i];
-				weakBox.classList.add("one");
-				weakBox.classList.remove("two");
-				weakBox.classList.remove("three");
+				weakBox.classList.add('one');
+				weakBox.classList.remove('two');
+				weakBox.classList.remove('three');
 				break;
 			case 2:
 				weakBox.innerHTML = weaks[i];
-				weakBox.classList.remove("one");
-				weakBox.classList.add("two");
-				weakBox.classList.remove("three");
+				weakBox.classList.remove('one');
+				weakBox.classList.add('two');
+				weakBox.classList.remove('three');
 				break;
 			default:
 				weakBox.innerHTML = weaks[i];
-				weakBox.classList.remove("one");
-				weakBox.classList.remove("two");
-				weakBox.classList.add("three");
+				weakBox.classList.remove('one');
+				weakBox.classList.remove('two');
+				weakBox.classList.add('three');
 				break;
 		}
 
 		switch (resists[i]) {
 			case 0:
-				resistBox.innerHTML = "";
-				resistBox.classList.remove("one");
-				resistBox.classList.remove("two");
-				resistBox.classList.remove("three");
+				resistBox.innerHTML = '';
+				resistBox.classList.remove('one');
+				resistBox.classList.remove('two');
+				resistBox.classList.remove('three');
 				break;
 			case 1:
 				resistBox.innerHTML = resists[i];
-				resistBox.classList.add("one");
-				resistBox.classList.remove("two");
-				resistBox.classList.remove("three");
+				resistBox.classList.add('one');
+				resistBox.classList.remove('two');
+				resistBox.classList.remove('three');
 				break;
 			case 2:
 				resistBox.innerHTML = resists[i];
-				resistBox.classList.remove("one");
-				resistBox.classList.add("two");
-				resistBox.classList.remove("three");
+				resistBox.classList.remove('one');
+				resistBox.classList.add('two');
+				resistBox.classList.remove('three');
 				break;
 			default:
 				resistBox.innerHTML = resists[i];
-				resistBox.classList.remove("one");
-				resistBox.classList.remove("two");
-				resistBox.classList.add("three");
+				resistBox.classList.remove('one');
+				resistBox.classList.remove('two');
+				resistBox.classList.add('three');
 				break;
 		}
 	}
