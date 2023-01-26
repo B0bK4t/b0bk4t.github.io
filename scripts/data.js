@@ -8241,7 +8241,7 @@ let data = [
 	},
 	{
 		name: 'Hisuian Zoroark',
-		id: 'zoroak-hisui',
+		id: 'zoroark-hisui',
 		french: 'Zoroark de Hisui',
 		type1: 'Normal',
 		type2: 'Ghost',
