@@ -4069,7 +4069,7 @@ let data = [
 	},
 	{
 		name: 'Shaymin Land',
-		id: 'shaymin land',
+		id: 'shaymin',
 		french: 'Shaymin Forme Terrestre',
 		type1: 'Grass',
 		type2: '',
@@ -4083,7 +4083,7 @@ let data = [
 	},
 	{
 		name: 'Shaymin Sky',
-		id: 'shaymin sky',
+		id: 'shaymin-sky',
 		french: 'Shaymin Forme Céleste',
 		type1: 'Grass',
 		type2: 'Flying',
@@ -7820,15 +7820,22 @@ let data = [
 		type2: '',
 	},
 	{
+		name: 'Indeedee',
+		id: 'indeedee',
+		french: 'Wimessir Mâle',
+		type1: 'Psychic',
+		type2: 'Normal',
+	},
+	{
 		name: 'Indeedee Male',
-		id: 'indeedee male',
+		id: 'indeedee',
 		french: 'Wimessir Mâle',
 		type1: 'Psychic',
 		type2: 'Normal',
 	},
 	{
 		name: 'Indeedee Female',
-		id: 'indeedee female',
+		id: 'indeedee-female',
 		french: 'Wimessir Femelle',
 		type1: 'Psychic',
 		type2: 'Normal',
