@@ -7835,7 +7835,7 @@ let data = [
 	},
 	{
 		name: 'Indeedee Female',
-		id: 'indeedee-female',
+		id: 'indeedee-f',
 		french: 'Wimessir Femelle',
 		type1: 'Psychic',
 		type2: 'Normal',
