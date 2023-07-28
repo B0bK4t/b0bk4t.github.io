@@ -2947,7 +2947,7 @@ let data = [
 		name: 'Mega Banette',
 		id: 'banette-mega',
 		french: 'Méga-Branette',
-		type1: '',
+		type1: 'Ghost',
 		type2: '',
 	},
 	{
