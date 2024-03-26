@@ -5256,7 +5256,7 @@ let data = [
 	},
 	{
 		name: 'Tornadus Incarnate',
-		id: 'tornadus-incarnate',
+		id: 'tornadus',
 		french: 'Boréas Avatar',
 		type1: 'Flying',
 		type2: '',
@@ -5284,7 +5284,7 @@ let data = [
 	},
 	{
 		name: 'Thundurus Incarnate',
-		id: 'thundurus-incarnate',
+		id: 'thundurus',
 		french: 'Fulguris Avatar',
 		type1: 'Electric',
 		type2: 'Flying',
@@ -5326,7 +5326,7 @@ let data = [
 	},
 	{
 		name: 'Landorus Incarnate',
-		id: 'landorus-incarnate',
+		id: 'landorus',
 		french: 'Démétéros Avatar',
 		type1: 'Ground',
 		type2: 'Flying',
