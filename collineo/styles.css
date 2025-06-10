@@ -1,0 +1,72 @@
+img {
+	max-width: 40vw;
+	max-height: 40vh;
+}
+
+.wrapper {
+	display: flex;
+	gap: 10px;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+#map {
+	height: 98vh;
+	width: 73vw;
+	z-index: 1;
+}
+
+.modal {
+	position: fixed;
+	bottom: 0;
+	z-index: 2;
+
+	color: black;
+
+	display: none;
+
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.modal button {
+	cursor: pointer;
+}
+
+#modalT {
+	left: 18%;
+	max-height: 45vh;
+	overflow: auto;
+}
+
+.modal div {
+	display: flex;
+	align-items: end;
+}
+
+.left {
+	flex-direction: column;
+}
+
+#modalP {
+	left: 33%;
+}
+
+.arborescence {
+	overflow: auto;
+	max-height: 70vh;
+}
+
+.arborescence h2,
+li {
+	cursor: pointer;
+}
+
+.info {
+	width: 45vw;
+	height: 40vh;
+	background: white;
+}

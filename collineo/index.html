@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Carte</title>
+		<!-- Script et CSS de Leaflet https://leafletjs.com/ https://github.com/Leaflet/Leaflet -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+			integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+			crossorigin=""
+		/>
+		<script
+			src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+			integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+			crossorigin=""
+		></script>
+		<!-- Script de DonutJS https://github.com/finom/donutjs -->
+		<script src="donut.js" defer></script>
+		<!-- Script et CSS de la carte -->
+		<link rel="stylesheet" href="styles.css" />
+		<script src="utils.js" defer></script>
+		<script src="data.js" defer></script>
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div id="modalT" class="modal">
+				<header>
+					<span> Turbine #<span class="nom"></span> </span>
+					<button onclick="alert('Bouton qui donne des informations')">
+						+
+					</button>
+					<button class="close">X</button>
+				</header>
+				<h3>titre</h3>
+				<div>
+					<div class="left">
+						<p>Infos & bris...</p>
+						<img style="height: 20vh" src="personne.jpg" />
+					</div>
+					<div class="info"></div>
+				</div>
+				<h3>titre</h3>
+				<div>
+					<div class="left">
+						<p>Infos & bris...</p>
+						<img style="height: 20vh" src="personne.jpg" />
+					</div>
+					<div class="info"></div>
+				</div>
+				<h3>titre</h3>
+				<div>
+					<div class="left">
+						<p>Infos & bris...</p>
+						<img style="height: 20vh" src="personne.jpg" />
+					</div>
+					<div class="info"></div>
+				</div>
+				<h3>titre</h3>
+				<div>
+					<div class="left">
+						<p>Infos & bris...</p>
+						<img style="height: 20vh" src="personne.jpg" />
+					</div>
+					<div class="info"></div>
+				</div>
+				<h3>titre</h3>
+				<div>
+					<div class="left">
+						<p>Infos & bris...</p>
+						<img style="height: 20vh" src="personne.jpg" />
+					</div>
+					<div class="info"></div>
+				</div>
+			</div>
+			<div id="modalP" class="modal">
+				<header>
+					<span class="nom"></span>
+					<button class="close">X</button>
+				</header>
+				<hr />
+				<div>
+					<div id="pie2"></div>
+					infos à faire etc etc
+				</div>
+			</div>
+			<div id="map"></div>
+			<div>
+				<header>
+					<div id="pie"></div>
+					<div id="stats">
+						<!-- <h2>Campagne inspection 2025</h2> -->
+						<h2 id="label">Vue globale</h2>
+						<ul>
+							<li id="sites">8 sites, 2 terminés</li>
+							<li>
+								<span id="ttotal">452</span> turbines,
+								<span id="tfin">0</span> terminées (<span id="tpercent">0</span
+								>%)
+							</li>
+							<li>Bris majeurs - <span id="c4">22</span></li>
+							<li>Blade killers - <span id="c5">4</span></li>
+							<li></li>
+							<li id="prod">Journées productives - 23 - 75%</li>
+							<li id="notprod">Journées météo inproductive - 8 - 22%</li>
+						</ul>
+					</div>
+				</header>
+				<button onclick="reset()">Vue globale</button>
+				<div class="arborescence">
+					<h2 onclick="toYear(2025)">2025</h2>
+					<h3>Blade killers</h3>
+					<h4 onclick="toParc('VIG', 2025)">VIG</h4>
+					<ul id="VIG2025C5"></ul>
+					<h4 onclick="toParc('BDS', 2025)">BDS</h4>
+					<ul id="BDS2025C5"></ul>
+					<h3>Bris majeurs</h3>
+					<h4 onclick="toParc('VIG', 2025)">VIG</h4>
+					<ul id="VIG2025C4"></ul>
+					<h4 onclick="toParc('BDS', 2025)">BDS</h4>
+					<ul id="BDS2025C4"></ul>
+
+					<h2 onclick="toYear(2024)">2024</h2>
+					<h3>Blade killers</h3>
+					<h4 onclick="toParc('VIG', 2024)">VIG</h4>
+					<ul id="VIG2024C5"></ul>
+					<h4 onclick="toParc('BDS', 2024)">BDS</h4>
+					<ul id="BDS2024C5"></ul>
+					<h3>Bris majeurs</h3>
+					<h4 onclick="toParc('VIG', 2024)">VIG</h4>
+					<ul id="VIG2024C4"></ul>
+					<h4 onclick="toParc('BDS', 2024)">BDS</h4>
+					<ul id="BDS2024C4"></ul>
+
+					<h2 onclick="toYear(2023)">2023</h2>
+					<h3>Blade killers</h3>
+					<h4 onclick="toParc('VIG', 2023)">VIG</h4>
+					<ul id="VIG2023C5"></ul>
+					<h4 onclick="toParc('BDS', 2023)">BDS</h4>
+					<ul id="BDS2023C5"></ul>
+					<h3>Bris majeurs</h3>
+					<h4 onclick="toParc('VIG', 2023)">VIG</h4>
+					<ul id="VIG2023C4"></ul>
+					<h4 onclick="toParc('BDS', 2023)">BDS</h4>
+					<ul id="BDS2023C4"></ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
