@@ -231,6 +231,7 @@ function toParc(parc, year = null) {
 function toTurbine(turbine) {
 	let coords = turbinesCoords.find((element) => element.id === turbine);
 	map.flyTo([coords.x, coords.y], 17);
+	openModal(modalT, coords.id);
 }
 
 //Données
