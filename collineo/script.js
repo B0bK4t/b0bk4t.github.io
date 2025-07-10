@@ -61,6 +61,14 @@ function openModal(modal, name) {
 	for (let i = 0; i < problemes.length; i++) {
 		const p = problemes[i];
 
+		//Object { id: "CAR58", parc: "CAR", nb: "58", nbRaw: "58", side: "3-00939-Upwind", date: "2025-07-08", year: "2025", category: "C3", desc: "Chordwise crack multiples gravite 3++ @19.1, 20.2, 20.8, 21.8, 22.3m", rapport: "2025-07-08_CAR2025 Rapport Inspection Pales 250708", … }
+
+		let blade = p.side.substring(0, 1);
+		let side_parts = p.side.substring(1, p.side.length).split('-');
+		let side = side_parts[side_parts.length - 1];
+
+		console.log(blade, side);
+
 		let photos = initialPhotoArray.filter(function (photo) {
 			return photo.rapport == p.rapport;
 		});
@@ -70,24 +78,20 @@ function openModal(modal, name) {
 			return photo.file.includes(p.parc + '-' + p.nbRaw);
 		});
 
+		//Bonne pale
+		let p_blades = p_turbines.filter(function (photo) {
+			return photo.blade == blade;
+		});
+
 		//Bon côté
-		let p_sides = p_turbines.filter(function (photo) {
-			if (photo.double_name == true) {
-				return photo.file.includes(
-					p.side.substring(0, 2) +
-						p.parc +
-						'-' +
-						p.nbRaw +
-						p.side.substring(1, p.side.length)
-				);
-			}
-			return photo.file.includes(p.side);
+		let p_sides = p_blades.filter(function (photo) {
+			return photo.side.includes(side);
 		});
 
 		let imgs = '';
 		for (let j = 0; j < p_sides.length; j++) {
 			let photo = p_sides[j];
-			imgs += `<img src='data/${p.rapport}/img/${photo.file}'>\n`;
+			imgs += `<img src='data/${p.rapport}/img/${photo.file}'><br>`;
 		}
 
 		newContent.push({
@@ -276,17 +280,15 @@ function compileData() {
 
 		if (p[0]) {
 			let parc = p[2].substring(4, 7);
-			let double_parc_name = false;
-
-			if (p[2].split(parc).length > 2) {
-				double_parc_name = true;
-			}
 
 			data_photo.push({
 				rapport: p[0],
 				date: p[1],
 				file: p[2],
-				double_name: double_parc_name,
+				parc: p[3],
+				turbine: p[4],
+				blade: p[5],
+				side: p[6],
 			});
 		}
 	}
@@ -296,7 +298,7 @@ function compileData() {
 	for (let i = 0; i < data.length; i++) {
 		const d = data[i];
 
-		// if (d.id == 'CAR09') {
+		// if (d.id == 'CAR58') {
 		// 	openModal(modalT, d.id);
 		// }
 
