@@ -42,11 +42,6 @@ header {
 	overflow: auto;
 }
 
-.modal div {
-	display: flex;
-	align-items: end;
-}
-
 .left {
 	flex-direction: column;
 }
@@ -61,7 +56,9 @@ header {
 }
 
 .arborescence h2,
-li {
+.arborescence h3,
+.arborescence h4,
+.arborescence li {
 	cursor: pointer;
 }
 
