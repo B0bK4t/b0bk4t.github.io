@@ -67,8 +67,6 @@ function openModal(modal, name) {
 		let side_parts = p.side.substring(1, p.side.length).split('-');
 		let side = side_parts[side_parts.length - 1];
 
-		console.log(blade, side);
-
 		let photos = initialPhotoArray.filter(function (photo) {
 			return photo.rapport == p.rapport;
 		});
@@ -100,6 +98,7 @@ function openModal(modal, name) {
 		${imgs}
 		`,
 			compare: p.date,
+			year: p.year,
 		});
 	}
 
@@ -114,17 +113,30 @@ function openModal(modal, name) {
 	newContent.sort(compare);
 	newContent.reverse();
 
-	modal.querySelector('.modal-content').innerHTML = '';
+	let years = [];
+	let yeardiv;
 
-	for (let i = 0; i < newContent.length; i++) {
-		modal.querySelector('.modal-content').innerHTML +=
-			newContent[i].content + '\n';
+	for (i = 0; i < newContent.length; i++) {
+		let c = newContent[i];
+		if (!years.includes(c.year)) {
+			yeardiv = document.createElement('div');
+			let thisyear = c.year;
+			if (thisyear == undefined) {
+				thisyear = 'Aucune année';
+			}
+			yeardiv.innerHTML = `<h2>${thisyear}</h2><div class='problemes-annee'></div>`;
+			years.push(thisyear);
+		}
+		let problemediv = document.createElement('div');
+		problemediv.innerHTML = c.content;
+		yeardiv.querySelector('.problemes-annee').appendChild(problemediv);
+		modal.querySelector('.modal-content').appendChild(yeardiv);
 	}
 }
 
 //Setup arborescence
 function populateArborescence() {
-	let years = [2025];
+	let years = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018];
 
 	let html = '';
 
@@ -212,10 +224,21 @@ function createPie(elem, data, r = 100) {
 		clr.push([d.clr]);
 	}
 
-	document.querySelector('#c5').innerHTML = data[3].value;
-	document.querySelector('#c4').innerHTML = data[2].value;
-	document.querySelector('#tfin').innerHTML =
-		data[0].value + data[1].value + data[2].value + data[3].value;
+	document.querySelector('#c5').innerHTML = data[5].value;
+	document.querySelector('#c4').innerHTML = data[4].value;
+	let turbinesDone =
+		data[0].value +
+		data[1].value +
+		data[2].value +
+		data[3].value +
+		data[4].value +
+		data[5].value;
+	document.querySelector('#tfin').innerHTML = turbinesDone;
+
+	let nbTurbinesTotal = 452 * 2; //*TODO x nb années
+	document.querySelector('#tpercent').innerHTML = Math.round(
+		(turbinesDone / nbTurbinesTotal) * 100
+	);
 
 	return donut({
 		el: elem,
@@ -247,8 +270,9 @@ function compileData() {
 
 		if (p[0]) {
 			let turbineName = p[1] + p[3].padStart(2, '0');
-			let catNb = p[6].substring(0, 1); //Si les ++ sont gardés
-			if (catNb == '-1') {
+			let catNb = p[6].substring(0, 1); //Si les 3++ sont gardés
+
+			if (catNb == '-') {
 				catNb = '0';
 			}
 
@@ -418,3 +442,5 @@ function toTurbine(turbine) {
 	map.flyTo([coords.x, coords.y], 17);
 	openModal(modalT, coords.id);
 }
+
+openModal(modalT, 'AAV59');
