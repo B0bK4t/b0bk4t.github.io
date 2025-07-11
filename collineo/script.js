@@ -442,5 +442,3 @@ function toTurbine(turbine) {
 	map.flyTo([coords.x, coords.y], 17);
 	openModal(modalT, coords.id);
 }
-
-openModal(modalT, 'AAV59');
