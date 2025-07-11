@@ -113,6 +113,8 @@ function openModal(modal, name) {
 	newContent.sort(compare);
 	newContent.reverse();
 
+	modal.querySelector('.modal-content').innerHTML = '';
+
 	let years = [];
 	let yeardiv;
 
