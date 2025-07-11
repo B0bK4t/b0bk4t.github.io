@@ -161,6 +161,14 @@ function parc(x, y, desc) {
 	});
 }
 
+parc(47.919977, -69.220581, 'VIG');
+parc(48.697947, -67.866519, 'BDS');
+parc(48.204712, -66.135434, 'CAR');
+parc(48.3128, -66.7297, 'MUU');
+parc(49.097906, -64.641406, 'AAV');
+parc(49.180976, -65.46173, 'GMO');
+parc(49.177678, -64.941747, 'MSE');
+
 let turbineClicked = false;
 let turbineTotal = 0;
 let turbinesCoords = [];
@@ -172,7 +180,7 @@ function turbine(x, y, id, clr, radius = 100) {
 	clr = 'blue';
 
 	let circle = L.circle([x, y], { radius: radius, color: clr }).addTo(map);
-	turbinesCoords.push({ id: id, x: x, y: y });
+	turbinesCoords.push({ id: id, x: x, y: y, obj: circle });
 	circle.on('click', function () {
 		turbineClicked = true;
 		toTurbine(id);
@@ -180,6 +188,8 @@ function turbine(x, y, id, clr, radius = 100) {
 		// modalP.style.display = 'none';
 	});
 }
+
+ajouterTurbines();
 
 //Clic sur la carte
 function onMapClick(e) {
@@ -345,14 +355,36 @@ function countCats(year = null, parc = null) {
 		if (count) {
 			catCount[d.category]++;
 		}
+
+		let obj = turbinesCoords.find((element) => element.id === d.id).obj;
+		let clr = 'aqua';
+		switch (d.category) {
+			case 'C1':
+				clr = 'turquoise';
+				break;
+			case 'C2':
+				clr = 'green';
+				break;
+			case 'C3':
+				clr = 'yellow';
+				break;
+			case 'C4':
+				clr = 'orange';
+				break;
+			case 'C5':
+				clr = 'red';
+				break;
+		}
+
+		obj.setStyle({ color: clr });
 	}
 
 	return [
 		{ donnee: 'C0', clr: 'aqua', value: catCount['C0'] },
-		{ donnee: 'C1', clr: 'limegreen', value: catCount['C1'] },
+		{ donnee: 'C1', clr: 'lime', value: catCount['C1'] },
 		{ donnee: 'C2', clr: 'green', value: catCount['C2'] },
-		{ donnee: 'C3', clr: 'lime', value: catCount['C3'] },
-		{ donnee: 'C4', clr: 'yellow', value: catCount['C4'] },
+		{ donnee: 'C3', clr: 'yellow', value: catCount['C3'] },
+		{ donnee: 'C4', clr: 'orange', value: catCount['C4'] },
 		{ donnee: 'C5', clr: 'red', value: catCount['C5'] },
 	];
 }
@@ -386,12 +418,3 @@ function toTurbine(turbine) {
 	map.flyTo([coords.x, coords.y], 17);
 	openModal(modalT, coords.id);
 }
-
-//Données
-parc(47.919977, -69.220581, 'VIG');
-parc(48.697947, -67.866519, 'BDS');
-parc(48.204712, -66.135434, 'CAR');
-parc(48.3128, -66.7297, 'MUU');
-parc(49.097906, -64.641406, 'AAV');
-parc(49.180976, -65.46173, 'GMO');
-parc(49.177678, -64.941747, 'MSE');
