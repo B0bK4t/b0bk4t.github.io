@@ -458,10 +458,10 @@ function ajouterTurbines() {
 	turbine(49.1913027, -65.0017769, 'MSE602', 'blue');
 	turbine(49.1934903, -65.0008972, 'MSE601', 'blue');
 
-	document.querySelector('#ttotal').innerHTML = turbineTotal;
-	let tfin = document.querySelector('#tfin').innerHTML;
-	document.querySelector('#tpercent').innerHTML = Math.round(
-		(tfin / turbineTotal) * 100,
-		2
-	);
+	// document.querySelector('#ttotal').innerHTML = turbineTotal;
+	// let tfin = document.querySelector('#tfin').innerHTML;
+	// document.querySelector('#tpercent').innerHTML = Math.round(
+	// 	(tfin / turbineTotal) * 100,
+	// 	2
+	// );
 }

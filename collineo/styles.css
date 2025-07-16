@@ -10,7 +10,7 @@ img {
 
 header {
 	display: flex;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	align-items: flex-start;
 }
 
@@ -18,11 +18,16 @@ header {
 	height: 98vh;
 	width: 73vw;
 	z-index: 1;
+	position: relative;
+}
+
+#pie {
+	margin-bottom: 15px;
 }
 
 .modal {
 	position: fixed;
-	bottom: 0;
+	top: 50vh;
 	z-index: 2;
 
 	color: black;
@@ -33,14 +38,30 @@ header {
 	background: white;
 }
 
+.modal,
+.modal * {
+	scrollbar-width: thin;
+}
+
+.modal h2 {
+	margin: 5px;
+}
+
 .modal button {
 	cursor: pointer;
 }
 
-#modalT {
-	left: 18%;
+#modalP {
+	left: 33%;
 	max-height: 45vh;
+}
+
+#modalT {
+	/* top: 25vh; */
+	left: 15vw;
+	max-height: 50vh;
 	overflow: auto;
+	width: 800px;
 }
 
 .modal-content {
@@ -55,10 +76,6 @@ header {
 
 .left {
 	flex-direction: column;
-}
-
-#modalP {
-	left: 33%;
 }
 
 .arborescence {

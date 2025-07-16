@@ -94,7 +94,7 @@ function openModal(modal, name) {
 
 		newContent.push({
 			content: `
-		<h3>${p.date} (${p.side}) &ndash; ${p.desc}</h3>
+		<h3>${p.date} (${p.side}) &ndash; ${p.desc} &ndash; détecté par ${p.author}</h3>
 		${imgs}
 		`,
 			compare: p.date,
@@ -105,7 +105,7 @@ function openModal(modal, name) {
 	if (problemes.length == 0) {
 		newContent = [
 			{
-				content: `<h3>Aucun problème</h3><div style='width: 650px; height: 380px;'></div>`,
+				content: `<h3>Aucun problème</h3><div style='width: 650px; height: 275px;'></div>`,
 			},
 		];
 	}
@@ -228,19 +228,19 @@ function createPie(elem, data, r = 100) {
 
 	document.querySelector('#c5').innerHTML = data[5].value;
 	document.querySelector('#c4').innerHTML = data[4].value;
-	let turbinesDone =
-		data[0].value +
-		data[1].value +
-		data[2].value +
-		data[3].value +
-		data[4].value +
-		data[5].value;
-	document.querySelector('#tfin').innerHTML = turbinesDone;
+	// let turbinesDone =
+	// 	data[0].value +
+	// 	data[1].value +
+	// 	data[2].value +
+	// 	data[3].value +
+	// 	data[4].value +
+	// 	data[5].value;
+	// document.querySelector('#tfin').innerHTML = turbinesDone;
 
-	let nbTurbinesTotal = 452 * 2; //*TODO x nb années
-	document.querySelector('#tpercent').innerHTML = Math.round(
-		(turbinesDone / nbTurbinesTotal) * 100
-	);
+	// let nbTurbinesTotal = 452 * 2; //*TODO x nb années
+	// document.querySelector('#tpercent').innerHTML = Math.round(
+	// 	(turbinesDone / nbTurbinesTotal) * 100
+	// );
 
 	return donut({
 		el: elem,
@@ -289,6 +289,7 @@ function compileData() {
 				category: 'C' + catNb,
 				desc: p[5],
 				rapport: p[0],
+				author: 'admin',
 				compare:
 					5 -
 					parseInt(catNb) +
@@ -382,27 +383,27 @@ function countCats(year = null, parc = null) {
 			catCount[d.category]++;
 		}
 
-		let obj = turbinesCoords.find((element) => element.id === d.id).obj;
-		let clr = 'aqua';
-		switch (d.category) {
-			case 'C1':
-				clr = 'turquoise';
-				break;
-			case 'C2':
-				clr = 'green';
-				break;
-			case 'C3':
-				clr = 'yellow';
-				break;
-			case 'C4':
-				clr = 'orange';
-				break;
-			case 'C5':
-				clr = 'red';
-				break;
-		}
+		// let obj = turbinesCoords.find((element) => element.id === d.id).obj;
+		// let clr = 'aqua';
+		// switch (d.category) {
+		// 	case 'C1':
+		// 		clr = 'turquoise';
+		// 		break;
+		// 	case 'C2':
+		// 		clr = 'green';
+		// 		break;
+		// 	case 'C3':
+		// 		clr = 'yellow';
+		// 		break;
+		// 	case 'C4':
+		// 		clr = 'orange';
+		// 		break;
+		// 	case 'C5':
+		// 		clr = 'red';
+		// 		break;
+		// }
 
-		obj.setStyle({ color: clr });
+		// obj.setStyle({ color: clr });
 	}
 
 	return [
