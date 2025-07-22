@@ -102,6 +102,11 @@ header {
 	}
 
 	#map {
-		width: 100%;
+		width: 90%;
+		margin: auto;
+	}
+
+	#modalT {
+		width: 650px;
 	}
 }
