@@ -95,3 +95,13 @@ header {
 	height: 40vh;
 	background: white;
 }
+
+@media only screen and (max-width: 1000px) {
+	.wrapper {
+		display: unset;
+	}
+
+	#map {
+		width: 100%;
+	}
+}
