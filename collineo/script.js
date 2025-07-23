@@ -335,9 +335,9 @@ function compileData() {
 	for (let i = 0; i < data.length; i++) {
 		const d = data[i];
 
-		if (d.id == 'AAV56') {
-			openModal(modalT, d.id);
-		}
+		// if (d.id == 'AAV56') {
+		// 	openModal(modalT, d.id);
+		// }
 
 		if (d.category == 'C4' || d.category == 'C5') {
 			let li = document.createElement('li');

@@ -110,6 +110,7 @@ header {
 
 	#map {
 		width: 90%;
+		height: 75vh;
 		margin: auto;
 	}
 
