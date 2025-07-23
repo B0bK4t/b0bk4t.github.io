@@ -6,6 +6,7 @@ img {
 .wrapper {
 	display: flex;
 	gap: 10px;
+	position: relative;
 }
 
 header {
@@ -18,7 +19,7 @@ header {
 	height: 98vh;
 	width: 73vw;
 	z-index: 1;
-	position: relative;
+	/* position: relative; */
 }
 
 #pie {
@@ -26,7 +27,7 @@ header {
 }
 
 .modal {
-	position: fixed;
+	position: absolute;
 	top: 50vh;
 	z-index: 2;
 
@@ -62,6 +63,12 @@ header {
 	max-height: 50vh;
 	overflow: auto;
 	width: 800px;
+}
+
+.modal header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .modal-content {
@@ -106,7 +113,17 @@ header {
 		margin: auto;
 	}
 
+	.modal {
+		position: relative;
+		width: 100%;
+	}
+
 	#modalT {
-		width: 650px;
+		top: 0;
+		left: 0;
+	}
+
+	.modal * {
+		max-width: 100% !important;
 	}
 }

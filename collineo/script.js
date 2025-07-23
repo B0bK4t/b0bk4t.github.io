@@ -61,8 +61,6 @@ function openModal(modal, name) {
 	for (let i = 0; i < problemes.length; i++) {
 		const p = problemes[i];
 
-		//Object { id: "CAR58", parc: "CAR", nb: "58", nbRaw: "58", side: "3-00939-Upwind", date: "2025-07-08", year: "2025", category: "C3", desc: "Chordwise crack multiples gravite 3++ @19.1, 20.2, 20.8, 21.8, 22.3m", rapport: "2025-07-08_CAR2025 Rapport Inspection Pales 250708", … }
-
 		let blade = p.side.substring(0, 1);
 		let side_parts = p.side.substring(1, p.side.length).split('-');
 		let side = side_parts[side_parts.length - 1];
@@ -216,6 +214,8 @@ function onMapClick(e) {
 }
 map.on('click', onMapClick);
 
+document.querySelector('#closeT').addEventListener('click', onMapClick);
+
 //Pie chart
 function createPie(elem, data, r = 100) {
 	let data_ = [];
@@ -335,9 +335,9 @@ function compileData() {
 	for (let i = 0; i < data.length; i++) {
 		const d = data[i];
 
-		// if (d.id == 'CAR58') {
-		// 	openModal(modalT, d.id);
-		// }
+		if (d.id == 'AAV56') {
+			openModal(modalT, d.id);
+		}
 
 		if (d.category == 'C4' || d.category == 'C5') {
 			let li = document.createElement('li');
