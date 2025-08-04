@@ -22,16 +22,28 @@
 		<link rel="stylesheet" href="styles.css" />
 
 		<script src="data/rapports.js" defer></script>
+		<!-- <script src="data_/rapports.js" defer></script> -->
 
-		<script src="utils.js" defer></script>
-		<script src="data.js" defer></script>
-		<script src="photos.js" defer></script>
 		<script src="turbines.js" defer></script>
 		<script src="script.js" defer></script>
 	</head>
 	<body>
 		<div class="wrapper">
 			<div id="map"></div>
+			<div id="info">
+				<header>
+					<h1>Turbine <span id="tID">123</span></h1>
+					<button class="close" id="close">X</button>
+				</header>
+				<section class="years">
+					<h2>2025</h2>
+					<section class="year" id="p2025"></section>
+					<h2>2024</h2>
+					<section class="year" id="p2024"></section>
+					<h2>2023</h2>
+					<section class="year" id="p2023"></section>
+				</section>
+			</div>
 			<div id="modalT" class="modal">
 				<header>
 					<h2>Turbine #<span class="nom"></span></h2>
@@ -39,34 +51,14 @@
 				</header>
 				<div class="modal-content"></div>
 			</div>
-			<!-- <div id="modalP" class="modal">
-				<header>
-					<span class="nom"></span>
-					<button class="close">X</button>
-				</header>
-				<hr />
-				<div>
-					<div id="pie2"></div>
-					infos à faire etc etc
-				</div>
-			</div> -->
-			<div>
+			<div id="sidebar">
 				<header>
 					<div id="pie"></div>
 					<div id="stats">
-						<!-- <h2>Campagne inspection 2025</h2> -->
 						<h2 id="label">Vue globale</h2>
 						<ul>
-							<!-- <li id="sites">8 sites, 2 terminés</li> -->
-							<!-- <li>
-								<span id="ttotal">452</span> turbines,
-								<span id="tfin">0</span> terminées (<span id="tpercent">0</span
-								>%)
-							</li> -->
 							<li>Bris majeurs - <span id="c4">22</span></li>
 							<li>Blade killers - <span id="c5">4</span></li>
-							<!-- <li id="prod">Journées productives - 23 - 75%</li> -->
-							<!-- <li id="notprod">Journées météo inproductive - 8 - 22%</li> -->
 						</ul>
 					</div>
 				</header>

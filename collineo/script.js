@@ -1,6 +1,20 @@
 //En utilisant https://leafletjs.com/ Github: https://github.com/Leaflet/Leaflet
 //Documentation https://leafletjs.com/reference.html
 
+//Utils
+function compare(a, b) {
+	const itemA = a.compare;
+	const itemB = b.compare;
+
+	let comparison = 0;
+	if (itemA > itemB) {
+		comparison = 1;
+	} else if (itemA < itemB) {
+		comparison = -1;
+	}
+	return comparison;
+}
+
 //Setup map
 let views = [
 	//[x, y], zoom
@@ -38,32 +52,36 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>', //Doc pour l'API OSM: https://operations.osmfoundation.org/policies/tiles/
 }).addTo(map);
 
-//Setup modals
-let modalT = document.querySelector('#modalT');
-// modalT.querySelector('.close').addEventListener('click', function () {
-// 	modalT.style.display = 'none';
-// });
+//Setup opérateurs
+let operateurs = {
+	david: 'David',
+	eloise: 'Éloïse',
+	gabriel_a: 'Gabriel A.',
+	gabriel_g: 'Gabriel G.',
+	guillaume: 'Guillaume',
+	marcantoine: 'Marc-Antoine',
+	theo: 'Théo',
+	isaac: 'Isaac',
+};
 
-// let modalP = document.querySelector('#modalP');
-// modalP.querySelector('.close').addEventListener('click', function () {
-// 	modalP.style.display = 'none';
-// });
+//Setup info
+function openTurbine(turbine) {
+	let div = document.querySelector('#info');
+	div.style.display = 'block';
+	div.querySelector('#tID').innerHTML = turbine;
 
-function openModal(modal, name) {
-	modal.style.display = 'initial';
-	modal.querySelector('.nom').innerHTML = name;
-	let newContent = [];
+	div.querySelector('#close').addEventListener('click', function () {
+		this.parentElement.parentElement.style.display = 'none';
+	});
 
 	let problemes = initialDataArray.filter(function (probleme) {
-		return probleme.id == name;
+		return probleme.id == turbine;
 	});
+
+	let problemes_ = [];
 
 	for (let i = 0; i < problemes.length; i++) {
 		const p = problemes[i];
-
-		let blade = p.side.substring(0, 1);
-		let side_parts = p.side.substring(1, p.side.length).split('-');
-		let side = side_parts[side_parts.length - 1];
 
 		let photos = initialPhotoArray.filter(function (photo) {
 			return photo.rapport == p.rapport;
@@ -76,67 +94,95 @@ function openModal(modal, name) {
 
 		//Bonne pale
 		let p_blades = p_turbines.filter(function (photo) {
-			return photo.blade == blade;
+			return photo.blade == p.side.substring(0, 1);
 		});
 
 		//Bon côté
-		let p_sides = p_blades.filter(function (photo) {
+		let side_parts = p.side.substring(1, p.side.length).split('-');
+		let side = side_parts[side_parts.length - 1];
+		let p_side = p_blades.filter(function (photo) {
 			return photo.side.includes(side);
 		});
 
 		let imgs = '';
-		for (let j = 0; j < p_sides.length; j++) {
-			let photo = p_sides[j];
-			imgs += `<img src='data/${p.rapport}/img/${photo.file}'><br>`;
+
+		for (let j = 0; j < p_side.length; j++) {
+			const photo = p_side[j];
+			// imgs += `<img src="data_/${photo.rapport}/img/${photo.file}">`;
+			imgs += `<img src="data/${photo.rapport}/img/${photo.file}">`;
 		}
 
-		newContent.push({
-			content: `
-		<h3>${p.date} (${p.side}) &ndash; ${p.desc} &ndash; détecté par ${p.author}</h3>
-		${imgs}
-		`,
-			compare: p.date,
+		// let op_text = '';
+		// for (let index = 0; index < array.length; index++) {
+		// 	const element = array[index];
+		// }
+
+		let authorText = '';
+		let authorImg = '';
+
+		if (p.author[0] == '') {
+			authorText = 'N/D';
+		} else {
+			for (let j = 0; j < p.author.length; j++) {
+				const op = p.author[j];
+				authorText += operateurs[op];
+				if (j < p.author.length - 1) {
+					authorText += ', ';
+				}
+
+				authorImg += `<img src="users/${op}.jpg" />`;
+			}
+		}
+
+		if (p.year < 2025) {
+			authorText = 'N/D';
+			authorImg = '';
+		}
+
+		let div = document.createElement('div');
+		div.innerHTML = `
+			<h3>
+				${p.date} (${p.side}) – ${p.desc} – détecté par ${authorText}
+			</h3>
+			<div class="photos_pfp">
+				<div class="pfp">${authorImg}</div>
+				<div class="photos">
+					${imgs}
+				</div>
+			</div>
+		`;
+		div.classList.add('probleme');
+
+		problemes_.push({
+			compare: `${p.date}-${p.side}`,
 			year: p.year,
+			content: div,
 		});
 	}
 
-	if (problemes.length == 0) {
-		newContent = [
-			{
-				content: `<h3>Aucun problème</h3><div style='width: 650px; height: 275px;'></div>`,
-			},
-		];
+	problemes_ = problemes_.sort(compare);
+	problemes_ = problemes_.reverse();
+
+	let years = [2025, 2024, 2023];
+	for (let i = 0; i < years.length; i++) {
+		const y = years[i];
+		document.querySelector('#p' + y).innerHTML = '';
 	}
 
-	newContent.sort(compare);
-	newContent.reverse();
-
-	modal.querySelector('.modal-content').innerHTML = '';
-
-	let years = [];
-	let yeardiv;
-
-	for (i = 0; i < newContent.length; i++) {
-		let c = newContent[i];
-		if (!years.includes(c.year)) {
-			yeardiv = document.createElement('div');
-			let thisyear = c.year;
-			if (thisyear == undefined) {
-				thisyear = 'Aucune année';
-			}
-			yeardiv.innerHTML = `<h2>${thisyear}</h2><div class='problemes-annee'></div>`;
-			years.push(thisyear);
+	for (let i = 0; i < problemes_.length; i++) {
+		const p = problemes_[i];
+		if (p.content) {
+			document.querySelector('#p' + p.year).appendChild(p.content);
+		} else {
+			document.querySelector('#p' + p.year).innerHTML =
+				'<h4>Aucun problème</h4>';
 		}
-		let problemediv = document.createElement('div');
-		problemediv.innerHTML = c.content;
-		yeardiv.querySelector('.problemes-annee').appendChild(problemediv);
-		modal.querySelector('.modal-content').appendChild(yeardiv);
 	}
 }
 
 //Setup arborescence
 function populateArborescence() {
-	let years = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018];
+	let years = [2025, 2024, 2023];
 
 	let html = '';
 
@@ -168,7 +214,6 @@ function parc(x, y, desc) {
 	let marker = L.marker([x, y]).addTo(map);
 	marker.on('click', function () {
 		toParc(desc);
-		// openModal(modalP, desc);
 		modalT.style.display = 'none';
 	});
 }
@@ -196,12 +241,14 @@ function turbine(x, y, id, clr, radius = 100) {
 	circle.on('click', function () {
 		turbineClicked = true;
 		toTurbine(id);
-		// openModal(modalT, id); //Dans toTurbine()
-		// modalP.style.display = 'none';
 	});
 }
 
-ajouterTurbines();
+//Ajouter turbines
+for (let i = 0; i < turbines.length; i++) {
+	const t = turbines[i];
+	turbine(t.coords[0], t.coords[1], t.id, 'blue');
+}
 
 //Clic sur la carte
 function onMapClick(e) {
@@ -228,19 +275,6 @@ function createPie(elem, data, r = 100) {
 
 	document.querySelector('#c5').innerHTML = data[5].value;
 	document.querySelector('#c4').innerHTML = data[4].value;
-	// let turbinesDone =
-	// 	data[0].value +
-	// 	data[1].value +
-	// 	data[2].value +
-	// 	data[3].value +
-	// 	data[4].value +
-	// 	data[5].value;
-	// document.querySelector('#tfin').innerHTML = turbinesDone;
-
-	// let nbTurbinesTotal = 452 * 2; //*TODO x nb années
-	// document.querySelector('#tpercent').innerHTML = Math.round(
-	// 	(turbinesDone / nbTurbinesTotal) * 100
-	// );
 
 	return donut({
 		el: elem,
@@ -278,6 +312,8 @@ function compileData() {
 				catNb = '0';
 			}
 
+			let operators = turbines.find((element) => element.id == turbineName).op;
+
 			data.push({
 				id: turbineName,
 				parc: p[1],
@@ -289,7 +325,7 @@ function compileData() {
 				category: 'C' + catNb,
 				desc: p[5],
 				rapport: p[0],
-				author: 'admin',
+				author: operators,
 				compare:
 					5 -
 					parseInt(catNb) +
@@ -334,10 +370,6 @@ function compileData() {
 
 	for (let i = 0; i < data.length; i++) {
 		const d = data[i];
-
-		// if (d.id == 'AAV56') {
-		// 	openModal(modalT, d.id);
-		// }
 
 		if (d.category == 'C4' || d.category == 'C5') {
 			let li = document.createElement('li');
@@ -443,5 +475,5 @@ function toParc(parc, year = null) {
 function toTurbine(turbine) {
 	let coords = turbinesCoords.find((element) => element.id === turbine);
 	map.flyTo([coords.x, coords.y], 17);
-	openModal(modalT, coords.id);
+	openTurbine(coords.id);
 }

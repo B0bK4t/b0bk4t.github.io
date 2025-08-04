@@ -1,467 +1,726 @@
-function ajouterTurbines() {
-	turbine(47.9271204, -69.2085713, 'VIG01', 'blue');
-	turbine(47.9227792, -69.2099474, 'VIG02', 'blue');
-	turbine(47.9251462, -69.2186576, 'VIG03', 'blue');
-	turbine(47.9209116, -69.2170896, 'VIG04', 'blue');
-	turbine(47.920047, -69.2227196, 'VIG05', 'blue');
-	turbine(47.9183069, -69.2266911, 'VIG06', 'blue');
-	turbine(47.9164701, -69.232719, 'VIG07', 'blue');
-	turbine(47.9135183, -69.2306695, 'VIG08', 'blue');
-	turbine(47.9106938, -69.2314003, 'VIG09', 'blue');
-	turbine(47.9106267, -69.2363291, 'VIG10', 'blue');
-	turbine(47.9294935, -69.2052309, 'VIG11', 'blue');
-	turbine(47.9149759, -69.2151662, 'VIG12', 'blue');
-
-	turbine(48.667813, -67.9547262, 'BDS01', 'blue');
-	turbine(48.6699085, -67.9505869, 'BDS02', 'blue');
-	turbine(48.6724087, -67.9477289, 'BDS03', 'blue');
-	turbine(48.6755056, -67.9451581, 'BDS04', 'blue');
-	turbine(48.6786226, -67.9414459, 'BDS05', 'blue');
-	turbine(48.682207, -67.9438921, 'BDS06', 'blue');
-	turbine(48.6840771, -67.9387208, 'BDS07', 'blue');
-	turbine(48.6868536, -67.9335495, 'BDS08', 'blue');
-	turbine(48.6890558, -67.9283996, 'BDS09', 'blue');
-	turbine(48.7079325, -67.8980078, 'BDS10', 'blue');
-	turbine(48.6822687, -67.935518, 'BDS11', 'blue');
-	turbine(48.6844179, -67.9299904, 'BDS12', 'blue');
-	turbine(48.68816, -67.9196033, 'BDS13', 'blue');
-	turbine(48.6805086, -67.9092297, 'BDS14', 'blue');
-	turbine(48.7148005, -67.8319558, 'BDS15', 'blue');
-	turbine(48.6896513, -67.8979995, 'BDS16', 'blue');
-	turbine(48.6918344, -67.8941264, 'BDS17', 'blue');
-	turbine(48.6947738, -67.8987386, 'BDS18', 'blue');
-	turbine(48.6982283, -67.8915394, 'BDS19', 'blue');
-	turbine(48.6998157, -67.8971309, 'BDS20', 'blue');
-	turbine(48.7039913, -67.9039809, 'BDS21', 'blue');
-	turbine(48.705514, -67.9006758, 'BDS22', 'blue');
-	turbine(48.7028779, -67.8884079, 'BDS23', 'blue');
-	turbine(48.6620975, -67.9011434, 'BDS24', 'blue');
-	turbine(48.7177321, -67.8262656, 'BDS25', 'blue');
-	turbine(48.6677538, -67.8923509, 'BDS26', 'blue');
-	turbine(48.6717202, -67.8907959, 'BDS27', 'blue');
-	turbine(48.6739104, -67.8889371, 'BDS28', 'blue');
-	turbine(48.6687469, -67.8852995, 'BDS29', 'blue');
-	turbine(48.6773379, -67.8820033, 'BDS30', 'blue');
-	turbine(48.6759423, -67.8775457, 'BDS31', 'blue');
-	turbine(48.6800205, -67.8803059, 'BDS32', 'blue');
-	turbine(48.6723174, -67.9546824, 'BDS33', 'blue');
-	turbine(48.6851636, -67.874293, 'BDS34', 'blue');
-	turbine(48.6656855, -67.9537841, 'BDS35', 'blue');
-	turbine(48.6915228, -67.8684644, 'BDS36', 'blue');
-	turbine(48.6937937, -67.8897553, 'BDS37', 'blue');
-	turbine(48.6682355, -67.8766139, 'BDS38', 'blue');
-	turbine(48.6869417, -67.9264025, 'BDS39', 'blue');
-	turbine(48.6954615, -67.8867809, 'BDS40', 'blue');
-	turbine(48.6788446, -67.8596815, 'BDS41', 'blue');
-	turbine(48.684361, -67.8548858, 'BDS42', 'blue');
-	turbine(48.7127973, -67.8738432, 'BDS43', 'blue');
-	turbine(48.7149668, -67.8714103, 'BDS44', 'blue');
-	turbine(48.718599, -67.872955, 'BDS45', 'blue');
-	turbine(48.7283426, -67.8148954, 'BDS46', 'blue');
-	turbine(48.7114919, -67.8671412, 'BDS47', 'blue');
-	turbine(48.7279307, -67.8648126, 'BDS48', 'blue');
-	turbine(48.7205763, -67.8205188, 'BDS49', 'blue');
-	turbine(48.7427985, -67.7871114, 'BDS50', 'blue');
-	turbine(48.7348343, -67.8468876, 'BDS51', 'blue');
-	turbine(48.7392111, -67.8378139, 'BDS52', 'blue');
-	turbine(48.7359958, -67.8394329, 'BDS53', 'blue');
-	turbine(48.7355239, -67.83442, 'BDS54', 'blue');
-	turbine(48.7329649, -67.8438952, 'BDS55', 'blue');
-	turbine(48.731575, -67.8395831, 'BDS56', 'blue');
-	turbine(48.7277974, -67.8548125, 'BDS57', 'blue');
-	turbine(48.7291815, -67.8371381, 'BDS58', 'blue');
-	turbine(48.7257826, -67.8168246, 'BDS59', 'blue');
-	turbine(48.7252024, -67.8512728, 'BDS60', 'blue');
-	turbine(48.7239417, -67.8565552, 'BDS61', 'blue');
-	turbine(48.7209001, -67.8595769, 'BDS62', 'blue');
-	turbine(48.7165602, -67.8660621, 'BDS63', 'blue');
-	turbine(48.7120868, -67.8613642, 'BDS64', 'blue');
-	turbine(48.7095607, -67.8955593, 'BDS65', 'blue');
-	turbine(48.7012029, -67.9082826, 'BDS66', 'blue');
-	turbine(48.7427524, -67.7979712, 'BDS67', 'blue');
-	turbine(48.7398365, -67.7935701, 'BDS68', 'blue');
-	turbine(48.7361963, -67.8059566, 'BDS69', 'blue');
-	turbine(48.7289714, -67.8074181, 'BDS70', 'blue');
-	turbine(48.7334464, -67.7990525, 'BDS71', 'blue');
-	turbine(48.7299765, -67.801246, 'BDS72', 'blue');
-	turbine(48.7260145, -67.7929375, 'BDS73', 'blue');
-
-	turbine(48.1654218, -66.1432001, 'CAR01', 'blue');
-	turbine(48.1666812, -66.1477276, 'CAR02', 'blue');
-	turbine(48.1691285, -66.1476632, 'CAR03', 'blue');
-	turbine(48.1786443, -66.1489078, 'CAR04', 'blue');
-	turbine(48.1808191, -66.1495301, 'CAR05', 'blue');
-	turbine(48.1750385, -66.1454746, 'CAR06', 'blue');
-	turbine(48.2012099, -66.1566196, 'CAR07', 'blue');
-	turbine(48.1826933, -66.1486288, 'CAR08', 'blue');
-	turbine(48.1658495, -66.1238405, 'CAR09', 'blue');
-	turbine(48.1678611, -66.1252806, 'CAR10', 'blue');
-	turbine(48.1778001, -66.1280939, 'CAR11', 'blue');
-	turbine(48.1758684, -66.1293169, 'CAR12', 'blue');
-	turbine(48.1737506, -66.1306902, 'CAR13', 'blue');
-	turbine(48.1714324, -66.1498305, 'CAR14', 'blue');
-	turbine(48.2259549, -66.1348166, 'CAR15', 'blue');
-	turbine(48.183042, -66.1320218, 'CAR16', 'blue');
-	turbine(48.1855875, -66.1326476, 'CAR17', 'blue');
-	turbine(48.1879883, -66.1342515, 'CAR18', 'blue');
-	turbine(48.1701159, -66.1038038, 'CAR19', 'blue');
-	turbine(48.1938855, -66.1400545, 'CAR20', 'blue');
-	turbine(48.1631175, -66.1258837, 'CAR21', 'blue');
-	turbine(48.2003861, -66.1371682, 'CAR22', 'blue');
-	turbine(48.1648493, -66.1280295, 'CAR23', 'blue');
-	turbine(48.2237447, -66.1468778, 'CAR24', 'blue');
-	turbine(48.2312753, -66.1111564, 'CAR25', 'blue');
-	turbine(48.185072, -66.1029501, 'CAR26', 'blue');
-	turbine(48.1871077, -66.1034894, 'CAR27', 'blue');
-	turbine(48.1891948, -66.1046476, 'CAR28', 'blue');
-	turbine(48.1933146, -66.1124597, 'CAR29', 'blue');
-	turbine(48.1984818, -66.1151511, 'CAR30', 'blue');
-	turbine(48.2004571, -66.1179795, 'CAR31', 'blue');
-	turbine(48.1942301, -66.107975, 'CAR32', 'blue');
-	turbine(48.1631748, -66.1034819, 'CAR33', 'blue');
-	turbine(48.2049092, -66.154381, 'CAR34', 'blue');
-	turbine(48.2066649, -66.1525845, 'CAR35', 'blue');
-	turbine(48.211449, -66.1479292, 'CAR36', 'blue');
-	turbine(48.2030625, -66.1553347, 'CAR37', 'blue');
-	turbine(48.2134794, -66.1473069, 'CAR38', 'blue');
-	turbine(48.1639491, -66.1217958, 'CAR39', 'blue');
-	turbine(48.2155494, -66.1464427, 'CAR40', 'blue');
-	turbine(48.220042, -66.1408053, 'CAR41', 'blue');
-	turbine(48.2220817, -66.1388271, 'CAR42', 'blue');
-	turbine(48.223856, -66.1363071, 'CAR43', 'blue');
-	turbine(48.2282032, -66.1335314, 'CAR44', 'blue');
-	turbine(48.2300421, -66.1311274, 'CAR45', 'blue');
-	turbine(48.2316757, -66.1293409, 'CAR46', 'blue');
-	turbine(48.2285682, -66.1449537, 'CAR47', 'blue');
-	turbine(48.2192986, -66.1291537, 'CAR48', 'blue');
-	turbine(48.2411967, -66.1432514, 'CAR49', 'blue');
-	turbine(48.1819026, -66.1239232, 'CAR50', 'blue');
-	turbine(48.1574115, -66.1152442, 'CAR51', 'blue');
-	turbine(48.1605412, -66.1422559, 'CAR52', 'blue');
-	turbine(48.1677117, -66.1041042, 'CAR53', 'blue');
-	turbine(48.2419, -66.1235877, 'CAR54', 'blue');
-	turbine(48.2173542, -66.1576281, 'CAR55', 'blue');
-	turbine(48.1971965, -66.161099, 'CAR56', 'blue');
-	turbine(48.2154526, -66.1594091, 'CAR57', 'blue');
-	turbine(48.2213573, -66.1275015, 'CAR58', 'blue');
-	turbine(48.1716042, -66.1312052, 'CAR59', 'blue');
-	turbine(48.161624, -66.1149126, 'CAR60', 'blue');
-	turbine(48.2461407, -66.1231406, 'CAR61', 'blue');
-	turbine(48.2480698, -66.122411, 'CAR62', 'blue');
-	turbine(48.1656222, -66.104426, 'CAR63', 'blue');
-	turbine(48.2111773, -66.1612544, 'CAR64', 'blue');
-	turbine(48.2439386, -66.1235233, 'CAR65', 'blue');
-	turbine(48.2502225, -66.1215532, 'CAR66', 'blue');
-	turbine(48.1552737, -66.116099, 'CAR67', 'blue');
-	turbine(48.1622588, -66.1408183, 'CAR68', 'blue');
-	turbine(48.1719619, -66.1068937, 'CAR69', 'blue');
-	turbine(48.1595322, -66.1149322, 'CAR70', 'blue');
-	turbine(48.1961493, -66.1136717, 'CAR71', 'blue');
-	turbine(48.1555886, -66.1290809, 'CAR72', 'blue');
-	turbine(48.2335569, -66.1122859, 'CAR73', 'blue');
-
-	turbine(48.3136689, -66.7899242, 'MUU25', 'blue');
-	turbine(48.3157043, -66.7708662, 'MUU24', 'blue');
-	turbine(48.3186511, -66.7685684, 'MUU23', 'blue');
-	turbine(48.322242, -66.773236, 'MUU22', 'blue');
-	turbine(48.3267896, -66.7786833, 'MUU21', 'blue');
-	turbine(48.3328947, -66.7756551, 'MUU20', 'blue');
-	turbine(48.2971366, -66.8013275, 'MUU30', 'blue');
-	turbine(48.2995566, -66.7971575, 'MUU31', 'blue');
-	turbine(48.286559, -66.7766613, 'MUU26', 'blue');
-	turbine(48.2821544, -66.775692, 'MUU27', 'blue');
-	turbine(48.2617875, -66.7575511, 'MUU29', 'blue');
-	turbine(48.276714, -66.7634594, 'MUU28', 'blue');
-	turbine(48.2751523, -66.7975763, 'MUU32', 'blue');
-	turbine(48.2717306, -66.7938964, 'MUU33', 'blue');
-	turbine(48.2683057, -66.7927738, 'MUU34', 'blue');
-	turbine(48.2647575, -66.7925149, 'MUU35', 'blue');
-	turbine(48.2575805, -66.7280698, 'MUU01', 'blue');
-	turbine(48.2637684, -66.725768, 'MUU02', 'blue');
-	turbine(48.265909, -66.7079846, 'MUU03', 'blue');
-	turbine(48.2761266, -66.6811467, 'MUU06', 'blue');
-	turbine(48.2737335, -66.6851646, 'MUU05', 'blue');
-	turbine(48.2713004, -66.6901124, 'MUU04', 'blue');
-	turbine(48.312133, -66.6915169, 'MUU10', 'blue');
-	turbine(48.3170148, -66.6902851, 'MUU09', 'blue');
-	turbine(48.306733, -66.7034265, 'MUU14', 'blue');
-	turbine(48.3038385, -66.7123669, 'MUU15', 'blue');
-	turbine(48.3019777, -66.7181574, 'MUU16', 'blue');
-	turbine(48.2896639, -66.7113554, 'MUU17', 'blue');
-	turbine(48.2869769, -66.7146326, 'MUU18', 'blue');
-	turbine(48.3128554, -66.673068, 'MUU08', 'blue');
-	turbine(48.3150248, -66.6684065, 'MUU07', 'blue');
-	turbine(48.2964015, -66.6933307, 'MUU11', 'blue');
-	turbine(48.2929958, -66.6980404, 'MUU12', 'blue');
-	turbine(48.3482194, -66.7186173, 'MUU38', 'blue');
-	turbine(48.350229, -66.7049221, 'MUU39', 'blue');
-	turbine(48.3468381, -66.7056814, 'MUU40', 'blue');
-	turbine(48.3590394, -66.711418, 'MUU37', 'blue');
-	turbine(48.362454, -66.7122832, 'MUU36', 'blue');
-	turbine(48.3678868, -66.7019402, 'MUU41', 'blue');
-	turbine(48.3638318, -66.6959392, 'MUU42', 'blue');
-	turbine(48.3619544, -66.6698492, 'MUU44', 'blue');
-	turbine(48.3634139, -66.662727, 'MUU43', 'blue');
-	turbine(48.3547934, -66.658156, 'MUU45', 'blue');
-	turbine(48.3531414, -66.6635103, 'MUU46', 'blue');
-	turbine(48.3508133, -66.6692051, 'MUU47', 'blue');
-	turbine(48.3114275, -66.7042119, 'MUU13', 'blue');
-	turbine(48.308645, -66.7329118, 'MUU19', 'blue');
-
-	turbine(49.1285635, -64.706387, 'AAV01', 'blue');
-	turbine(49.1247989, -64.6976479, 'AAV02', 'blue');
-	turbine(49.1219083, -64.6879181, 'AAV03', 'blue');
-	turbine(49.1260135, -64.7027824, 'AAV04', 'blue');
-	turbine(49.1198512, -64.6823772, 'AAV05', 'blue');
-	turbine(49.1172995, -64.6693539, 'AAV06', 'blue');
-	turbine(49.0912081, -64.6551431, 'AAV07', 'blue');
-	turbine(49.1164797, -64.6622604, 'AAV08', 'blue');
-	turbine(49.0888762, -64.6508933, 'AAV09', 'blue');
-	turbine(49.1143371, -64.660027, 'AAV10', 'blue');
-	turbine(49.1115325, -64.6497215, 'AAV11', 'blue');
-	turbine(49.1126914, -64.6533801, 'AAV12', 'blue');
-	turbine(49.110084, -64.6456486, 'AAV13', 'blue');
-	turbine(49.1237172, -64.6915573, 'AAV14', 'blue');
-	turbine(49.0934211, -64.6537982, 'AAV15', 'blue');
-	turbine(49.0921738, -64.6626723, 'AAV16', 'blue');
-	turbine(49.0892075, -64.6638703, 'AAV17', 'blue');
-	turbine(49.098806, -64.7029534, 'AAV18', 'blue');
-	turbine(49.0900738, -64.6588012, 'AAV19', 'blue');
-	turbine(49.0967664, -64.7044234, 'AAV20', 'blue');
-	turbine(49.1011765, -64.7012525, 'AAV21', 'blue');
-	turbine(49.1023386, -64.6990206, 'AAV22', 'blue');
-	turbine(49.1032237, -64.6952262, 'AAV23', 'blue');
-	turbine(49.101823, -64.6858905, 'AAV24', 'blue');
-	turbine(49.0931778, -64.7008176, 'AAV25', 'blue');
-	turbine(49.0951887, -64.6980431, 'AAV26', 'blue');
-	turbine(49.0864486, -64.691895, 'AAV27', 'blue');
-	turbine(49.0889629, -64.6903059, 'AAV28', 'blue');
-	turbine(49.0861695, -64.6763858, 'AAV29', 'blue');
-	turbine(49.0925256, -64.6862192, 'AAV30', 'blue');
-	turbine(49.0934662, -64.6829049, 'AAV31', 'blue');
-	turbine(49.0948772, -64.6801564, 'AAV32', 'blue');
-	turbine(49.095368, -64.6772624, 'AAV33', 'blue');
-	turbine(49.0958444, -64.6745369, 'AAV34', 'blue');
-	turbine(49.0967325, -64.6715949, 'AAV35', 'blue');
-	turbine(49.0871284, -64.6705754, 'AAV36', 'blue');
-	turbine(49.095401, -64.6521113, 'AAV37', 'blue');
-	turbine(49.093997, -64.6617093, 'AAV38', 'blue');
-	turbine(49.0953326, -64.6590818, 'AAV39', 'blue');
-	turbine(49.0856157, -64.6546133, 'AAV40', 'blue');
-	turbine(49.0909348, -64.6489557, 'AAV41', 'blue');
-	turbine(49.093442, -64.6465211, 'AAV42', 'blue');
-	turbine(49.0829545, -64.6405381, 'AAV43', 'blue');
-	turbine(49.086446, -64.6406403, 'AAV44', 'blue');
-	turbine(49.0880924, -64.6376341, 'AAV45', 'blue');
-	turbine(49.0900322, -64.6363826, 'AAV46', 'blue');
-	turbine(49.0854453, -64.6351002, 'AAV47', 'blue');
-	turbine(49.0814278, -64.633321, 'AAV48', 'blue');
-	turbine(49.0822673, -64.6293491, 'AAV49', 'blue');
-	turbine(49.0861264, -64.6288206, 'AAV50', 'blue');
-	turbine(49.0879551, -64.6282563, 'AAV51', 'blue');
-	turbine(49.0787248, -64.6246672, 'AAV52', 'blue');
-	turbine(49.0790082, -64.621826, 'AAV53', 'blue');
-	turbine(49.0841803, -64.6183927, 'AAV54', 'blue');
-	turbine(49.0769576, -64.6043962, 'AAV55', 'blue');
-	turbine(49.0788452, -64.6034738, 'AAV56', 'blue');
-	turbine(49.0728949, -64.5988028, 'AAV57', 'blue');
-	turbine(49.0770691, -64.5978659, 'AAV58', 'blue');
-	turbine(49.0785111, -64.5948606, 'AAV59', 'blue');
-	turbine(49.0745051, -64.6029693, 'AAV60', 'blue');
-	turbine(49.0734388, -64.5921504, 'AAV61', 'blue');
-	turbine(49.0677487, -64.587034, 'AAV62', 'blue');
-	turbine(49.0751851, -64.5842321, 'AAV63', 'blue');
-	turbine(49.0834495, -64.6133931, 'AAV64', 'blue');
-	turbine(49.0852624, -64.6229418, 'AAV65', 'blue');
-	turbine(49.0667666, -64.5824591, 'AAV66', 'blue');
-	turbine(49.0981672, -64.6977276, 'AAV67', 'blue');
-
-	turbine(49.2371243, -65.4997538, 'GMO401', 'blue');
-	turbine(49.2350231, -65.4991475, 'GMO402', 'blue');
-	turbine(49.2369758, -65.4923451, 'GMO403', 'blue');
-	turbine(49.2349227, -65.4919027, 'GMO404', 'blue');
-	turbine(49.2359705, -65.4867921, 'GMO405', 'blue');
-	turbine(49.2328927, -65.4914169, 'GMO406', 'blue');
-	turbine(49.2308646, -65.4906641, 'GMO407', 'blue');
-	turbine(49.2318763, -65.4977985, 'GMO408', 'blue');
-	turbine(49.2299059, -65.4971296, 'GMO409', 'blue');
-	turbine(49.2278162, -65.4943416, 'GMO410', 'blue');
-	turbine(49.2256609, -65.4942897, 'GMO411', 'blue');
-	turbine(49.2236191, -65.4936215, 'GMO412', 'blue');
-	turbine(49.2258802, -65.4851884, 'GMO413', 'blue');
-	turbine(49.2268773, -65.4762205, 'GMO414', 'blue');
-	turbine(49.223694, -65.5126566, 'GMO415', 'blue');
-	turbine(49.2219781, -65.5091633, 'GMO416', 'blue');
-	turbine(49.222039, -65.5001856, 'GMO417', 'blue');
-	turbine(49.2193141, -65.4997088, 'GMO418', 'blue');
-	turbine(49.2194248, -65.4914287, 'GMO419', 'blue');
-	turbine(49.2202168, -65.48406, 'GMO420', 'blue');
-	turbine(49.2210205, -65.479843, 'GMO421', 'blue');
-	turbine(49.2233605, -65.4835173, 'GMO422', 'blue');
-	turbine(49.2248654, -65.4757198, 'GMO423', 'blue');
-	turbine(49.2218578, -65.4726194, 'GMO424', 'blue');
-	turbine(49.2229848, -65.4659152, 'GMO425', 'blue');
-	turbine(49.2263209, -65.4642031, 'GMO426', 'blue');
-	turbine(49.2173486, -65.4901549, 'GMO427', 'blue');
-	turbine(49.2153732, -65.4853752, 'GMO428', 'blue');
-	turbine(49.2144772, -65.4807011, 'GMO429', 'blue');
-	turbine(49.2169573, -65.4995219, 'GMO430', 'blue');
-	turbine(49.2147834, -65.4999627, 'GMO431', 'blue');
-	turbine(49.2127544, -65.4993675, 'GMO432', 'blue');
-	turbine(49.2098258, -65.5168172, 'GMO433', 'blue');
-	turbine(49.2111326, -65.5075149, 'GMO434', 'blue');
-	turbine(49.2075968, -65.5053564, 'GMO435', 'blue');
-	turbine(49.208496, -65.4973049, 'GMO436', 'blue');
-	turbine(49.2059336, -65.4957341, 'GMO437', 'blue');
-	turbine(49.2027947, -65.4946327, 'GMO438', 'blue');
-	turbine(49.2006555, -65.4933378, 'GMO439', 'blue');
-	turbine(49.1985189, -65.4922135, 'GMO440', 'blue');
-	turbine(49.1963456, -65.4924003, 'GMO441', 'blue');
-	turbine(49.1995599, -65.5163397, 'GMO442', 'blue');
-	turbine(49.197552, -65.5152258, 'GMO443', 'blue');
-	turbine(49.2002878, -65.5104053, 'GMO444', 'blue');
-	turbine(49.2005764, -65.5052775, 'GMO445', 'blue');
-	turbine(49.1983803, -65.5046822, 'GMO446', 'blue');
-	turbine(49.1962386, -65.5030243, 'GMO447', 'blue');
-	turbine(49.1940678, -65.501917, 'GMO448', 'blue');
-	turbine(49.1919225, -65.5006794, 'GMO449', 'blue');
-	turbine(49.1898686, -65.4993928, 'GMO450', 'blue');
-	turbine(49.1937222, -65.5124138, 'GMO451', 'blue');
-	turbine(49.1917474, -65.5133394, 'GMO452', 'blue');
-	turbine(49.1896854, -65.5136202, 'GMO453', 'blue');
-	turbine(49.1867247, -65.5090259, 'GMO454', 'blue');
-	turbine(49.1850598, -65.5024136, 'GMO455', 'blue');
-	turbine(49.1828629, -65.5021531, 'GMO456', 'blue');
-	turbine(49.186751, -65.4947599, 'GMO457', 'blue');
-	turbine(49.1767306, -65.5117595, 'GMO458', 'blue');
-	turbine(49.1748486, -65.5112059, 'GMO459', 'blue');
-	turbine(49.1794074, -65.5023684, 'GMO460', 'blue');
-	turbine(49.1774042, -65.5014401, 'GMO461', 'blue');
-	turbine(49.1752751, -65.5006715, 'GMO462', 'blue');
-	turbine(49.1733845, -65.5004891, 'GMO463', 'blue');
-	turbine(49.183668, -65.4914456, 'GMO464', 'blue');
-	turbine(49.1815308, -65.490228, 'GMO465', 'blue');
-	turbine(49.1793845, -65.4883881, 'GMO466', 'blue');
-	turbine(49.177526, -65.4878143, 'GMO467', 'blue');
-	turbine(49.1785174, -65.4796304, 'GMO468', 'blue');
-	turbine(49.1816093, -65.4797308, 'GMO469', 'blue');
-	turbine(49.2009706, -65.4802468, 'GMO470', 'blue');
-	turbine(49.1987379, -65.4792071, 'GMO471', 'blue');
-	turbine(49.2017162, -65.4694046, 'GMO472', 'blue');
-	turbine(49.1995868, -65.4689786, 'GMO473', 'blue');
-	turbine(49.1965287, -65.4690612, 'GMO474', 'blue');
-	turbine(49.196269, -65.4612601, 'GMO475', 'blue');
-	turbine(49.1901532, -65.4658349, 'GMO476', 'blue');
-	turbine(49.1848413, -65.4581752, 'GMO477', 'blue');
-	turbine(49.1829181, -65.4577044, 'GMO478', 'blue');
-	turbine(49.1809989, -65.4572509, 'GMO479', 'blue');
-	turbine(49.1784766, -65.4568216, 'GMO480', 'blue');
-	turbine(49.176411, -65.4561705, 'GMO481', 'blue');
-	turbine(49.1733308, -65.4552588, 'GMO482', 'blue');
-	turbine(49.2381069, -65.4188159, 'GMO501', 'blue');
-	turbine(49.2373184, -65.4286204, 'GMO502', 'blue');
-	turbine(49.2354731, -65.4282551, 'GMO503', 'blue');
-	turbine(49.2333989, -65.423313, 'GMO504', 'blue');
-	turbine(49.2314192, -65.4219919, 'GMO505', 'blue');
-	turbine(49.2294071, -65.4195153, 'GMO506', 'blue');
-	turbine(49.2239874, -65.4214839, 'GMO507', 'blue');
-	turbine(49.2248058, -65.4142535, 'GMO508', 'blue');
-	turbine(49.2203023, -65.4210736, 'GMO509', 'blue');
-	turbine(49.2205704, -65.4166137, 'GMO510', 'blue');
-	turbine(49.2328858, -65.433555, 'GMO511', 'blue');
-	turbine(49.2311967, -65.4334821, 'GMO512', 'blue');
-	turbine(49.2277807, -65.4335268, 'GMO513', 'blue');
-	turbine(49.2257735, -65.4338142, 'GMO514', 'blue');
-	turbine(49.2238107, -65.4333375, 'GMO515', 'blue');
-	turbine(49.2217063, -65.4328887, 'GMO516', 'blue');
-	turbine(49.2196323, -65.4328646, 'GMO517', 'blue');
-	turbine(49.2176097, -65.4326547, 'GMO518', 'blue');
-	turbine(49.2155256, -65.4323215, 'GMO519', 'blue');
-	turbine(49.2134304, -65.4322171, 'GMO520', 'blue');
-	turbine(49.2108523, -65.4305635, 'GMO521', 'blue');
-	turbine(49.2090778, -65.4306496, 'GMO522', 'blue');
-	turbine(49.2068118, -65.4312452, 'GMO523', 'blue');
-	turbine(49.2048836, -65.4325828, 'GMO524', 'blue');
-	turbine(49.2031052, -65.4347393, 'GMO525', 'blue');
-	turbine(49.2005046, -65.4304316, 'GMO526', 'blue');
-	turbine(49.1983484, -65.429956, 'GMO527', 'blue');
-	turbine(49.1962674, -65.4293754, 'GMO528', 'blue');
-	turbine(49.1941383, -65.4287097, 'GMO529', 'blue');
-	turbine(49.191757, -65.4277644, 'GMO530', 'blue');
-	turbine(49.1897515, -65.426944, 'GMO531', 'blue');
-	turbine(49.1862605, -65.4253598, 'GMO532', 'blue');
-	turbine(49.1883166, -65.4182222, 'GMO533', 'blue');
-	turbine(49.1863552, -65.4170206, 'GMO534', 'blue');
-	turbine(49.1788899, -65.4200024, 'GMO535', 'blue');
-	turbine(49.1768697, -65.4181814, 'GMO536', 'blue');
-	turbine(49.174004, -65.4183859, 'GMO537', 'blue');
-	turbine(49.1759793, -65.4091375, 'GMO538', 'blue');
-	turbine(49.2251459, -65.3969681, 'GMO539', 'blue');
-	turbine(49.226154, -65.3929792, 'GMO540', 'blue');
-	turbine(49.2087628, -65.4075874, 'GMO541', 'blue');
-	turbine(49.2119764, -65.4042364, 'GMO542', 'blue');
-	turbine(49.2129525, -65.3993317, 'GMO543', 'blue');
-	turbine(49.2144869, -65.3951328, 'GMO544', 'blue');
-	turbine(49.2162875, -65.3872121, 'GMO545', 'blue');
-	turbine(49.2143658, -65.3845173, 'GMO546', 'blue');
-	turbine(49.2021478, -65.4011219, 'GMO547', 'blue');
-	turbine(49.2042204, -65.4043018, 'GMO548', 'blue');
-	turbine(49.2086165, -65.3981566, 'GMO549', 'blue');
-	turbine(49.211584, -65.3929346, 'GMO550', 'blue');
-	turbine(49.1904889, -65.3888705, 'GMO551', 'blue');
-	turbine(49.1918335, -65.3848211, 'GMO552', 'blue');
-	turbine(49.1923661, -65.3803614, 'GMO553', 'blue');
-	turbine(49.1936623, -65.3760506, 'GMO554', 'blue');
-	turbine(49.2008127, -65.379235, 'GMO555', 'blue');
-	turbine(49.2029239, -65.3788458, 'GMO556', 'blue');
-	turbine(49.2025881, -65.3666661, 'GMO557', 'blue');
-	turbine(49.2045612, -65.368486, 'GMO558', 'blue');
-	turbine(49.2078441, -65.365511, 'GMO559', 'blue');
-
-	turbine(49.1716215, -64.8835132, 'MSE639', 'blue');
-	turbine(49.1735274, -64.8881614, 'MSE638', 'blue');
-	turbine(49.1732857, -64.8920824, 'MSE637', 'blue');
-	turbine(49.1734689, -64.8966666, 'MSE636', 'blue');
-	turbine(49.1733466, -64.9012713, 'MSE635', 'blue');
-	turbine(49.1700264, -64.9036669, 'MSE634', 'blue');
-	turbine(49.1702007, -64.9078459, 'MSE633', 'blue');
-	turbine(49.1771944, -64.9062842, 'MSE632', 'blue');
-	turbine(49.1764748, -64.909511, 'MSE631', 'blue');
-	turbine(49.1763026, -64.9132404, 'MSE630', 'blue');
-	turbine(49.1743646, -64.9147001, 'MSE629', 'blue');
-	turbine(49.1722804, -64.9219565, 'MSE627', 'blue');
-	turbine(49.173557, -64.9197249, 'MSE628', 'blue');
-	turbine(49.1769377, -64.9242739, 'MSE625', 'blue');
-	turbine(49.1781648, -64.9218727, 'MSE626', 'blue');
-	turbine(49.1756215, -64.9287216, 'MSE624', 'blue');
-	turbine(49.1750959, -64.9322226, 'MSE623', 'blue');
-	turbine(49.1804625, -64.9313549, 'MSE622', 'blue');
-	turbine(49.181417, -64.9355377, 'MSE621', 'blue');
-	turbine(49.1813149, -64.9437548, 'MSE620', 'blue');
-	turbine(49.1805575, -64.946716, 'MSE619', 'blue');
-	turbine(49.1790426, -64.9495055, 'MSE618', 'blue');
-	turbine(49.187799, -64.9610516, 'MSE617', 'blue');
-	turbine(49.1861236, -64.9623563, 'MSE616', 'blue');
-	turbine(49.1891108, -64.9684288, 'MSE615', 'blue');
-	turbine(49.1876304, -64.9703657, 'MSE614', 'blue');
-	turbine(49.1872452, -64.9771874, 'MSE613', 'blue');
-	turbine(49.1859431, -64.9795607, 'MSE612', 'blue');
-	turbine(49.1873858, -64.9882772, 'MSE608', 'blue');
-	turbine(49.1889769, -64.986042, 'MSE609', 'blue');
-	turbine(49.1903501, -64.9831703, 'MSE610', 'blue');
-	turbine(49.191257, -64.9804176, 'MSE611', 'blue');
-	turbine(49.1769923, -64.9938448, 'MSE607', 'blue');
-	turbine(49.1809029, -64.9977818, 'MSE606', 'blue');
-	turbine(49.1812287, -65.0030615, 'MSE605', 'blue');
-	turbine(49.1802469, -65.0074389, 'MSE604', 'blue');
-	turbine(49.1878248, -65.0064976, 'MSE603', 'blue');
-	turbine(49.1913027, -65.0017769, 'MSE602', 'blue');
-	turbine(49.1934903, -65.0008972, 'MSE601', 'blue');
-
-	// document.querySelector('#ttotal').innerHTML = turbineTotal;
-	// let tfin = document.querySelector('#tfin').innerHTML;
-	// document.querySelector('#tpercent').innerHTML = Math.round(
-	// 	(tfin / turbineTotal) * 100,
-	// 	2
-	// );
-}
+let turbines = [
+	{ id: 'VIG01', coords: [47.9271204, -69.2085713], op: [''] },
+	{ id: 'VIG02', coords: [47.9227792, -69.2099474], op: [''] },
+	{ id: 'VIG03', coords: [47.9251462, -69.2186576], op: [''] },
+	{ id: 'VIG04', coords: [47.9209116, -69.2170896], op: [''] },
+	{ id: 'VIG05', coords: [47.920047, -69.2227196], op: [''] },
+	{ id: 'VIG06', coords: [47.9183069, -69.2266911], op: [''] },
+	{ id: 'VIG07', coords: [47.9164701, -69.232719], op: [''] },
+	{ id: 'VIG08', coords: [47.9135183, -69.2306695], op: [''] },
+	{ id: 'VIG09', coords: [47.9106938, -69.2314003], op: [''] },
+	{ id: 'VIG10', coords: [47.9106267, -69.2363291], op: [''] },
+	{ id: 'VIG11', coords: [47.9294935, -69.2052309], op: [''] },
+	{ id: 'VIG12', coords: [47.9149759, -69.2151662], op: [''] },
+	{ id: 'BDS01', coords: [48.667813, -67.9547262], op: ['eloise'] },
+	{
+		id: 'BDS02',
+		coords: [48.6699085, -67.9505869],
+		op: ['eloise', 'marcantoine'],
+	},
+	{ id: 'BDS03', coords: [48.6724087, -67.9477289], op: ['eloise'] },
+	{ id: 'BDS04', coords: [48.6755056, -67.9451581], op: ['eloise', 'theo'] },
+	{ id: 'BDS05', coords: [48.6786226, -67.9414459], op: ['eloise'] },
+	{
+		id: 'BDS06',
+		coords: [48.682207, -67.9438921],
+		op: ['eloise', 'guillaume'],
+	},
+	{
+		id: 'BDS07',
+		coords: [48.6840771, -67.9387208],
+		op: ['eloise', 'guillaume'],
+	},
+	{ id: 'BDS08', coords: [48.6868536, -67.9335495], op: ['eloise'] },
+	{ id: 'BDS09', coords: [48.6890558, -67.9283996], op: ['eloise'] },
+	{ id: 'BDS10', coords: [48.7079325, -67.8980078], op: ['david'] },
+	{ id: 'BDS11', coords: [48.6822687, -67.935518], op: ['guillaume'] },
+	{
+		id: 'BDS12',
+		coords: [48.6844179, -67.9299904],
+		op: ['eloise', 'guillaume', 'theo'],
+	},
+	{
+		id: 'BDS13',
+		coords: [48.68816, -67.9196033],
+		op: ['gabriel_g', 'guillaume'],
+	},
+	{
+		id: 'BDS14',
+		coords: [48.6805086, -67.9092297],
+		op: ['gabriel_g', 'guillaume'],
+	},
+	{
+		id: 'BDS15',
+		coords: [48.7148005, -67.8319558],
+		op: ['david', 'guillaume'],
+	},
+	{ id: 'BDS16', coords: [48.6896513, -67.8979995], op: ['david', 'theo'] },
+	{ id: 'BDS17', coords: [48.6918344, -67.8941264], op: ['gabriel_a'] },
+	{ id: 'BDS18', coords: [48.6947738, -67.8987386], op: ['guillaume'] },
+	{ id: 'BDS19', coords: [48.6982283, -67.8915394], op: ['david'] },
+	{ id: 'BDS20', coords: [48.6998157, -67.8971309], op: ['david'] },
+	{ id: 'BDS21', coords: [48.7039913, -67.9039809], op: ['eloise'] },
+	{ id: 'BDS22', coords: [48.705514, -67.9006758], op: ['eloise'] },
+	{ id: 'BDS23', coords: [48.7028779, -67.8884079], op: ['theo'] },
+	{ id: 'BDS24', coords: [48.6620975, -67.9011434], op: ['guillaume'] },
+	{
+		id: 'BDS25',
+		coords: [48.7177321, -67.8262656],
+		op: ['david', 'gabriel_g'],
+	},
+	{
+		id: 'BDS26',
+		coords: [48.6677538, -67.8923509],
+		op: ['gabriel_a', 'david'],
+	},
+	{ id: 'BDS27', coords: [48.6717202, -67.8907959], op: ['david', 'isaac'] },
+	{ id: 'BDS28', coords: [48.6739104, -67.8889371], op: ['guillaume'] },
+	{
+		id: 'BDS29',
+		coords: [48.6687469, -67.8852995],
+		op: ['eloise', 'guillaume'],
+	},
+	{
+		id: 'BDS30',
+		coords: [48.6773379, -67.8820033],
+		op: ['david', 'guillaume'],
+	},
+	{
+		id: 'BDS31',
+		coords: [48.6759423, -67.8775457],
+		op: ['marcantoine', 'theo'],
+	},
+	{
+		id: 'BDS32',
+		coords: [48.6800205, -67.8803059],
+		op: ['david', 'guillaume'],
+	},
+	{ id: 'BDS33', coords: [48.6723174, -67.9546824], op: ['guillaume'] },
+	{ id: 'BDS34', coords: [48.6851636, -67.874293], op: [''] },
+	{
+		id: 'BDS35',
+		coords: [48.6656855, -67.9537841],
+		op: ['eloise', 'marcantoine'],
+	},
+	{ id: 'BDS36', coords: [48.6915228, -67.8684644], op: ['david', 'isaac'] },
+	{ id: 'BDS37', coords: [48.6937937, -67.8897553], op: ['isaac'] },
+	{ id: 'BDS38', coords: [48.6682355, -67.8766139], op: ['eloise'] },
+	{ id: 'BDS39', coords: [48.6869417, -67.9264025], op: ['eloise', 'theo'] },
+	{ id: 'BDS40', coords: [48.6954615, -67.8867809], op: ['guillaume', 'theo'] },
+	{ id: 'BDS41', coords: [48.6788446, -67.8596815], op: ['guillaume', 'theo'] },
+	{ id: 'BDS42', coords: [48.684361, -67.8548858], op: [''] },
+	{ id: 'BDS43', coords: [48.7127973, -67.8738432], op: ['david'] },
+	{
+		id: 'BDS44',
+		coords: [48.7149668, -67.8714103],
+		op: ['david', 'isaac', 'marcantoine'],
+	},
+	{ id: 'BDS45', coords: [48.718599, -67.872955], op: ['gabriel_a'] },
+	{ id: 'BDS46', coords: [48.7283426, -67.8148954], op: ['gabriel_g'] },
+	{ id: 'BDS47', coords: [48.7114919, -67.8671412], op: ['isaac'] },
+	{ id: 'BDS48', coords: [48.7279307, -67.8648126], op: ['david', 'isaac'] },
+	{
+		id: 'BDS49',
+		coords: [48.7205763, -67.8205188],
+		op: ['david', 'gabriel_a'],
+	},
+	{ id: 'BDS50', coords: [48.7427985, -67.7871114], op: ['marcantoine'] },
+	{ id: 'BDS51', coords: [48.7348343, -67.8468876], op: ['eloise'] },
+	{ id: 'BDS52', coords: [48.7392111, -67.8378139], op: ['eloise'] },
+	{ id: 'BDS53', coords: [48.7359958, -67.8394329], op: ['isaac'] },
+	{ id: 'BDS54', coords: [48.7355239, -67.83442], op: ['theo'] },
+	{ id: 'BDS55', coords: [48.7329649, -67.8438952], op: ['isaac'] },
+	{ id: 'BDS56', coords: [48.731575, -67.8395831], op: ['david', 'guillaume'] },
+	{ id: 'BDS57', coords: [48.7277974, -67.8548125], op: ['gabriel_a'] },
+	{ id: 'BDS58', coords: [48.7291815, -67.8371381], op: ['gabriel_g'] },
+	{ id: 'BDS59', coords: [48.7257826, -67.8168246], op: ['eloise'] },
+	{ id: 'BDS60', coords: [48.7252024, -67.8512728], op: ['isaac'] },
+	{ id: 'BDS61', coords: [48.7239417, -67.8565552], op: ['marcantoine'] },
+	{
+		id: 'BDS62',
+		coords: [48.7209001, -67.8595769],
+		op: ['gabriel_a', 'isaac'],
+	},
+	{
+		id: 'BDS63',
+		coords: [48.7165602, -67.8660621],
+		op: ['david', 'marcantoine'],
+	},
+	{ id: 'BDS64', coords: [48.7120868, -67.8613642], op: ['marcantoine'] },
+	{ id: 'BDS65', coords: [48.7095607, -67.8955593], op: ['gabriel_g'] },
+	{ id: 'BDS66', coords: [48.7012029, -67.9082826], op: ['gabriel_g'] },
+	{ id: 'BDS67', coords: [48.7427524, -67.7979712], op: ['david'] },
+	{
+		id: 'BDS68',
+		coords: [48.7398365, -67.7935701],
+		op: ['gabriel_a', 'gabriel_g'],
+	},
+	{ id: 'BDS69', coords: [48.7361963, -67.8059566], op: ['gabriel_g'] },
+	{ id: 'BDS70', coords: [48.7289714, -67.8074181], op: [''] },
+	{ id: 'BDS71', coords: [48.7334464, -67.7990525], op: ['gabriel_a'] },
+	{ id: 'BDS72', coords: [48.7299765, -67.801246], op: ['eloise'] },
+	{
+		id: 'BDS73',
+		coords: [48.7260145, -67.7929375],
+		op: ['david', 'guillaume'],
+	},
+	{ id: 'CAR01', coords: [48.1654218, -66.1432001], op: ['eloise'] },
+	{ id: 'CAR02', coords: [48.1666812, -66.1477276], op: ['gabriel_g'] },
+	{ id: 'CAR03', coords: [48.1691285, -66.1476632], op: ['eloise'] },
+	{ id: 'CAR04', coords: [48.1786443, -66.1489078], op: ['marcantoine'] },
+	{
+		id: 'CAR05',
+		coords: [48.1808191, -66.1495301],
+		op: ['eloise', 'gabriel_a'],
+	},
+	{
+		id: 'CAR06',
+		coords: [48.1750385, -66.1454746],
+		op: ['david', 'guillaume', 'theo'],
+	},
+	{ id: 'CAR07', coords: [48.2012099, -66.1566196], op: ['gabriel_g'] },
+	{ id: 'CAR08', coords: [48.1826933, -66.1486288], op: ['marcantoine'] },
+	{ id: 'CAR09', coords: [48.1658495, -66.1238405], op: ['marcantoine'] },
+	{ id: 'CAR10', coords: [48.1678611, -66.1252806], op: ['theo'] },
+	{ id: 'CAR11', coords: [48.1778001, -66.1280939], op: ['eloise'] },
+	{ id: 'CAR12', coords: [48.1758684, -66.1293169], op: ['eloise'] },
+	{ id: 'CAR13', coords: [48.1737506, -66.1306902], op: ['marcantoine'] },
+	{ id: 'CAR14', coords: [48.1714324, -66.1498305], op: ['marcantoine'] },
+	{ id: 'CAR15', coords: [48.2259549, -66.1348166], op: ['david'] },
+	{ id: 'CAR16', coords: [48.183042, -66.1320218], op: ['eloise'] },
+	{ id: 'CAR17', coords: [48.1855875, -66.1326476], op: ['eloise'] },
+	{
+		id: 'CAR18',
+		coords: [48.1879883, -66.1342515],
+		op: ['david', 'gabriel_g', 'guillaume'],
+	},
+	{
+		id: 'CAR19',
+		coords: [48.1701159, -66.1038038],
+		op: ['david', 'gabriel_a'],
+	},
+	{ id: 'CAR20', coords: [48.1938855, -66.1400545], op: ['marcantoine'] },
+	{
+		id: 'CAR21',
+		coords: [48.1631175, -66.1258837],
+		op: ['gabriel_a', 'marcantoine'],
+	},
+	{ id: 'CAR22', coords: [48.2003861, -66.1371682], op: ['marcantoine'] },
+	{ id: 'CAR23', coords: [48.1648493, -66.1280295], op: ['eloise'] },
+	{
+		id: 'CAR24',
+		coords: [48.2237447, -66.1468778],
+		op: ['gabriel_g', 'guillaume', 'marcantoine'],
+	},
+	{ id: 'CAR25', coords: [48.2312753, -66.1111564], op: ['david'] },
+	{
+		id: 'CAR26',
+		coords: [48.185072, -66.1029501],
+		op: ['david', 'guillaume', 'theo'],
+	},
+	{ id: 'CAR27', coords: [48.1871077, -66.1034894], op: ['theo'] },
+	{ id: 'CAR28', coords: [48.1891948, -66.1046476], op: ['david'] },
+	{ id: 'CAR29', coords: [48.1933146, -66.1124597], op: ['gabriel_g'] },
+	{ id: 'CAR30', coords: [48.1984818, -66.1151511], op: ['marcantoine'] },
+	{
+		id: 'CAR31',
+		coords: [48.2004571, -66.1179795],
+		op: ['gabriel_a', 'guillaume'],
+	},
+	{
+		id: 'CAR32',
+		coords: [48.1942301, -66.107975],
+		op: ['eloise', 'marcantoine'],
+	},
+	{ id: 'CAR33', coords: [48.1631748, -66.1034819], op: ['gabriel_a'] },
+	{ id: 'CAR34', coords: [48.2049092, -66.154381], op: ['gabriel_a'] },
+	{
+		id: 'CAR35',
+		coords: [48.2066649, -66.1525845],
+		op: ['eloise', 'guillaume'],
+	},
+	{ id: 'CAR36', coords: [48.211449, -66.1479292], op: ['gabriel_g'] },
+	{ id: 'CAR37', coords: [48.2030625, -66.1553347], op: ['marcantoine'] },
+	{ id: 'CAR38', coords: [48.2134794, -66.1473069], op: ['david'] },
+	{ id: 'CAR39', coords: [48.1639491, -66.1217958], op: ['gabriel_g'] },
+	{
+		id: 'CAR40',
+		coords: [48.2155494, -66.1464427],
+		op: ['gabriel_g', 'marcantoine'],
+	},
+	{
+		id: 'CAR41',
+		coords: [48.220042, -66.1408053],
+		op: ['gabriel_g', 'marcantoine'],
+	},
+	{ id: 'CAR42', coords: [48.2220817, -66.1388271], op: ['eloise'] },
+	{
+		id: 'CAR43',
+		coords: [48.223856, -66.1363071],
+		op: ['eloise', 'guillaume'],
+	},
+	{ id: 'CAR44', coords: [48.2282032, -66.1335314], op: ['marcantoine'] },
+	{ id: 'CAR45', coords: [48.2300421, -66.1311274], op: ['theo'] },
+	{ id: 'CAR46', coords: [48.2316757, -66.1293409], op: ['gabriel_a'] },
+	{ id: 'CAR47', coords: [48.2285682, -66.1449537], op: ['theo'] },
+	{
+		id: 'CAR48',
+		coords: [48.2192986, -66.1291537],
+		op: ['guillaume', 'marcantoine'],
+	},
+	{
+		id: 'CAR49',
+		coords: [48.2411967, -66.1432514],
+		op: ['gabriel_a', 'marcantoine'],
+	},
+	{
+		id: 'CAR50',
+		coords: [48.1819026, -66.1239232],
+		op: ['david', 'gabriel_a'],
+	},
+	{ id: 'CAR51', coords: [48.1574115, -66.1152442], op: ['gabriel_g'] },
+	{ id: 'CAR52', coords: [48.1605412, -66.1422559], op: ['gabriel_g'] },
+	{ id: 'CAR53', coords: [48.1677117, -66.1041042], op: ['david'] },
+	{ id: 'CAR54', coords: [48.2419, -66.1235877], op: ['gabriel_g'] },
+	{ id: 'CAR55', coords: [48.2173542, -66.1576281], op: ['marcantoine'] },
+	{ id: 'CAR56', coords: [48.1971965, -66.161099], op: ['marcantoine'] },
+	{ id: 'CAR57', coords: [48.2154526, -66.1594091], op: ['gabriel_g'] },
+	{ id: 'CAR58', coords: [48.2213573, -66.1275015], op: ['gabriel_a', 'theo'] },
+	{ id: 'CAR59', coords: [48.1716042, -66.1312052], op: ['gabriel_a'] },
+	{
+		id: 'CAR60',
+		coords: [48.161624, -66.1149126],
+		op: ['guillaume', 'marcantoine'],
+	},
+	{ id: 'CAR61', coords: [48.2461407, -66.1231406], op: ['gabriel_a'] },
+	{
+		id: 'CAR62',
+		coords: [48.2480698, -66.122411],
+		op: ['guillaume', 'marcantoine'],
+	},
+	{
+		id: 'CAR63',
+		coords: [48.1656222, -66.104426],
+		op: ['david', 'guillaume', 'marcantoine'],
+	},
+	{ id: 'CAR64', coords: [48.2111773, -66.1612544], op: ['gabriel_a'] },
+	{ id: 'CAR65', coords: [48.2439386, -66.1235233], op: ['gabriel_g'] },
+	{ id: 'CAR66', coords: [48.2502225, -66.1215532], op: ['theo'] },
+	{ id: 'CAR67', coords: [48.1552737, -66.116099], op: ['david', 'theo'] },
+	{
+		id: 'CAR68',
+		coords: [48.1622588, -66.1408183],
+		op: ['gabriel_a', 'marcantoine'],
+	},
+	{ id: 'CAR69', coords: [48.1719619, -66.1068937], op: ['david'] },
+	{ id: 'CAR70', coords: [48.1595322, -66.1149322], op: ['marcantoine'] },
+	{ id: 'CAR71', coords: [48.1961493, -66.1136717], op: ['gabriel_a'] },
+	{ id: 'CAR72', coords: [48.1555886, -66.1290809], op: ['gabriel_g'] },
+	{ id: 'CAR73', coords: [48.2335569, -66.1122859], op: ['theo'] },
+	{ id: 'MUU01', coords: [48.2575805, -66.7280698], op: ['theo'] },
+	{ id: 'MUU02', coords: [48.2637684, -66.725768], op: ['david'] },
+	{ id: 'MUU03', coords: [48.265909, -66.7079846], op: ['gabriel_a'] },
+	{ id: 'MUU04', coords: [48.2713004, -66.6901124], op: ['eloise'] },
+	{ id: 'MUU05', coords: [48.2737335, -66.6851646], op: ['marcantoine'] },
+	{
+		id: 'MUU06',
+		coords: [48.2761266, -66.6811467],
+		op: ['david', 'guillaume'],
+	},
+	{ id: 'MUU07', coords: [48.3150248, -66.6684065], op: ['eloise'] },
+	{ id: 'MUU08', coords: [48.3128554, -66.673068], op: ['david'] },
+	{ id: 'MUU09', coords: [48.3170148, -66.6902851], op: ['eloise'] },
+	{ id: 'MUU10', coords: [48.312133, -66.6915169], op: ['david'] },
+	{
+		id: 'MUU11',
+		coords: [48.2964015, -66.6933307],
+		op: ['david', 'gabriel_g'],
+	},
+	{ id: 'MUU12', coords: [48.2929958, -66.6980404], op: ['guillaume'] },
+	{ id: 'MUU13', coords: [48.3114275, -66.7042119], op: ['eloise'] },
+	{ id: 'MUU14', coords: [48.306733, -66.7034265], op: ['gabriel_g'] },
+	{ id: 'MUU15', coords: [48.3038385, -66.7123669], op: ['gabriel_a'] },
+	{ id: 'MUU16', coords: [48.3019777, -66.7181574], op: ['gabriel_g'] },
+	{ id: 'MUU17', coords: [48.2896639, -66.7113554], op: ['guillaume'] },
+	{ id: 'MUU18', coords: [48.2869769, -66.7146326], op: ['guillaume'] },
+	{ id: 'MUU19', coords: [48.308645, -66.7329118], op: ['david'] },
+	{ id: 'MUU20', coords: [48.3328947, -66.7756551], op: ['gabriel_g'] },
+	{ id: 'MUU21', coords: [48.3267896, -66.7786833], op: ['theo'] },
+	{ id: 'MUU22', coords: [48.322242, -66.773236], op: ['theo'] },
+	{ id: 'MUU23', coords: [48.3186511, -66.7685684], op: ['eloise'] },
+	{ id: 'MUU24', coords: [48.3157043, -66.7708662], op: ['gabriel_a', 'theo'] },
+	{ id: 'MUU25', coords: [48.3136689, -66.7899242], op: ['david'] },
+	{ id: 'MUU26', coords: [48.286559, -66.7766613], op: ['eloise'] },
+	{ id: 'MUU27', coords: [48.2821544, -66.775692], op: ['eloise', 'theo'] },
+	{ id: 'MUU28', coords: [48.276714, -66.7634594], op: ['theo'] },
+	{
+		id: 'MUU29',
+		coords: [48.2617875, -66.7575511],
+		op: ['david', 'gabriel_g', 'guillaume'],
+	},
+	{ id: 'MUU30', coords: [48.2971366, -66.8013275], op: ['guillaume'] },
+	{ id: 'MUU31', coords: [48.2995566, -66.7971575], op: ['gabriel_g'] },
+	{ id: 'MUU32', coords: [48.2751523, -66.7975763], op: ['marcantoine'] },
+	{ id: 'MUU33', coords: [48.2717306, -66.7938964], op: ['gabriel_g'] },
+	{ id: 'MUU34', coords: [48.2683057, -66.7927738], op: ['marcantoine'] },
+	{ id: 'MUU35', coords: [48.2647575, -66.7925149], op: ['theo'] },
+	{
+		id: 'MUU36',
+		coords: [48.362454, -66.7122832],
+		op: ['david', 'eloise', 'gabriel_g'],
+	},
+	{ id: 'MUU37', coords: [48.3590394, -66.711418], op: ['david'] },
+	{ id: 'MUU38', coords: [48.3482194, -66.7186173], op: ['eloise'] },
+	{ id: 'MUU39', coords: [48.350229, -66.7049221], op: ['gabriel_g'] },
+	{ id: 'MUU40', coords: [48.3468381, -66.7056814], op: ['david', 'theo'] },
+	{ id: 'MUU41', coords: [48.3678868, -66.7019402], op: ['gabriel_g'] },
+	{ id: 'MUU42', coords: [48.3638318, -66.6959392], op: ['gabriel_g'] },
+	{ id: 'MUU43', coords: [48.3634139, -66.662727], op: ['david', 'guillaume'] },
+	{ id: 'MUU44', coords: [48.3619544, -66.6698492], op: ['gabriel_g'] },
+	{ id: 'MUU45', coords: [48.3547934, -66.658156], op: ['eloise'] },
+	{ id: 'MUU46', coords: [48.3531414, -66.6635103], op: ['gabriel_g'] },
+	{ id: 'MUU47', coords: [48.3508133, -66.6692051], op: ['eloise'] },
+	{ id: 'AAV01', coords: [49.1285635, -64.706387], op: ['marcantoine'] },
+	{ id: 'AAV02', coords: [49.1247989, -64.6976479], op: ['eloise'] },
+	{
+		id: 'AAV03',
+		coords: [49.1219083, -64.6879181],
+		op: ['gabriel_g', 'guillaume', 'theo'],
+	},
+	{ id: 'AAV04', coords: [49.1260135, -64.7027824], op: ['eloise'] },
+	{ id: 'AAV05', coords: [49.1198512, -64.6823772], op: ['gabriel_g'] },
+	{
+		id: 'AAV06',
+		coords: [49.1172995, -64.6693539],
+		op: ['eloise', 'gabriel_a', 'theo'],
+	},
+	{ id: 'AAV07', coords: [49.0912081, -64.6551431], op: ['gabriel_g'] },
+	{
+		id: 'AAV08',
+		coords: [49.1164797, -64.6622604],
+		op: ['gabriel_a', 'gabriel_g'],
+	},
+	{
+		id: 'AAV09',
+		coords: [49.0888762, -64.6508933],
+		op: ['marcantoine', 'theo'],
+	},
+	{
+		id: 'AAV10',
+		coords: [49.1143371, -64.660027],
+		op: ['gabriel_g', 'marcantoine'],
+	},
+	{ id: 'AAV11', coords: [49.1115325, -64.6497215], op: ['eloise'] },
+	{
+		id: 'AAV12',
+		coords: [49.1126914, -64.6533801],
+		op: ['guillaume', 'marcantoine'],
+	},
+	{ id: 'AAV13', coords: [49.110084, -64.6456486], op: ['david', 'guillaume'] },
+	{
+		id: 'AAV14',
+		coords: [49.1237172, -64.6915573],
+		op: ['david', 'eloise', 'marcantoine'],
+	},
+	{
+		id: 'AAV15',
+		coords: [49.0934211, -64.6537982],
+		op: ['eloise', 'guillaume'],
+	},
+	{ id: 'AAV16', coords: [49.0921738, -64.6626723], op: ['eloise'] },
+	{ id: 'AAV17', coords: [49.0892075, -64.6638703], op: ['gabriel_a', 'theo'] },
+	{
+		id: 'AAV18',
+		coords: [49.098806, -64.7029534],
+		op: ['eloise', 'gabriel_a'],
+	},
+	{ id: 'AAV19', coords: [49.0900738, -64.6588012], op: ['eloise', 'theo'] },
+	{ id: 'AAV20', coords: [49.0967664, -64.7044234], op: ['david', 'eloise'] },
+	{ id: 'AAV21', coords: [49.1011765, -64.7012525], op: ['gabriel_g'] },
+	{ id: 'AAV22', coords: [49.1023386, -64.6990206], op: ['guillaume', 'theo'] },
+	{ id: 'AAV23', coords: [49.1032237, -64.6952262], op: ['theo'] },
+	{ id: 'AAV24', coords: [49.101823, -64.6858905], op: ['marcantoine'] },
+	{ id: 'AAV25', coords: [49.0931778, -64.7008176], op: ['guillaume'] },
+	{ id: 'AAV26', coords: [49.0951887, -64.6980431], op: ['gabriel_a', 'theo'] },
+	{ id: 'AAV27', coords: [49.0864486, -64.691895], op: ['david', 'eloise'] },
+	{ id: 'AAV28', coords: [49.0889629, -64.6903059], op: ['marcantoine'] },
+	{ id: 'AAV29', coords: [49.0861695, -64.6763858], op: ['gabriel_a', 'theo'] },
+	{ id: 'AAV30', coords: [49.0925256, -64.6862192], op: ['theo'] },
+	{ id: 'AAV31', coords: [49.0934662, -64.6829049], op: ['marcantoine'] },
+	{ id: 'AAV32', coords: [49.0948772, -64.6801564], op: ['theo'] },
+	{ id: 'AAV33', coords: [49.095368, -64.6772624], op: ['gabriel_a'] },
+	{ id: 'AAV34', coords: [49.0958444, -64.6745369], op: ['gabriel_g'] },
+	{ id: 'AAV35', coords: [49.0967325, -64.6715949], op: ['theo'] },
+	{ id: 'AAV36', coords: [49.0871284, -64.6705754], op: ['guillaume'] },
+	{ id: 'AAV37', coords: [49.095401, -64.6521113], op: ['theo'] },
+	{
+		id: 'AAV38',
+		coords: [49.093997, -64.6617093],
+		op: ['gabriel_g', 'marcantoine'],
+	},
+	{ id: 'AAV39', coords: [49.0953326, -64.6590818], op: ['marcantoine'] },
+	{
+		id: 'AAV40',
+		coords: [49.0856157, -64.6546133],
+		op: ['eloise', 'guillaume'],
+	},
+	{ id: 'AAV41', coords: [49.0909348, -64.6489557], op: ['marcantoine'] },
+	{
+		id: 'AAV42',
+		coords: [49.093442, -64.6465211],
+		op: ['eloise', 'marcantoine'],
+	},
+	{ id: 'AAV43', coords: [49.0829545, -64.6405381], op: ['theo'] },
+	{ id: 'AAV44', coords: [49.086446, -64.6406403], op: ['theo'] },
+	{
+		id: 'AAV45',
+		coords: [49.0880924, -64.6376341],
+		op: ['david', 'marcantoine'],
+	},
+	{ id: 'AAV46', coords: [49.0900322, -64.6363826], op: ['marcantoine'] },
+	{ id: 'AAV47', coords: [49.0854453, -64.6351002], op: ['theo'] },
+	{
+		id: 'AAV48',
+		coords: [49.0814278, -64.633321],
+		op: ['eloise', 'guillaume'],
+	},
+	{
+		id: 'AAV49',
+		coords: [49.0822673, -64.6293491],
+		op: ['david', 'gabriel_a', 'guillaume'],
+	},
+	{ id: 'AAV50', coords: [49.0861264, -64.6288206], op: ['marcantoine'] },
+	{
+		id: 'AAV51',
+		coords: [49.0879551, -64.6282563],
+		op: ['eloise', 'gabriel_a'],
+	},
+	{ id: 'AAV52', coords: [49.0787248, -64.6246672], op: ['david', 'theo'] },
+	{
+		id: 'AAV53',
+		coords: [49.0790082, -64.621826],
+		op: ['gabriel_a', 'marcantoine'],
+	},
+	{ id: 'AAV54', coords: [49.0841803, -64.6183927], op: ['marcantoine'] },
+	{ id: 'AAV55', coords: [49.0769576, -64.6043962], op: ['david', 'theo'] },
+	{ id: 'AAV56', coords: [49.0788452, -64.6034738], op: ['gabriel_a'] },
+	{ id: 'AAV57', coords: [49.0728949, -64.5988028], op: ['gabriel_a'] },
+	{ id: 'AAV58', coords: [49.0770691, -64.5978659], op: ['theo'] },
+	{ id: 'AAV59', coords: [49.0785111, -64.5948606], op: ['marcantoine'] },
+	{ id: 'AAV60', coords: [49.0745051, -64.6029693], op: ['marcantoine'] },
+	{ id: 'AAV61', coords: [49.0734388, -64.5921504], op: ['marcantoine'] },
+	{ id: 'AAV62', coords: [49.0677487, -64.587034], op: ['theo'] },
+	{ id: 'AAV63', coords: [49.0751851, -64.5842321], op: ['gabriel_a', 'theo'] },
+	{
+		id: 'AAV64',
+		coords: [49.0834495, -64.6133931],
+		op: ['david', 'gabriel_a'],
+	},
+	{
+		id: 'AAV65',
+		coords: [49.0852624, -64.6229418],
+		op: ['eloise', 'gabriel_a'],
+	},
+	{
+		id: 'AAV66',
+		coords: [49.0667666, -64.5824591],
+		op: ['eloise', 'gabriel_a'],
+	},
+	{ id: 'AAV67', coords: [49.0981672, -64.6977276], op: ['theo'] },
+	{ id: 'GMO401', coords: [49.2371243, -65.4997538], op: [''] },
+	{ id: 'GMO402', coords: [49.2350231, -65.4991475], op: [''] },
+	{ id: 'GMO403', coords: [49.2369758, -65.4923451], op: [''] },
+	{ id: 'GMO404', coords: [49.2349227, -65.4919027], op: [''] },
+	{ id: 'GMO405', coords: [49.2359705, -65.4867921], op: [''] },
+	{ id: 'GMO406', coords: [49.2328927, -65.4914169], op: [''] },
+	{ id: 'GMO407', coords: [49.2308646, -65.4906641], op: [''] },
+	{ id: 'GMO408', coords: [49.2318763, -65.4977985], op: [''] },
+	{ id: 'GMO409', coords: [49.2299059, -65.4971296], op: [''] },
+	{ id: 'GMO410', coords: [49.2278162, -65.4943416], op: [''] },
+	{ id: 'GMO411', coords: [49.2256609, -65.4942897], op: [''] },
+	{ id: 'GMO412', coords: [49.2236191, -65.4936215], op: [''] },
+	{ id: 'GMO413', coords: [49.2258802, -65.4851884], op: [''] },
+	{ id: 'GMO414', coords: [49.2268773, -65.4762205], op: [''] },
+	{ id: 'GMO415', coords: [49.223694, -65.5126566], op: [''] },
+	{ id: 'GMO416', coords: [49.2219781, -65.5091633], op: [''] },
+	{ id: 'GMO417', coords: [49.222039, -65.5001856], op: [''] },
+	{ id: 'GMO418', coords: [49.2193141, -65.4997088], op: [''] },
+	{ id: 'GMO419', coords: [49.2194248, -65.4914287], op: [''] },
+	{ id: 'GMO420', coords: [49.2202168, -65.48406], op: [''] },
+	{ id: 'GMO421', coords: [49.2210205, -65.479843], op: [''] },
+	{ id: 'GMO422', coords: [49.2233605, -65.4835173], op: [''] },
+	{ id: 'GMO423', coords: [49.2248654, -65.4757198], op: [''] },
+	{ id: 'GMO424', coords: [49.2218578, -65.4726194], op: [''] },
+	{ id: 'GMO425', coords: [49.2229848, -65.4659152], op: [''] },
+	{ id: 'GMO426', coords: [49.2263209, -65.4642031], op: [''] },
+	{ id: 'GMO427', coords: [49.2173486, -65.4901549], op: [''] },
+	{ id: 'GMO428', coords: [49.2153732, -65.4853752], op: [''] },
+	{ id: 'GMO429', coords: [49.2144772, -65.4807011], op: [''] },
+	{ id: 'GMO430', coords: [49.2169573, -65.4995219], op: [''] },
+	{ id: 'GMO431', coords: [49.2147834, -65.4999627], op: [''] },
+	{ id: 'GMO432', coords: [49.2127544, -65.4993675], op: [''] },
+	{ id: 'GMO433', coords: [49.2098258, -65.5168172], op: [''] },
+	{ id: 'GMO434', coords: [49.2111326, -65.5075149], op: [''] },
+	{ id: 'GMO435', coords: [49.2075968, -65.5053564], op: [''] },
+	{ id: 'GMO436', coords: [49.208496, -65.4973049], op: [''] },
+	{ id: 'GMO437', coords: [49.2059336, -65.4957341], op: [''] },
+	{ id: 'GMO438', coords: [49.2027947, -65.4946327], op: ['theo'] },
+	{ id: 'GMO439', coords: [49.2006555, -65.4933378], op: [''] },
+	{ id: 'GMO440', coords: [49.1985189, -65.4922135], op: [''] },
+	{ id: 'GMO441', coords: [49.1963456, -65.4924003], op: [''] },
+	{ id: 'GMO442', coords: [49.1995599, -65.5163397], op: [''] },
+	{ id: 'GMO443', coords: [49.197552, -65.5152258], op: [''] },
+	{ id: 'GMO444', coords: [49.2002878, -65.5104053], op: [''] },
+	{ id: 'GMO445', coords: [49.2005764, -65.5052775], op: [''] },
+	{ id: 'GMO446', coords: [49.1983803, -65.5046822], op: [''] },
+	{ id: 'GMO447', coords: [49.1962386, -65.5030243], op: [''] },
+	{ id: 'GMO448', coords: [49.1940678, -65.501917], op: [''] },
+	{ id: 'GMO449', coords: [49.1919225, -65.5006794], op: [''] },
+	{ id: 'GMO450', coords: [49.1898686, -65.4993928], op: [''] },
+	{ id: 'GMO451', coords: [49.1937222, -65.5124138], op: [''] },
+	{ id: 'GMO452', coords: [49.1917474, -65.5133394], op: [''] },
+	{ id: 'GMO453', coords: [49.1896854, -65.5136202], op: [''] },
+	{ id: 'GMO454', coords: [49.1867247, -65.5090259], op: [''] },
+	{ id: 'GMO455', coords: [49.1850598, -65.5024136], op: [''] },
+	{ id: 'GMO456', coords: [49.1828629, -65.5021531], op: ['marcantoine'] },
+	{ id: 'GMO457', coords: [49.186751, -65.4947599], op: ['marcantoine'] },
+	{ id: 'GMO458', coords: [49.1767306, -65.5117595], op: ['guillaume'] },
+	{ id: 'GMO459', coords: [49.1748486, -65.5112059], op: [''] },
+	{ id: 'GMO460', coords: [49.1794074, -65.5023684], op: [''] },
+	{ id: 'GMO461', coords: [49.1774042, -65.5014401], op: [''] },
+	{ id: 'GMO462', coords: [49.1752751, -65.5006715], op: ['guillaume'] },
+	{ id: 'GMO463', coords: [49.1733845, -65.5004891], op: [''] },
+	{ id: 'GMO464', coords: [49.183668, -65.4914456], op: ['gabriel_a'] },
+	{ id: 'GMO465', coords: [49.1815308, -65.490228], op: [''] },
+	{ id: 'GMO466', coords: [49.1793845, -65.4883881], op: ['guillaume'] },
+	{ id: 'GMO467', coords: [49.177526, -65.4878143], op: [''] },
+	{ id: 'GMO468', coords: [49.1785174, -65.4796304], op: [''] },
+	{ id: 'GMO469', coords: [49.1816093, -65.4797308], op: ['gabriel_a'] },
+	{ id: 'GMO470', coords: [49.2009706, -65.4802468], op: [''] },
+	{ id: 'GMO471', coords: [49.1987379, -65.4792071], op: [''] },
+	{ id: 'GMO472', coords: [49.2017162, -65.4694046], op: ['theo'] },
+	{ id: 'GMO473', coords: [49.1995868, -65.4689786], op: [''] },
+	{ id: 'GMO474', coords: [49.1965287, -65.4690612], op: [''] },
+	{ id: 'GMO475', coords: [49.196269, -65.4612601], op: ['marcantoine'] },
+	{ id: 'GMO476', coords: [49.1901532, -65.4658349], op: ['theo'] },
+	{ id: 'GMO477', coords: [49.1848413, -65.4581752], op: [''] },
+	{ id: 'GMO478', coords: [49.1829181, -65.4577044], op: [''] },
+	{ id: 'GMO479', coords: [49.1809989, -65.4572509], op: [''] },
+	{ id: 'GMO480', coords: [49.1784766, -65.4568216], op: [''] },
+	{ id: 'GMO481', coords: [49.176411, -65.4561705], op: ['marcantoine'] },
+	{ id: 'GMO482', coords: [49.1733308, -65.4552588], op: [''] },
+	{ id: 'GMO501', coords: [49.2381069, -65.4188159], op: ['marcantoine'] },
+	{ id: 'GMO502', coords: [49.2373184, -65.4286204], op: ['theo'] },
+	{ id: 'GMO503', coords: [49.2354731, -65.4282551], op: ['theo'] },
+	{
+		id: 'GMO504',
+		coords: [49.2333989, -65.423313],
+		op: ['marcantoine', 'theo'],
+	},
+	{ id: 'GMO505', coords: [49.2314192, -65.4219919], op: ['guillaume'] },
+	{ id: 'GMO506', coords: [49.2294071, -65.4195153], op: [''] },
+	{ id: 'GMO507', coords: [49.2239874, -65.4214839], op: ['theo'] },
+	{ id: 'GMO508', coords: [49.2248058, -65.4142535], op: ['theo'] },
+	{ id: 'GMO509', coords: [49.2203023, -65.4210736], op: ['gabriel_g'] },
+	{ id: 'GMO510', coords: [49.2205704, -65.4166137], op: ['eloise'] },
+	{ id: 'GMO511', coords: [49.2328858, -65.433555], op: ['marcantoine'] },
+	{ id: 'GMO512', coords: [49.2311967, -65.4334821], op: ['theo'] },
+	{ id: 'GMO513', coords: [49.2277807, -65.4335268], op: ['marcantoine'] },
+	{ id: 'GMO514', coords: [49.2257735, -65.4338142], op: ['guillaume'] },
+	{
+		id: 'GMO515',
+		coords: [49.2238107, -65.4333375],
+		op: ['gabriel_a', 'theo'],
+	},
+	{ id: 'GMO516', coords: [49.2217063, -65.4328887], op: ['eloise'] },
+	{ id: 'GMO517', coords: [49.2196323, -65.4328646], op: ['theo'] },
+	{ id: 'GMO518', coords: [49.2176097, -65.4326547], op: ['marcantoine'] },
+	{
+		id: 'GMO519',
+		coords: [49.2155256, -65.4323215],
+		op: ['eloise', 'gabriel_a'],
+	},
+	{ id: 'GMO520', coords: [49.2134304, -65.4322171], op: ['gabriel_g'] },
+	{ id: 'GMO521', coords: [49.2108523, -65.4305635], op: ['guillaume'] },
+	{ id: 'GMO522', coords: [49.2090778, -65.4306496], op: ['theo'] },
+	{ id: 'GMO523', coords: [49.2068118, -65.4312452], op: ['guillaume'] },
+	{ id: 'GMO524', coords: [49.2048836, -65.4325828], op: ['eloise'] },
+	{ id: 'GMO525', coords: [49.2031052, -65.4347393], op: ['marcantoine'] },
+	{ id: 'GMO526', coords: [49.2005046, -65.4304316], op: ['gabriel_g'] },
+	{ id: 'GMO527', coords: [49.1983484, -65.429956], op: ['gabriel_g'] },
+	{ id: 'GMO528', coords: [49.1962674, -65.4293754], op: ['eloise'] },
+	{ id: 'GMO529', coords: [49.1941383, -65.4287097], op: ['gabriel_a'] },
+	{ id: 'GMO530', coords: [49.191757, -65.4277644], op: ['eloise'] },
+	{ id: 'GMO531', coords: [49.1897515, -65.426944], op: ['gabriel_a'] },
+	{ id: 'GMO532', coords: [49.1862605, -65.4253598], op: ['gabriel_a'] },
+	{ id: 'GMO533', coords: [49.1883166, -65.4182222], op: ['marcantoine'] },
+	{ id: 'GMO534', coords: [49.1863552, -65.4170206], op: ['theo'] },
+	{ id: 'GMO535', coords: [49.1788899, -65.4200024], op: ['theo'] },
+	{ id: 'GMO536', coords: [49.1768697, -65.4181814], op: ['marcantoine'] },
+	{ id: 'GMO537', coords: [49.174004, -65.4183859], op: ['theo'] },
+	{ id: 'GMO538', coords: [49.1759793, -65.4091375], op: ['gabriel_a'] },
+	{ id: 'GMO539', coords: [49.2251459, -65.3969681], op: ['gabriel_a'] },
+	{ id: 'GMO540', coords: [49.226154, -65.3929792], op: ['guillaume'] },
+	{ id: 'GMO541', coords: [49.2087628, -65.4075874], op: ['guillaume'] },
+	{ id: 'GMO542', coords: [49.2119764, -65.4042364], op: ['guillaume'] },
+	{ id: 'GMO543', coords: [49.2129525, -65.3993317], op: ['marcantoine'] },
+	{ id: 'GMO544', coords: [49.2144869, -65.3951328], op: ['theo'] },
+	{ id: 'GMO545', coords: [49.2162875, -65.3872121], op: ['marcantoine'] },
+	{ id: 'GMO546', coords: [49.2143658, -65.3845173], op: ['marcantoine'] },
+	{ id: 'GMO547', coords: [49.2021478, -65.4011219], op: ['marcantoine'] },
+	{ id: 'GMO548', coords: [49.2042204, -65.4043018], op: ['gabriel_a'] },
+	{ id: 'GMO549', coords: [49.2086165, -65.3981566], op: ['marcantoine'] },
+	{ id: 'GMO550', coords: [49.211584, -65.3929346], op: ['theo'] },
+	{ id: 'GMO551', coords: [49.1904889, -65.3888705], op: ['theo'] },
+	{ id: 'GMO552', coords: [49.1918335, -65.3848211], op: ['guillaume'] },
+	{
+		id: 'GMO553',
+		coords: [49.1923661, -65.3803614],
+		op: ['guillaume', 'marcantoine'],
+	},
+	{ id: 'GMO554', coords: [49.1936623, -65.3760506], op: ['gabriel_a'] },
+	{ id: 'GMO555', coords: [49.2008127, -65.379235], op: ['guillaume'] },
+	{ id: 'GMO556', coords: [49.2029239, -65.3788458], op: ['gabriel_a'] },
+	{ id: 'GMO557', coords: [49.2025881, -65.3666661], op: ['marcantoine'] },
+	{ id: 'GMO558', coords: [49.2045612, -65.368486], op: ['theo'] },
+	{ id: 'GMO559', coords: [49.2078441, -65.365511], op: ['gabriel_a'] },
+	{ id: 'MSE601', coords: [49.1934903, -65.0008972], op: [''] },
+	{ id: 'MSE602', coords: [49.1913027, -65.0017769], op: [''] },
+	{ id: 'MSE603', coords: [49.1878248, -65.0064976], op: [''] },
+	{ id: 'MSE604', coords: [49.1802469, -65.0074389], op: [''] },
+	{ id: 'MSE605', coords: [49.1812287, -65.0030615], op: [''] },
+	{ id: 'MSE606', coords: [49.1809029, -64.9977818], op: [''] },
+	{ id: 'MSE607', coords: [49.1769923, -64.9938448], op: [''] },
+	{ id: 'MSE608', coords: [49.1873858, -64.9882772], op: [''] },
+	{ id: 'MSE609', coords: [49.1889769, -64.986042], op: [''] },
+	{ id: 'MSE610', coords: [49.1903501, -64.9831703], op: [''] },
+	{ id: 'MSE611', coords: [49.191257, -64.9804176], op: [''] },
+	{ id: 'MSE612', coords: [49.1859431, -64.9795607], op: [''] },
+	{ id: 'MSE613', coords: [49.1872452, -64.9771874], op: [''] },
+	{ id: 'MSE614', coords: [49.1876304, -64.9703657], op: [''] },
+	{ id: 'MSE615', coords: [49.1891108, -64.9684288], op: [''] },
+	{ id: 'MSE616', coords: [49.1861236, -64.9623563], op: [''] },
+	{ id: 'MSE617', coords: [49.187799, -64.9610516], op: [''] },
+	{ id: 'MSE618', coords: [49.1790426, -64.9495055], op: [''] },
+	{ id: 'MSE619', coords: [49.1805575, -64.946716], op: [''] },
+	{ id: 'MSE620', coords: [49.1813149, -64.9437548], op: [''] },
+	{ id: 'MSE621', coords: [49.181417, -64.9355377], op: [''] },
+	{ id: 'MSE622', coords: [49.1804625, -64.9313549], op: [''] },
+	{ id: 'MSE623', coords: [49.1750959, -64.9322226], op: [''] },
+	{ id: 'MSE624', coords: [49.1756215, -64.9287216], op: [''] },
+	{ id: 'MSE625', coords: [49.1769377, -64.9242739], op: [''] },
+	{ id: 'MSE626', coords: [49.1781648, -64.9218727], op: [''] },
+	{ id: 'MSE627', coords: [49.1722804, -64.9219565], op: [''] },
+	{ id: 'MSE628', coords: [49.173557, -64.9197249], op: [''] },
+	{ id: 'MSE629', coords: [49.1743646, -64.9147001], op: [''] },
+	{ id: 'MSE630', coords: [49.1763026, -64.9132404], op: [''] },
+	{ id: 'MSE631', coords: [49.1764748, -64.909511], op: [''] },
+	{ id: 'MSE632', coords: [49.1771944, -64.9062842], op: [''] },
+	{ id: 'MSE633', coords: [49.1702007, -64.9078459], op: [''] },
+	{ id: 'MSE634', coords: [49.1700264, -64.9036669], op: [''] },
+	{ id: 'MSE635', coords: [49.1733466, -64.9012713], op: [''] },
+	{ id: 'MSE636', coords: [49.1734689, -64.8966666], op: [''] },
+	{ id: 'MSE637', coords: [49.1732857, -64.8920824], op: [''] },
+	{ id: 'MSE638', coords: [49.1735274, -64.8881614], op: [''] },
+	{ id: 'MSE639', coords: [49.1716215, -64.8835132], op: [''] },
+];
