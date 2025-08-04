@@ -76,6 +76,17 @@ img {
 	margin-bottom: 15px;
 }
 
+table {
+	border-collapse: collapse;
+}
+
+table th,
+table td {
+	border: 1px solid black;
+	text-align: center;
+	padding: 3px;
+}
+
 @media only screen and (max-width: 1000px) {
 	.wrapper {
 		grid-template-areas:
@@ -85,7 +96,7 @@ img {
 
 	#sidebar {
 		height: var(--map-height-1000);
-		overflow: hidden;
+		overflow: scroll;
 	}
 
 	#map {
@@ -162,7 +173,6 @@ img {
 }
 
 .arborescence {
-	overflow: auto;
 	max-height: 70vh;
 }
 

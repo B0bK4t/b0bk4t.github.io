@@ -1,6 +1,3 @@
-//En utilisant https://leafletjs.com/ Github: https://github.com/Leaflet/Leaflet
-//Documentation https://leafletjs.com/reference.html
-
 //Utils
 function compare(a, b) {
 	const itemA = a.compare;
@@ -13,6 +10,76 @@ function compare(a, b) {
 		comparison = -1;
 	}
 	return comparison;
+}
+
+//https://www.w3schools.com/howto/howto_js_sort_table.asp
+function sortTable(n, table_id) {
+	var table,
+		rows,
+		switching,
+		i,
+		x,
+		y,
+		shouldSwitch,
+		dir,
+		switchcount = 0;
+	table = document.querySelector('#' + table_id);
+	switching = true;
+	// Set the sorting direction to ascending:
+	dir = 'asc';
+	/* Make a loop that will continue until
+  no switching has been done: */
+	while (switching) {
+		// Start by saying: no switching is done:
+		switching = false;
+		rows = table.rows;
+		/* Loop through all table rows (except the
+    first, which contains table headers): */
+		for (i = 1; i < rows.length - 1; i++) {
+			// Start by saying there should be no switching:
+			shouldSwitch = false;
+			/* Get the two elements you want to compare,
+      one from current row and one from the next: */
+			x = rows[i].getElementsByTagName('TD')[n];
+			y = rows[i + 1].getElementsByTagName('TD')[n];
+			/* Check if the two rows should switch place,
+      based on the direction, asc or desc: */
+			if (dir == 'asc') {
+				if (
+					x.getAttribute('data-sort').toLowerCase() >
+					y.getAttribute('data-sort').toLowerCase()
+				) {
+					// If so, mark as a switch and break the loop:
+					shouldSwitch = true;
+					break;
+				}
+			} else if (dir == 'desc') {
+				if (
+					x.getAttribute('data-sort').toLowerCase() <
+					y.getAttribute('data-sort').toLowerCase()
+				) {
+					// If so, mark as a switch and break the loop:
+					shouldSwitch = true;
+					break;
+				}
+			}
+		}
+		if (shouldSwitch) {
+			/* If a switch has been marked, make the switch
+      and mark that a switch has been done: */
+			rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+			switching = true;
+			// Each time a switch is done, increase this count by 1:
+			switchcount++;
+		} else {
+			/* If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again. */
+			if (switchcount == 0 && dir == 'asc') {
+				dir = 'desc';
+				switching = true;
+			}
+		}
+	}
 }
 
 //Setup map
@@ -43,6 +110,9 @@ function flyTo(parc) {
 	parc = parcs[parc];
 	map.flyTo([views[parc][0], views[parc][1]], views[parc][2]);
 }
+
+//En utilisant https://leafletjs.com/ Github: https://github.com/Leaflet/Leaflet
+//Documentation https://leafletjs.com/reference.html
 
 var map = L.map('map').setView([views[0][0], views[0][1]], views[0][2]);
 
@@ -163,7 +233,6 @@ function openTurbine(turbine) {
 	problemes_ = problemes_.sort(compare);
 	problemes_ = problemes_.reverse();
 
-	let years = [2025, 2024, 2023];
 	for (let i = 0; i < years.length; i++) {
 		const y = years[i];
 		document.querySelector('#p' + y).innerHTML = '';
@@ -181,28 +250,46 @@ function openTurbine(turbine) {
 }
 
 //Setup arborescence
+let years = [2025, 2024, 2023];
+let op_per_year = [operateurs, null, null];
+
 function populateArborescence() {
-	let years = [2025, 2024, 2023];
-
 	let html = '';
-
 	for (let i = 0; i < years.length; i++) {
 		const y = years[i];
-
 		html += `<h2 onclick="toYear(${y})">${y}</h2>\n`;
-		let bkillers = `<h3>Blade killers</h3>\n`;
-		let bris = `<h3>Bris majeurs</h3>\n`;
-
-		for ([key, value] of Object.entries(parcs)) {
-			if (key != '0') {
-				let row = `<h4 onclick="toParc('${key}', ${y})">${key}</h4>\n`;
-				bkillers += row + `<ul id="${key}${y}C5"></ul>\n`;
-				bris += row + `<ul id="${key}${y}C4"></ul>\n`;
+		if (op_per_year[i]) {
+			let ops = op_per_year[i];
+			html += `<table id="table__${y}">`;
+			html += `<tr>
+				<th onclick="sortTable(0, 'table__${y}')">Opérateur</th>
+				<th onclick="sortTable(1, 'table__${y}')">Bris majeurs</th>
+				<th onclick="sortTable(2, 'table__${y}')">Blade killers</th>
+				<th onclick="sortTable(3, 'table__${y}')">Mouches</th>
+				<th onclick="sortTable(4, 'table__${y}')">Spécial</th>
+			</tr>`;
+			for ([key, value] of Object.entries(ops)) {
+				html += `<tr id="${key}">
+					<td data-sort="${key}"><b>${value}</b></td>
+					<td data-sort="" id="${key}__c5"></td>
+					<td data-sort="" id="${key}__c4"></td>
+					<td data-sort="" id="${key}__m"></td>
+					<td data-sort="" id="${key}__s"></td>
+				</tr>`;
 			}
+			html += '</table>';
 		}
-
-		html += bkillers;
-		html += bris;
+		// 	let bkillers = `<h3>Blade killers</h3>\n`;
+		// 	let bris = `<h3>Bris majeurs</h3>\n`;
+		// 	for ([key, value] of Object.entries(parcs)) {
+		// 		if (key != '0') {
+		// 			let row = `<h4 onclick="toParc('${key}', ${y})">${key}</h4>\n`;
+		// 			bkillers += row + `<ul id="${key}${y}C5"></ul>\n`;
+		// 			bris += row + `<ul id="${key}${y}C4"></ul>\n`;
+		// 		}
+		// 	}
+		// 	html += bkillers;
+		// 	html += bris;
 	}
 
 	document.querySelector('.arborescence').innerHTML = html;
@@ -368,18 +455,57 @@ function compileData() {
 
 	initialPhotoArray = data_photo;
 
-	for (let i = 0; i < data.length; i++) {
-		const d = data[i];
+	// for (let i = 0; i < data.length; i++) {
+	// 	const d = data[i];
 
-		if (d.category == 'C4' || d.category == 'C5') {
-			let li = document.createElement('li');
-			li.innerHTML = d.id + ': ' + d.desc;
-			li.addEventListener('click', function () {
-				toTurbine(d.id);
-			});
-			document
-				.querySelector('#' + d.parc + d.year + d.category)
-				.appendChild(li);
+	// 	if (d.category == 'C4' || d.category == 'C5') {
+	// 		let li = document.createElement('li');
+	// 		li.innerHTML = d.id + ': ' + d.desc;
+	// 		li.addEventListener('click', function () {
+	// 			toTurbine(d.id);
+	// 		});
+	// 		document
+	// 			.querySelector('#' + d.parc + d.year + d.category)
+	// 			.appendChild(li);
+	// 	}
+	// }
+
+	for (let i = 0; i < years.length; i++) {
+		let y = document.querySelector('#table__' + years[i]);
+
+		if (op_per_year[i]) {
+			let ops = op_per_year[i];
+			for ([key, value] of Object.entries(ops)) {
+				let problemes_trouves = data.filter(function (a) {
+					return a.author.includes(key);
+				});
+
+				let p_cat_5 = problemes_trouves.filter(function (p) {
+					return p.category == 'C5';
+				});
+				let p_cat_5_nb = p_cat_5.length;
+
+				let p_cat_5_box = y.querySelector('#' + key + '__c5');
+				p_cat_5_box.innerHTML = p_cat_5_nb;
+				p_cat_5_box.setAttribute(
+					'data-sort',
+					p_cat_5_nb.toString().padStart(2, '0')
+				);
+
+				let p_cat_4 = problemes_trouves.filter(function (p) {
+					return p.category == 'C4';
+				});
+				let p_cat_4_nb = p_cat_4.length;
+				let p_cat_4_box = y.querySelector('#' + key + '__c4');
+				p_cat_4_box.innerHTML = p_cat_4_nb;
+				p_cat_4_box.setAttribute(
+					'data-sort',
+					p_cat_4_nb.toString().padStart(2, '0')
+				);
+
+				y.querySelector('#' + key + '__m').innerHTML = 0;
+				y.querySelector('#' + key + '__s').innerHTML = 0;
+			}
 		}
 	}
 
