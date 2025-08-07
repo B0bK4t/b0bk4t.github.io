@@ -13,6 +13,7 @@ img {
 .wrapper {
 	display: grid;
 	gap: 10px;
+	height: 98vh;
 	position: relative;
 	grid-template-areas: 'map sidebar';
 }
@@ -65,19 +66,47 @@ img {
 
 #sidebar {
 	grid-area: sidebar;
+	overflow: auto;
+	scrollbar-width: thin;
 }
 
 #sidebar header {
-	display: flex;
-	align-items: flex-start;
+	display: grid;
+	grid-template-areas:
+		'pie stats'
+		'pie stats'
+		'progres progres';
 }
 
 #pie {
-	margin-bottom: 15px;
+	grid-area: pie;
+}
+
+#stats {
+	grid-area: stats;
 }
 
 table {
 	border-collapse: collapse;
+}
+
+#progres {
+	grid-area: progres;
+	margin-bottom: 15px;
+	position: relative;
+}
+
+.progress-bar {
+	width: 100%;
+	height: 15px;
+	background: red;
+	position: absolute;
+}
+
+#t_faite {
+	z-index: 2;
+	background: lime;
+	width: 0;
 }
 
 table th,
@@ -110,6 +139,13 @@ table td {
 		width: var(--map-width-1000);
 		border-top: 1px solid black;
 		overflow: scroll;
+	}
+
+	.progress-bar {
+		width: calc(var(--map-width-1000) - 3vw);
+		height: 15px;
+		background: red;
+		margin-bottom: 15px;
 	}
 }
 

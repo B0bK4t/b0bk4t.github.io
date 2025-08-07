@@ -1,4 +1,7 @@
 //Utils
+//343 = VIG1+AAV+BDS+CAR+MUU+GMO500
+let current_completion = 343 + 12;
+
 function compare(a, b) {
 	const itemA = a.compare;
 	const itemB = b.compare;
@@ -263,33 +266,51 @@ function populateArborescence() {
 			html += `<table id="table__${y}">`;
 			html += `<tr>
 				<th onclick="sortTable(0, 'table__${y}')">Opérateur</th>
-				<th onclick="sortTable(1, 'table__${y}')">Bris majeurs</th>
-				<th onclick="sortTable(2, 'table__${y}')">Blade killers</th>
-				<th onclick="sortTable(3, 'table__${y}')">Mouches</th>
-				<th onclick="sortTable(4, 'table__${y}')">Spécial</th>
+				<th onclick="sortTable(1, 'table__${y}')">Blade killers</th>
+				<th onclick="sortTable(2, 'table__${y}')">Bris majeurs</th>
+				<th onclick="sortTable(3, 'table__${y}')">Autres déclarations</th>
+				<th onclick="sortTable(4, 'table__${y}')">Mouches</th>
+				<th onclick="sortTable(5, 'table__${y}')">Spécial</th>
 			</tr>`;
 			for ([key, value] of Object.entries(ops)) {
 				html += `<tr id="${key}">
 					<td data-sort="${key}"><b>${value}</b></td>
 					<td data-sort="" id="${key}__c5"></td>
 					<td data-sort="" id="${key}__c4"></td>
+					<td data-sort="" id="${key}__c0"></td>
 					<td data-sort="" id="${key}__m"></td>
 					<td data-sort="" id="${key}__s"></td>
 				</tr>`;
 			}
 			html += '</table>';
+			html += `<br>`;
 		}
-		// 	let bkillers = `<h3>Blade killers</h3>\n`;
-		// 	let bris = `<h3>Bris majeurs</h3>\n`;
-		// 	for ([key, value] of Object.entries(parcs)) {
-		// 		if (key != '0') {
-		// 			let row = `<h4 onclick="toParc('${key}', ${y})">${key}</h4>\n`;
-		// 			bkillers += row + `<ul id="${key}${y}C5"></ul>\n`;
-		// 			bris += row + `<ul id="${key}${y}C4"></ul>\n`;
-		// 		}
-		// 	}
-		// 	html += bkillers;
-		// 	html += bris;
+
+		html += `<table id='table__${y}_p'>`;
+		html += `<tr>
+				<th onclick="sortTable(0, 'table__${y}_p')">Parc</th>
+				<th onclick="sortTable(1, 'table__${y}_p')">Blade killers</th>
+				<th onclick="sortTable(2, 'table__${y}_p')">Bris majeurs</th>
+				<th onclick="sortTable(3, 'table__${y}_p')">Autres déclarations</th>
+			</tr>`;
+
+		for ([key, value] of Object.entries(parcs)) {
+			if (
+				key != '0' &&
+				!(key == 'MUU' && y == '2023') &&
+				!(key == 'BDS' && years[i] == '2023')
+			) {
+				// html += `<h3 onclick="toParc('${key}', ${y})">${key}</h3>`;
+				html += `<tr id="${key}__${y}">
+					<td data-sort="${key}" onclick="toParc('${key}', ${y})"><b>${key}</b></td>
+					<td data-sort="" id="${key}__c5"></td>
+					<td data-sort="" id="${key}__c4"></td>
+					<td data-sort="" id="${key}__c0"></td>
+				</tr>`;
+			}
+		}
+
+		html += '</table>';
 	}
 
 	document.querySelector('.arborescence').innerHTML = html;
@@ -360,8 +381,18 @@ function createPie(elem, data, r = 100) {
 		clr.push([d.clr]);
 	}
 
-	document.querySelector('#c5').innerHTML = data[5].value;
-	document.querySelector('#c4').innerHTML = data[4].value;
+	let d_5 = data[5].value;
+	let d_4 = data[4].value;
+	let d_total =
+		d_5 + d_4 + data[3].value + data[2].value + data[1].value + data[0].value;
+	let d_5_p = (d_5 / d_total) * 100;
+	let d_4_p = (d_4 / d_total) * 100;
+	let rst = d_total - d_5 - d_4;
+	let r_p = (rst / d_total) * 100;
+
+	document.querySelector('#c5').innerHTML = `${d_5} (${Math.round(d_5_p)}%)`;
+	document.querySelector('#c4').innerHTML = `${d_4} (${Math.round(d_4_p)}%)`;
+	document.querySelector('#c_a').innerHTML = `${rst} (${Math.round(r_p)}%)`;
 
 	return donut({
 		el: elem,
@@ -455,21 +486,6 @@ function compileData() {
 
 	initialPhotoArray = data_photo;
 
-	// for (let i = 0; i < data.length; i++) {
-	// 	const d = data[i];
-
-	// 	if (d.category == 'C4' || d.category == 'C5') {
-	// 		let li = document.createElement('li');
-	// 		li.innerHTML = d.id + ': ' + d.desc;
-	// 		li.addEventListener('click', function () {
-	// 			toTurbine(d.id);
-	// 		});
-	// 		document
-	// 			.querySelector('#' + d.parc + d.year + d.category)
-	// 			.appendChild(li);
-	// 	}
-	// }
-
 	for (let i = 0; i < years.length; i++) {
 		let y = document.querySelector('#table__' + years[i]);
 
@@ -503,8 +519,97 @@ function compileData() {
 					p_cat_4_nb.toString().padStart(2, '0')
 				);
 
+				let p_cat_0 = problemes_trouves.filter(function (p) {
+					return p.category == 'C0';
+				});
+				let p_cat_1 = problemes_trouves.filter(function (p) {
+					return p.category == 'C1';
+				});
+				let p_cat_2 = problemes_trouves.filter(function (p) {
+					return p.category == 'C2';
+				});
+				let p_cat_3 = problemes_trouves.filter(function (p) {
+					return p.category == 'C3';
+				});
+
+				let p_cat_0_nb =
+					p_cat_0.length + p_cat_1.length + p_cat_2.length + p_cat_3.length;
+				let p_cat_0_box = y.querySelector('#' + key + '__c0');
+				p_cat_0_box.innerHTML = p_cat_0_nb;
+				p_cat_0_box.setAttribute(
+					'data-sort',
+					p_cat_0_nb.toString().padStart(2, '0')
+				);
+
 				y.querySelector('#' + key + '__m').innerHTML = 0;
 				y.querySelector('#' + key + '__s').innerHTML = 0;
+			}
+		}
+
+		y = document.querySelector('#table__' + years[i] + '_p');
+
+		for ([key, value] of Object.entries(parcs)) {
+			if (
+				key != '0' &&
+				!(key == 'MUU' && years[i] == '2023') &&
+				!(key == 'BDS' && years[i] == '2023')
+			) {
+				let data__ = data.filter(function (a) {
+					return a.year == years[i];
+				});
+
+				let problemes_trouves = data__.filter(function (a) {
+					return a.parc == key;
+				});
+
+				let p_cat_0 = problemes_trouves.filter(function (p) {
+					return p.category == 'C0';
+				});
+				let p_cat_1 = problemes_trouves.filter(function (p) {
+					return p.category == 'C1';
+				});
+				let p_cat_2 = problemes_trouves.filter(function (p) {
+					return p.category == 'C2';
+				});
+				let p_cat_3 = problemes_trouves.filter(function (p) {
+					return p.category == 'C3';
+				});
+				let p_cat_4 = problemes_trouves.filter(function (p) {
+					return p.category == 'C4';
+				});
+				let p_cat_5 = problemes_trouves.filter(function (p) {
+					return p.category == 'C5';
+				});
+
+				let p_cat_0_nb =
+					p_cat_0.length + p_cat_1.length + p_cat_2.length + p_cat_3.length;
+				let p_cat_0_box = y.querySelector('#' + key + '__c0');
+				let p_cat_4_nb = p_cat_4.length;
+				let p_cat_5_nb = p_cat_5.length;
+				let t = p_cat_0_nb + p_cat_4_nb + p_cat_5_nb;
+				let p_0_p = (p_cat_0_nb / t) * 100;
+				let p_4_p = (p_cat_4_nb / t) * 100;
+				let p_5_p = (p_cat_5_nb / t) * 100;
+
+				let p_cat_5_box = y.querySelector('#' + key + '__c5');
+				p_cat_5_box.innerHTML = `${p_cat_5_nb} (${Math.round(p_5_p)}%)`;
+				p_cat_5_box.setAttribute(
+					'data-sort',
+					p_cat_5_nb.toString().padStart(2, '0')
+				);
+
+				let p_cat_4_box = y.querySelector('#' + key + '__c4');
+				p_cat_4_box.innerHTML = `${p_cat_4_nb} (${Math.round(p_4_p)}%)`;
+				p_cat_4_box.setAttribute(
+					'data-sort',
+					p_cat_4_nb.toString().padStart(2, '0')
+				);
+
+				p_cat_0_box.innerHTML = `${p_cat_0_nb} (${Math.round(p_0_p)}%)`;
+				p_cat_0_box.setAttribute(
+					'data-sort',
+					p_cat_0_nb.toString().padStart(2, '0')
+				);
 			}
 		}
 	}
@@ -513,6 +618,63 @@ function compileData() {
 }
 
 const initialData = compileData();
+
+//Complétion des turbines
+function turbines_faites(mode = 'global', value = 'global', value2 = null) {
+	//				  2025, 2024, 2023
+	let tt_per_year = [464, 464, 417];
+	// let tt_completes = [current_completion, 464, 417];
+	let tt_completes = [258, 464, 417];
+	//				  null, VIG,BDS,CAR,MUU,AAV, GMO,MSE
+	// let tt_per_parc = [null, 24, 73, 73, 47, 67, 141, 39];
+
+	let t = 0;
+	let c = 0;
+	let label = 'Progression';
+
+	switch (mode) {
+		case 'year':
+			let y = years.indexOf(value);
+			t = tt_per_year[y];
+			c = tt_completes[y];
+			label = 'Progression - ' + value;
+			break;
+		case 'parc':
+			//TODO par parc quand automatisé
+			for (let i = 0; i < years.length; i++) {
+				t += tt_per_year[i];
+				c += tt_completes[i];
+			}
+			label =
+				'Progression globale<span title="progression par parc sera ajoutée plus tard">*</span>';
+			break;
+		case 'parc-y':
+			//TODO par parc quand automatisé
+			let y2 = years.indexOf(value2);
+			t = tt_per_year[y2];
+			c = tt_completes[y2];
+			label =
+				'Progression ' +
+				value2 +
+				'<span title="progression par parc sera ajoutée plus tard">*</span>';
+			break;
+		default:
+			for (let i = 0; i < years.length; i++) {
+				t += tt_per_year[i];
+				c += tt_completes[i];
+			}
+			break;
+	}
+
+	let c_p = (c / t) * 100;
+	let r = t - c;
+	let r_p = (r / t) * 100;
+
+	document.querySelector('#progres-title').innerHTML = label;
+	document.querySelector('#t_c').innerHTML = `${c} (${Math.round(c_p)}%)`;
+	document.querySelector('#t_faite').style.width = c_p + '%';
+	document.querySelector('#t_r').innerHTML = `${r} (${Math.round(r_p)}%)`;
+}
 
 //Initial pie chart
 function countCats(year = null, parc = null) {
@@ -540,53 +702,34 @@ function countCats(year = null, parc = null) {
 		if (count) {
 			catCount[d.category]++;
 		}
-
-		// let obj = turbinesCoords.find((element) => element.id === d.id).obj;
-		// let clr = 'aqua';
-		// switch (d.category) {
-		// 	case 'C1':
-		// 		clr = 'turquoise';
-		// 		break;
-		// 	case 'C2':
-		// 		clr = 'green';
-		// 		break;
-		// 	case 'C3':
-		// 		clr = 'yellow';
-		// 		break;
-		// 	case 'C4':
-		// 		clr = 'orange';
-		// 		break;
-		// 	case 'C5':
-		// 		clr = 'red';
-		// 		break;
-		// }
-
-		// obj.setStyle({ color: clr });
 	}
 
 	return [
-		{ donnee: 'C0', clr: 'aqua', value: catCount['C0'] },
+		{ donnee: 'C0', clr: 'grey', value: catCount['C0'] },
 		{ donnee: 'C1', clr: 'lime', value: catCount['C1'] },
-		{ donnee: 'C2', clr: 'green', value: catCount['C2'] },
-		{ donnee: 'C3', clr: 'yellow', value: catCount['C3'] },
-		{ donnee: 'C4', clr: 'orange', value: catCount['C4'] },
-		{ donnee: 'C5', clr: 'red', value: catCount['C5'] },
+		{ donnee: 'C2', clr: 'yellow', value: catCount['C2'] },
+		{ donnee: 'C3', clr: 'orange', value: catCount['C3'] },
+		{ donnee: 'C4', clr: 'red', value: catCount['C4'] },
+		{ donnee: 'C5', clr: 'darkred', value: catCount['C5'] },
 	];
 }
 
 let globalPie = createPie(document.querySelector('#pie'), countCats(), 200);
+turbines_faites();
 
 //Manipulation des pie charts & déplacements
 function reset() {
 	flyTo(0);
 	document.querySelector('#label').innerHTML = 'Vue globale';
 	globalPie = updatePie(globalPie, countCats());
+	turbines_faites();
 }
 
 function toYear(year) {
 	flyTo(0);
 	document.querySelector('#label').innerHTML = 'Campagne inspection ' + year;
 	globalPie = updatePie(globalPie, countCats(year));
+	turbines_faites('year', year);
 }
 
 function toParc(parc, year = null) {
@@ -594,6 +737,9 @@ function toParc(parc, year = null) {
 	document.querySelector('#label').innerHTML = 'Parc ' + parc;
 	if (year) {
 		document.querySelector('#label').innerHTML += ' ' + year;
+		turbines_faites('parc-y', parc, year);
+	} else {
+		turbines_faites('parc', parc);
 	}
 	globalPie = updatePie(globalPie, countCats(year, parc));
 }
